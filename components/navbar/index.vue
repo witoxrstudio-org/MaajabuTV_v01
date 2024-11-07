@@ -77,7 +77,10 @@
 </template>
 
 <script setup>
-const { t } = useI18n();
+import { useI18n } from "vue-i18n";
+import { ref, computed } from "vue";
+
+const { t, locale } = useI18n();
 const menuOpen = ref(false);
 
 // Méthode pour basculer l'état du menu
@@ -85,8 +88,8 @@ const toggleMenu = () => {
   menuOpen.value = !menuOpen.value;
 };
 
-// Définir les éléments de menu
-const menuItems = ref([
+// Les éléments de menu, calculés en fonction de la langue actuelle
+const menuItems = computed(() => [
   t("menu.home"),
   t("menu.news"),
   t("menu.events"),
@@ -95,22 +98,24 @@ const menuItems = ref([
   t("menu.about"),
 ]);
 
+// Fonction de gestion des liens avec la langue actuelle
 const localPath = (item) => {
+  const prefix = locale.value === "en-UK" ? "" : `/${locale.value}`;
   switch (item) {
     case t("menu.home"):
-      return "/";
+      return `${prefix}/`;
     case t("menu.news"):
-      return "/news";
+      return `${prefix}/news`;
     case t("menu.events"):
-      return "/events";
+      return `${prefix}/events`;
     case t("menu.apps"):
-      return "/apps";
+      return `${prefix}/apps`;
     case t("menu.prod"):
-      return "/products";
+      return `${prefix}/products`;
     case t("menu.about"):
-      return "/about";
+      return `${prefix}/about`;
     default:
-      return "/";
+      return `${prefix}/`;
   }
 };
 </script>
