@@ -22,7 +22,7 @@
         />
         <button
           type="submit"
-          class="absolute inset-y-0 right-0 px-4 py-2 m-2 bg-yellow-500 text-white hover: focus:outline-none"
+          class="absolute inset-y-0 right-0 px-4 py-2 m-2 bg-yellow-500 text-white hover: focus:outline-none transition-all duration-300 hover:scale-110"
         >
           Subscribe
         </button>
