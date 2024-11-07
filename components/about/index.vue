@@ -37,23 +37,15 @@
         </div>
 
         <p class="text-gray-700 font-roboto text-justify">
-          Maajabu Gospel est un label de production musicale bien connu, associé
-          à quatre ambassadeurs talentueux et populaires : Mike Kalambay, Sandra
-          Mbuyi, Deborah Lukalu et Rosny Kayiba. Ces artistes, qui figurent
-          parmi les chanteurs gospel les plus cotés en RDC, ont contribué à la
-          popularité du label, notamment à travers des événements comme Maajabu
-          Talent, où ils jouent le rôle de coachs et de juges.
+          {{ about }}
         </p>
         <p class="text-gray-700 font-roboto text-justify">
-          À travers les concours Maajabu Talent ou encore Maajabu Rafiki, ils
-          ont démontré leur dévouement à cultiver la prochaine génération
-          d'artistes gospel, en leur offrant une plateforme pour briller et en
-          partageant leur sagesse accumulée au fil des années.
+          {{ abouter }}
         </p>
         <button
           class="bg-yellow-500 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-yellow-600 transition"
         >
-          PLUS
+          {{ bouton }}
         </button>
       </div>
     </div>
@@ -63,5 +55,8 @@
 <script setup>
 const { t } = useI18n();
 const menu = ref(t("menu.about"));
+const about = ref(t("title.about"));
+const abouter = ref(t("title.abouter"));
+const bouton = ref(t("title.bouton_un"));
 const localPath = useLocalePath();
 </script>
