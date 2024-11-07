@@ -11,7 +11,11 @@
         {{ menu }}
       </span>
     </p>
-    <h1 class="text-center text-3xl font-bold mb-12">{{ menu }}</h1>
+    <h1
+      class="text-center text-3xl font-bold mb-12 transform transition duration-400 hover:scale-105"
+    >
+      {{ menu }}
+    </h1>
 
     <div class="flex flex-col lg:flex-row items-center lg:items-start gap-8">
       <!-- Left Image Section -->
@@ -19,7 +23,7 @@
         <img
           src="public/img/about.png"
           alt="Maajabu Gospel"
-          class="rounded-lg"
+          class="rounded-lg transform transition duration-400 hover:scale-105"
         />
       </div>
 
@@ -29,24 +33,35 @@
           <img
             src="public/img/mj.png"
             alt="Filigrane"
-            class="absolute top-0 left-2/2 transform translate-x-5 -translate-y-8 w-auto h-16 z-10"
+            class="absolute top-0 left-2/2 transform translate-x-5 -translate-y-8 w-auto h-16 z-10 transition duration-400 hover:scale-105"
           />
-          <h3 class="text-5xl font-bold font-inter text-gray-900 z-10">
+          <h3
+            class="text-5xl font-bold font-inter text-gray-900 z-10 transform transition duration-400 hover:scale-105"
+          >
             Maajabu
           </h3>
         </div>
-
-        <p class="text-gray-700 font-roboto text-justify">
-          {{ about }}
-        </p>
-        <p class="text-gray-700 font-roboto text-justify">
-          {{ abouter }}
-        </p>
-        <button
-          class="bg-yellow-500 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-yellow-600 transition"
+        <div class="transform transition duration-400 hover:scale-105">
+          <p class="text-gray-700 font-roboto text-justify">
+            {{ about }}
+          </p>
+          <p class="text-gray-700 font-roboto text-justify">
+            {{ abouter }}
+          </p>
+        </div>
+        <!-- <button
+          class="bg-yellow-500 text-white font-semibold py-2 px-6 shadow-md hover:bg-yellow-600 transform transition duration-400 hover:scale-105"
         >
           {{ bouton }}
-        </button>
+        </button> -->
+        <br />
+        <div class="relative inline-block">
+          <button
+            class="bg-yellow-500 text-white py-4 px-4 font-bold skew-x-[-10deg] transform transition duration-400 hover:scale-105"
+          >
+            <span class="inline-block skew-x-[10deg]"> {{ bouton }}</span>
+          </button>
+        </div>
       </div>
     </div>
   </section>
