@@ -7,15 +7,15 @@
     <!-- Menu Desktop -->
     <div class="flex-grow">
       <nav class="hidden md:flex justify-center font-semibold space-x-6">
-        <a
+        <NuxtLink
           v-for="(item, index) in menuItems"
           :key="index"
-          href="#"
+          :to="localPath(item)"
           class="hover:text-yellow-400 hover:underline transform transition duration-400 hover:scale-105"
           :class="{ 'text-yellow-500': index === 0 }"
         >
           {{ item }}
-        </a>
+        </NuxtLink>
       </nav>
     </div>
 
@@ -64,7 +64,7 @@
         <NuxtLink
           v-for="(item, index) in menuItems"
           :key="index"
-          :to="localPath('/about')"
+          :to="localPath(item)"
           class="font-semibold hover:text-yellow-400 text-2xl transition-opacity duration-300 opacity-0 animate-fadeIn delay-{{ index * 100 }} hover:underline"
         >
           {{ item }}
@@ -84,6 +84,8 @@ const menuOpen = ref(false);
 const toggleMenu = () => {
   menuOpen.value = !menuOpen.value;
 };
+
+// Définir les éléments de menu
 const menuItems = ref([
   t("menu.home"),
   t("menu.news"),
@@ -92,5 +94,23 @@ const menuItems = ref([
   t("menu.prod"),
   t("menu.about"),
 ]);
-const localPath = useLocalePath();
+
+const localPath = (item) => {
+  switch (item) {
+    case t("menu.home"):
+      return "/";
+    case t("menu.news"):
+      return "/news";
+    case t("menu.events"):
+      return "/events";
+    case t("menu.apps"):
+      return "/apps";
+    case t("menu.prod"):
+      return "/products";
+    case t("menu.about"):
+      return "/about";
+    default:
+      return "/";
+  }
+};
 </script>
