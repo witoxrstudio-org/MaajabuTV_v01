@@ -15,5 +15,21 @@
     "about": "Maajabu Gospel es una conocida etiqueta de producción musical, asociada con cuatro embajadores talentosos y populares: Mike Kalambay, Sandra Mbuyi, Deborah Lukalu y Rosny Kayiba. Estos artistas, que figuran entre los cantantes de gospel más destacados de la RDC, han contribuido a la popularidad de la etiqueta, especialmente a través de eventos como Maajabu Talent, donde desempeñan el papel de entrenadores y jueces.",
     "abouter": "A través de concursos como Maajabu Talent y Maajabu Rafiki, han demostrado su dedicación para cultivar la próxima generación de artistas de gospel, ofreciéndoles una plataforma para brillar y compartiendo su sabiduría acumulada a lo largo de los años.",
     "bouton_un": "MÁS"
+  },
+  "about": {
+    "one": "El lugar para el auto-mejoramiento",
+    "two": "Las mejores canciones gospel para mentes curiosas",
+    "three": "Somos el mejor lugar para aquellos que quieren desarrollarse a través de la voz. Para aquellos que están ocupados y no tienen tiempo para leer libros de auto-desarrollo.",
+    "about_icon_1": "Alcanzar la meta",
+    "about_icon_desc1": "Descubre consejos y trucos para lograr tus objetivos y sueños",
+
+    "about_icon_2": "Relación",
+    "about_icon_desc2": "También hablamos sobre cómo mantener y cuidar una buena relación con tu pareja",
+
+    "about_icon_3": "Formar un hábito",
+    "about_icon_desc3": "Ofrecemos podcasts con episodios que hablan sobre hábitos",
+
+    "about_icon_4": "Crecer con la carrera",
+    "about_icon_desc4": "Hablando del camino para lograr tu carrera soñada y las circunstancias que la rodean"
   }
 }
