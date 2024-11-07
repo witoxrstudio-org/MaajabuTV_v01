@@ -9,9 +9,10 @@ export default {
     "./error.vue",
   ],
   theme: {
-    extend: {},
-    fontFamily: {
-      dancing: ["Dancing+Script"],
+    extend: {
+      fontFamily: {
+        title: ["Dancing Script"],
+      },
     },
   },
   plugins: [],

@@ -5,10 +5,10 @@
     <!-- Texte à gauche -->
     <div class="lg:w-1/2 space-y-6">
       <!-- Petite ligne avec texte -->
-      <p class="text-yellow-500 font-semibold flex items-center">
+      <p class="text-yellow-500 text-2xl font-semibold flex items-center">
         <span class="inline-block w-8 h-0.5 bg-yellow-500 mr-3"></span>
         <span
-          class="transform transition duration-200 hover:scale-105 font-dancing"
+          class="transform transition duration-200 hover:scale-105 font-title"
           >{{ welcome }}</span
         >
       </p>
