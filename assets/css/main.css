@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Train+One&display=swap");
+
 html::-webkit-scrollbar {
   width: 0.2rem;
   background: transparent;
@@ -11,17 +12,21 @@ html::-webkit-scrollbar-thumb {
   border-radius: 2rem;
   background: #000;
 }
+
 /* Gestion Contenu */
 .rm-wrapper {
   @apply flex justify-start items-center space-x-4 relative;
 }
+
 .rm-container {
   @apply max-w-6xl mx-auto px-6 sm:px-2 w-full;
 }
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s;
 }
+
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
@@ -32,11 +37,13 @@ html::-webkit-scrollbar-thumb {
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 .animate-fadeIn {
   animation: fadeIn 0.5s forwards;
 }

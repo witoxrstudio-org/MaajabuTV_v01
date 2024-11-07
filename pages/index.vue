@@ -1,9 +1,7 @@
 <template>
   <div>
-    <div
-      :class="{ 'backdrop-blur-sm': menuOpen }"
-      class="relative bg-black text-white min-h-screen flex flex-col items-center"
-    >
+    <div :class="{ 'backdrop-blur-sm': menuOpen }"
+      class="relative bg-black text-white min-h-screen flex flex-col items-center">
       <!-- Barre de navigation -->
       <Navbar @toggleMenu="toggleMenu" />
       <!-- HomePage -->
