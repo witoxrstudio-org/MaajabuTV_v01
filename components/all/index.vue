@@ -33,7 +33,7 @@
               : 'bg-gray-200 text-black'
           "
           @click="setActiveButton(button.value)"
-          class="px-4 py-2 rounded transition duration-300"
+          class="px-4 py-2 transition duration-300"
         >
           {{ button.label }}
         </button>
