@@ -17,6 +17,11 @@
     "abouter": "À travers les concours Maajabu Talent ou encore Maajabu Rafiki, ils ont démontré leur dévouement à cultiver la prochaine génération d'artistes gospel, en leur offrant une plateforme pour briller et en partageant leur sagesse accumulée au fil des années.",
     "bouton_un": "PLUS"
   },
+  "latest": {
+    "title": "Dernières Musiques",
+    "btn": "Voir Tout",
+    "btn_alt": "Voir Plus de Singles"
+  },
   "about": {
     "one": "Le lieu pour l'amélioration personnelle",
     "two": "Les meilleures chansons gospel pour les esprits curieux",

@@ -11,7 +11,7 @@
           <h2
             class="text-xl sm:text-2xl font-bold text-yellow-600 transform transition duration-200 hover:scale-105"
           >
-            Latest Music
+            {{ title }}
           </h2>
 
           <!-- Ligne séparatrice centrée avec décalage vers le bouton -->
@@ -22,7 +22,7 @@
           <button
             class="border border-yellow-500 text-yellow-500 px-3 sm:px-4 py-1 sm:py-2 text-xs sm:text-sm font-medium hover:bg-yellow-50 transform transition duration-200 hover:scale-105"
           >
-            Voir Tout
+            {{ btn }}
           </button>
         </div>
         <!-- Section Musics -->
@@ -109,7 +109,7 @@
             <span
               class="relative z-10 transition-all duration-300 ease-in-out group-hover:text-black group-hover:translate-x-0 transform translate-x-full"
             >
-              Voir plus des singles
+              {{ btn_alt }}
             </span>
             <div
               class="absolute inset-0 w-full h-full bg-yellow-500 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"
@@ -121,9 +121,10 @@
   </div>
 </template>
 <script setup>
-import pub1 from "../assets/img/a1.png";
-import pub2 from "../assets/img/a2.png";
-import pub3 from "../assets/img/a3.png";
+const { t } = useI18n();
+const title = ref(t("latest.title"));
+const btn = ref(t("latest.btn"));
+const btn_alt = ref(t("latest.btn_alt"));
 
 const episodes = ref([
   {
@@ -134,7 +135,7 @@ const episodes = ref([
     title: "Désormais",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac neque sagittis...",
-    image: pub1,
+    image: "/img/a1.png",
     stats: {
       listen: "8.9K",
       likes: "2.1K",
@@ -150,7 +151,7 @@ const episodes = ref([
     title: "CELEBRONS HEBRON AUJOURD'HUI",
     description:
       "Quisque sit amet lacus luctus, ultrices eros ac, laoreet sem...",
-    image: pub2,
+    image: "/img/a2.png",
     stats: {
       listen: "24K",
       likes: "3.2K",
@@ -166,7 +167,7 @@ const episodes = ref([
     title: "Hakuniacaha",
     description:
       "Cras facilisis orci in arcu ullamcorper viverra. Maecenas vulputate risus...",
-    image: pub3,
+    image: "/img/a3.png",
     stats: {
       listen: "42K",
       likes: "10K",
