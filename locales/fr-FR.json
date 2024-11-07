@@ -9,7 +9,9 @@
   },
 
   "title": {
-    "title": "Maintenant en cours de diffusion!",
-    "titles": "Partageons nos rêves"
+    "title": "Maintenant...",
+    "titles": "Partageons nos rêves",
+    "desc": "Disponible sur Apple Soundcast et Spotify",
+    "welcome": "Commençons..."
   }
 }

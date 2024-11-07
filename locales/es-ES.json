@@ -9,6 +9,8 @@
   },
   "title": {
     "title": "Ahora en exhibición!",
-    "titles": "Compartamos sueños"
+    "titles": "Compartamos sueños",
+    "desc": "Disponible en Apple Soundcast y Spotify",
+    "welcome": "Empecemos"
   }
 }

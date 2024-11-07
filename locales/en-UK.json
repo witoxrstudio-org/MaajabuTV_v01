@@ -9,6 +9,8 @@
   },
   "title": {
     "title": " Now showing!",
-    "titles": "Let’s share dreams"
+    "titles": "Let’s share dreams",
+    "desc": "Available on Apple Soundcast and Spotify",
+    "welcome": "Let's get started"
   }
 }
