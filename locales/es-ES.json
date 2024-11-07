@@ -1,0 +1,14 @@
+{
+  "menu": {
+    "home": "Inicio",
+    "news": "Noticias",
+    "events": "Eventos",
+    "apps": "Aplicaciones",
+    "prod": "Productos",
+    "about": "Acerca de"
+  },
+  "title": {
+    "title": "Ahora en exhibición!",
+    "titles": "Compartamos sueños"
+  }
+}

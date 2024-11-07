@@ -1,0 +1,14 @@
+{
+  "menu": {
+    "home": "Home",
+    "news": "News",
+    "events": "Events",
+    "apps": "Apps",
+    "prod": "Products",
+    "about": "About"
+  },
+  "title": {
+    "title": " Now showing!",
+    "titles": "Let’s share dreams"
+  }
+}

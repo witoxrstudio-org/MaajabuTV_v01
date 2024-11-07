@@ -1,0 +1,15 @@
+{
+  "menu": {
+    "home": "Accueil",
+    "news": "Nouvelles",
+    "events": "Événements",
+    "apps": "Applications",
+    "prod": "Produits",
+    "about": "À propos"
+  },
+
+  "title": {
+    "title": "Maintenant en cours de diffusion!",
+    "titles": "Partageons nos rêves"
+  }
+}
