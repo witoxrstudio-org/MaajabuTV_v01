@@ -1,9 +1,9 @@
 <template>
-  <section class="rm-container bg-white py-16 px-8">
+  <section class="rm-container bg-white py-16 px-8 relative">
     <img
       src="public/img/wellness.png"
       alt="Filigrane"
-      class="absolute top-0 left-0 opacity-20 w-32 h-32 z-10"
+      class="absolute top-10 left-10 w-32 h-32 z-10"
     />
     <!-- Upper Section Title -->
     <p
