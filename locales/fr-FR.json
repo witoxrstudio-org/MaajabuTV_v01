@@ -32,5 +32,10 @@
 
     "about_icon_4": "Évoluer avec la carrière",
     "about_icon_desc4": "Parler du parcours pour atteindre votre carrière de rêve et des circonstances qui l'entourent"
+  },
+  "news": {
+    "btn1": "Les Plus récents",
+    "btn2": "Toutes les nouveautés",
+    "btn3": "Mes Plays Lists"
   }
 }

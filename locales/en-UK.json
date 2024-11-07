@@ -31,5 +31,10 @@
 
     "about_icon_4": "Grow with career",
     "about_icon_desc4": "Talking about the journey to achieve your dream career and what about the circumstances around it"
+  },
+  "news": {
+    "btn1": "Latest",
+    "btn2": "All News",
+    "btn3": "My Playlists"
   }
 }

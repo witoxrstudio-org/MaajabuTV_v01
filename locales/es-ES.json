@@ -31,5 +31,10 @@
 
     "about_icon_4": "Crecer con la carrera",
     "about_icon_desc4": "Hablando del camino para lograr tu carrera soñada y las circunstancias que la rodean"
+  },
+  "news": {
+    "btn1": "Más recientes",
+    "btn2": "Todas las novedades",
+    "btn3": "Mis listas de reproducción"
   }
 }

@@ -40,15 +40,21 @@
       </div>
       <!-- Le Contenu -->
       <div class="mt-4">
-        <p v-if="activeButton === 'recent'">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
-        <p v-if="activeButton === 'new'">
-          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <p v-if="activeButton === 'playlists'">
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-        </p>
+        <baseSlideTransition>
+          <div v-if="activeButton === 'recent'">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </div>
+        </baseSlideTransition>
+        <baseSlideTransition>
+          <div v-if="activeButton === 'new'">
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+        </baseSlideTransition>
+        <baseSlideTransition>
+          <div v-if="activeButton === 'playlists'">
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+          </div>
+        </baseSlideTransition>
       </div>
     </div>
   </section>
@@ -57,12 +63,16 @@
 <script setup>
 const { t } = useI18n();
 const menu = ref(t("menu.news"));
+const btn_1 = ref(t("news.btn1"));
+const btn_2 = ref(t("news.btn2"));
+const btn_3 = ref(t("news.btn3"));
+
 const activeButton = ref("recent");
 
 const buttons = [
-  { value: "recent", label: "Les Plus récents" },
-  { value: "new", label: "Toutes les Nouveautés" },
-  { value: "playlists", label: "Mes PlayLists" },
+  { value: "recent", label: btn_1 },
+  { value: "new", label: btn_2 },
+  { value: "playlists", label: btn_3 },
 ];
 
 function setActiveButton(button) {
