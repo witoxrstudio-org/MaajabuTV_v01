@@ -61,14 +61,14 @@
         v-if="menuOpen"
         class="fixed inset-0 bg-gradient-to-b from-black via-black/70 to-black/40 backdrop-blur-lg border border-gray-700 rounded-lg m-4 p-8 flex flex-col items-center space-y-6 flex-grow transition-transform duration-300 ease-out z-40"
       >
-        <a
+        <NuxtLink
           v-for="(item, index) in menuItems"
           :key="index"
-          href="#"
+          :to="localPath('/about')"
           class="font-semibold hover:text-yellow-400 text-2xl transition-opacity duration-300 opacity-0 animate-fadeIn delay-{{ index * 100 }} hover:underline"
         >
           {{ item }}
-        </a>
+        </NuxtLink>
         <!-- LangSwitcher à l'intérieur du menu mobile -->
         <LangSwitcher class="block md:hidden mt-4" />
       </nav>
@@ -84,8 +84,6 @@ const menuOpen = ref(false);
 const toggleMenu = () => {
   menuOpen.value = !menuOpen.value;
 };
-
-// Définir les éléments de menu en utilisant la fonction de traduction
 const menuItems = ref([
   t("menu.home"),
   t("menu.news"),
@@ -94,4 +92,5 @@ const menuItems = ref([
   t("menu.prod"),
   t("menu.about"),
 ]);
+const localPath = useLocalePath();
 </script>

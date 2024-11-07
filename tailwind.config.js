@@ -12,6 +12,8 @@ export default {
     extend: {
       fontFamily: {
         title: ["Dancing Script"],
+        inter: ["Inter"],
+        roboto: ["Roboto"],
       },
     },
   },
