@@ -97,18 +97,18 @@
       class="flex flex-col justify-center md:flex-row md:space-x-4 mt-4 space-y-2 md:space-y-0"
     >
       <button
-        class="bg-yellow-500 hover:bg-yellow-600 text-black py-2 px-3 rounded-full font-semibold text-sm flex items-center justify-center space-x-2 transform transition duration-200 hover:scale-105 hover:text-green-500 w-full md:w-auto"
+        class="bg-black hover:bg-yellow-600 text-white py-2 px-3 rounded-full font-semibold text-sm flex items-center justify-center space-x-2 transform transition duration-200 hover:scale-105 hover:text-green-500 w-full md:w-auto"
       >
         <i class="fab fa-spotify"></i> <span>Spotify</span>
       </button>
       <button
-        class="bg-yellow-500 hover:bg-yellow-600 text-black py-2 px-3 rounded-full font-semibold text-sm flex items-center justify-center space-x-2 transform transition duration-200 hover:scale-105 hover:text-orange-200 w-full md:w-auto"
+        class="bg-black hover:bg-yellow-600 text-white py-2 px-3 rounded-full font-semibold text-sm flex items-center justify-center space-x-2 transform transition duration-200 hover:scale-105 hover:text-orange-200 w-full md:w-auto"
       >
         <i class="fab fa-soundcloud"></i>
         <span>SoundCloud</span>
       </button>
       <button
-        class="bg-yellow-500 hover:bg-yellow-600 text-black py-2 px-3 rounded-full font-semibold text-sm flex items-center justify-center space-x-2 transform transition duration-200 hover:scale-105 hover:text-white w-full md:w-auto"
+        class="bg-black hover:bg-yellow-600 text-white py-2 px-3 rounded-full font-semibold text-sm flex items-center justify-center space-x-2 transform transition duration-200 hover:scale-105 hover:text-white w-full md:w-auto"
       >
         <i class="fab fa-apple"></i> <span>Apple Podcast</span>
       </button>
