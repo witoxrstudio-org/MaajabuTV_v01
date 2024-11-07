@@ -49,18 +49,11 @@
             {{ abouter }}
           </p>
         </div>
-        <!-- <button
+        <button
           class="bg-yellow-500 text-white font-semibold py-2 px-6 shadow-md hover:bg-yellow-600 transform transition duration-400 hover:scale-105"
         >
           {{ bouton }}
-        </button> -->
-        <div class="relative inline-block">
-          <button
-            class="bg-yellow-500 text-white py-4 px-4 font-bold skew-x-[-10deg] transform transition duration-400 hover:scale-105"
-          >
-            <span class="inline-block skew-x-[10deg]"> {{ bouton }}</span>
-          </button>
-        </div>
+        </button>
       </div>
     </div>
     <div>
