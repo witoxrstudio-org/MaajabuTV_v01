@@ -11,7 +11,7 @@
           v-for="(item, index) in menuItems"
           :key="index"
           href="#"
-          class="hover:text-yellow-400 transition duration-300 hover:underline"
+          class="hover:text-yellow-400 hover:underline transform transition duration-400 hover:scale-105"
           :class="{ 'text-yellow-500': index === 0 }"
         >
           {{ item }}

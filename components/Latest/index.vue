@@ -9,7 +9,7 @@
           class="flex items-center justify-between border-b border-gray-200 py-4"
         >
           <h2
-            class="text-xl sm:text-2xl font-bold text-yellow-500 transform transition duration-200 hover:scale-105"
+            class="text-xl sm:text-2xl font-bold text-yellow-600 transform transition duration-200 hover:scale-105"
           >
             Latest Music
           </h2>
@@ -20,7 +20,7 @@
           ></div>
 
           <button
-            class="border border-yellow-400 text-yellow-500 px-3 sm:px-4 py-1 sm:py-2 text-xs sm:text-sm font-medium hover:bg-yellow-50 transform transition duration-200 hover:scale-105"
+            class="border border-yellow-500 text-yellow-500 px-3 sm:px-4 py-1 sm:py-2 text-xs sm:text-sm font-medium hover:bg-yellow-50 transform transition duration-200 hover:scale-105"
           >
             Voir Tout
           </button>
