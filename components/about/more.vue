@@ -114,7 +114,7 @@
       </button>
     </div>
     <img
-      src="public/img/Titik-titik.png"
+      src="public/img/wellness.png"
       alt="Watermark Left"
       class="absolute -bottom-20 -left-8 opacity-30 w-10 h-10 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
     />
