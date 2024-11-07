@@ -1,5 +1,5 @@
 <template>
-  <section class="rm-container bg-gray-100 -pt-8 px-8 sm:px-6 md:px-8 relative">
+  <section class="rm-container bg-white -pt-8 px-8 sm:px-6 md:px-8 relative">
     <!-- Upper Section Title -->
     <img
       src="public/img/Titik-titik.png"
@@ -55,11 +55,19 @@
       </div>
 
       <!-- Image Centrale -->
-      <div class="flex items-center justify-center">
+      <div class="relative flex items-center justify-center">
+        <!-- Image principale -->
         <img
           src="public/img/fav.png"
           alt="Image Centrale"
-          class="w-auto h-80 shadow-lg transform transition duration-300 hover:scale-105"
+          class="w-full sm:w-auto sm:h-80 shadow-lg transform transition duration-300 hover:scale-105"
+        />
+
+        <!-- Icône dans le coin supérieur droit -->
+        <img
+          src="public/img/icon-play.png"
+          alt="Icone Play"
+          class="absolute top-0 right-0 mt-2 -mr-1 sm:w-8 sm:h-8 w-6 h-6"
         />
       </div>
 
@@ -105,6 +113,18 @@
         <i class="fab fa-apple"></i> <span>Apple Podcast</span>
       </button>
     </div>
+    <img
+      src="public/img/Titik-titik.png"
+      alt="Watermark Left"
+      class="absolute -bottom-20 -left-8 opacity-30 w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40"
+    />
+
+    <!-- Image en filigrane à droite -->
+    <img
+      src="public/img/lol1.png"
+      alt="Watermark Right"
+      class="absolute -bottom-20 right-0 opacity-30 w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40"
+    />
   </section>
 </template>
 
