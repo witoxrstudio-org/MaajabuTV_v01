@@ -6,23 +6,29 @@
       alt="Image"
       class="absolute opacity-50 -top-36 right-0 w-auto h-36 sm:h-28 md:h-36 transition duration-400 hover:scale-105"
     />
-    <div class="py-8">
+    <div class="max-w-2xl mx-auto p-6 sm:p-8 space-y-6">
       <p
-        class="text-yellow-500 text-2xl sm:text-2xl font-semibold flex items-center justify-center text-center"
+        class="text-yellow-500 text-2xl sm:text-3xl font-semibold flex items-center justify-center text-center space-x-3 sm:space-x-4"
       >
-        <span class="inline-block w-8 h-0.5 bg-yellow-500 mr-3"></span>
+        <span class="inline-block w-8 h-1 sm:w-10 bg-yellow-500"></span>
         <span
           class="transform transition duration-200 hover:scale-105 font-title"
         >
           {{ one }}
         </span>
       </p>
+
       <h1
-        class="text-center text-4xl font-bold mb-12 mt-8 transform transition duration-400 hover:scale-105"
+        class="text-center text-3xl sm:text-5xl font-bold mt-8 sm:mt-10 mb-4 sm:mb-6 text-black transform transition duration-500 hover:scale-105"
       >
         {{ two }}
       </h1>
-      <p>{{ three }}</p>
+
+      <p
+        class="text-base sm:text-lg text-black leading-relaxed text-center px-4 sm:px-0"
+      >
+        {{ three }}
+      </p>
     </div>
 
     <div class="mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-8">
