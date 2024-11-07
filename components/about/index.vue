@@ -56,9 +56,6 @@
         </button>
       </div>
     </div>
-    <div>
-      <aboutMore />
-    </div>
   </section>
 </template>
 
