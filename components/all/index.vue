@@ -42,17 +42,100 @@
       <div class="mt-4">
         <baseSlideTransition>
           <div v-if="activeButton === 'recent'">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <div class="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              <div
+                v-for="(card, index) in cards"
+                :key="index"
+                class="bg-white shadow-md overflow-hidden max-w-xs mx-auto hover:text-yellow-500 hover:underline cursor-pointer"
+                @click="addToPlaylist(card)"
+              >
+                <img
+                  :src="card.image"
+                  alt="Card Image"
+                  class="w-full h-36 object-cover transform transition duration-200 hover:scale-105"
+                />
+                <div class="p-3">
+                  <h3 class="font-semibold text-sm mb-1">{{ card.title }}</h3>
+                  <p class="text-gray-500 text-xs mb-1">{{ card.time }}</p>
+                  <div class="flex items-center mt-2">
+                    <img
+                      :src="card.channelAvatar"
+                      alt="Channel Avatar"
+                      class="w-6 h-6 rounded-full mr-2"
+                    />
+                    <p class="text-gray-700 text-xs">{{ card.channel }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </baseSlideTransition>
-        <baseSlideTransition>
+
+        <baseZoomTransition>
           <div v-if="activeButton === 'new'">
-            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <div class="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              <div
+                v-for="(card, index) in cards"
+                :key="index"
+                class="bg-white shadow-md overflow-hidden max-w-xs mx-auto hover:text-yellow-500 hover:underline cursor-pointer"
+                @click="addToPlaylist(card)"
+              >
+                <img
+                  :src="card.image"
+                  alt="Card Image"
+                  class="w-full h-36 object-cover transform transition duration-200 hover:scale-105"
+                />
+                <div class="p-3">
+                  <h3 class="font-semibold text-sm mb-1">{{ card.title }}</h3>
+                  <p class="text-gray-500 text-xs mb-1">{{ card.time }}</p>
+                  <div class="flex items-center mt-2">
+                    <img
+                      :src="card.channelAvatar"
+                      alt="Channel Avatar"
+                      class="w-6 h-6 rounded-full mr-2"
+                    />
+                    <p class="text-gray-700 text-xs">{{ card.channel }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </baseSlideTransition>
+        </baseZoomTransition>
         <baseSlideTransition>
           <div v-if="activeButton === 'playlists'">
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+            <div v-if="playlists.length === 0">
+              <p class="text-center text-gray-500">
+                Aucune carte dans la playlist.
+              </p>
+            </div>
+            <div
+              class="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+              v-else
+            >
+              <div
+                v-for="(card, index) in playlists"
+                :key="index"
+                class="bg-white shadow-md overflow-hidden max-w-xs mx-auto"
+              >
+                <img
+                  :src="card.image"
+                  alt="Card Image"
+                  class="w-full h-36 object-cover"
+                />
+                <div class="p-3">
+                  <h3 class="font-semibold text-sm mb-1">{{ card.title }}</h3>
+                  <p class="text-gray-500 text-xs mb-1">{{ card.time }}</p>
+                  <div class="flex items-center mt-2">
+                    <img
+                      :src="card.channelAvatar"
+                      alt="Channel Avatar"
+                      class="w-6 h-6 rounded-full mr-2"
+                    />
+                    <p class="text-gray-700 text-xs">{{ card.channel }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </baseSlideTransition>
       </div>
@@ -77,6 +160,71 @@ const buttons = [
 
 function setActiveButton(button) {
   activeButton.value = button;
+}
+const cards = [
+  {
+    image: "img/r1.png",
+    title: "News Title Lorem Ipsum Dolor Sit Amet",
+    time: "1 Hour Ago",
+    channel: "Maajabu TV",
+    channelAvatar: "img/tv.png",
+  },
+  {
+    image: "img/r2.png",
+    title: "News Title Lorem Ipsum Dolor Sit Amet",
+    time: "1 Hour Ago",
+    channel: "Maajabu TV",
+    channelAvatar: "img/tv.png",
+  },
+  {
+    image: "img/r3.png",
+    title: "News Title Lorem Ipsum Dolor Sit Amet",
+    time: "1 Hour Ago",
+    channel: "Maajabu TV",
+    channelAvatar: "img/tv.png",
+  },
+  {
+    image: "img/r4.png",
+    title: "News Title Lorem Ipsum Dolor Sit Amet",
+    time: "1 Hour Ago",
+    channel: "Maajabu TV",
+    channelAvatar: "img/tv.png",
+  },
+  {
+    image: "img/r5.png",
+    title: "News Title Lorem Ipsum Dolor Sit Amet",
+    time: "1 Hour Ago",
+    channel: "Maajabu TV",
+    channelAvatar: "img/tv.png",
+  },
+  {
+    image: "img/r6.png",
+    title: "News Title Lorem Ipsum Dolor Sit Amet",
+    time: "1 Hour Ago",
+    channel: "Maajabu TV",
+    channelAvatar: "img/tv.png",
+  },
+  {
+    image: "img/r7.png",
+    title: "News Title Lorem Ipsum Dolor Sit Amet",
+    time: "1 Hour Ago",
+    channel: "Maajabu TV",
+    channelAvatar: "img/tv.png",
+  },
+  {
+    image: "img/r8.png",
+    title: "News Title Lorem Ipsum Dolor Sit Amet",
+    time: "1 Hour Ago",
+    channel: "Maajabu TV",
+    channelAvatar: "img/tv.png",
+  },
+];
+const playlists = ref([]);
+function addToPlaylist(card) {
+  // Évite d'ajouter des duplications dans la playlist
+  if (!playlists.value.some((item) => item.title === card.title)) {
+    playlists.value.push(card);
+  }
 }
 </script>
 
