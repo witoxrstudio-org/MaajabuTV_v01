@@ -54,7 +54,6 @@
         >
           {{ bouton }}
         </button> -->
-        <br />
         <div class="relative inline-block">
           <button
             class="bg-yellow-500 text-white py-4 px-4 font-bold skew-x-[-10deg] transform transition duration-400 hover:scale-105"
@@ -63,6 +62,9 @@
           </button>
         </div>
       </div>
+    </div>
+    <div>
+      <aboutMore />
     </div>
   </section>
 </template>
