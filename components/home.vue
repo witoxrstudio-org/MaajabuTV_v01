@@ -7,17 +7,24 @@
       <!-- Petite ligne avec texte -->
       <p class="text-yellow-500 font-semibold flex items-center">
         <span class="inline-block w-8 h-0.5 bg-yellow-500 mr-3"></span>
-        {{ welcome }}
+        <span
+          class="transform transition duration-200 hover:scale-105 font-dancing"
+          >{{ welcome }}</span
+        >
       </p>
 
       <!-- Titre principal -->
-      <h1 class="text-4xl lg:text-6xl font-bold">
+      <h1
+        class="text-4xl lg:text-6xl font-bold transform transition duration-200 hover:scale-105"
+      >
         {{ title }} <br />
         {{ titles }}
       </h1>
 
       <!-- Description -->
-      <p class="text-lg text-gray-300">
+      <p
+        class="text-lg text-gray-300 transform transition duration-200 hover:scale-105 hover:text-yellow-500 hover:underline"
+      >
         {{ desc }}
       </p>
       <!-- Boutons -->
@@ -25,18 +32,18 @@
         class="flex flex-col md:flex-row md:space-x-4 mt-4 space-y-2 md:space-y-0"
       >
         <button
-          class="bg-yellow-500 hover:bg-yellow-600 text-black py-2 px-3 rounded-full font-semibold text-sm flex items-center justify-center space-x-2 hover:text-green-500 w-full md:w-auto"
+          class="bg-yellow-500 hover:bg-yellow-600 text-black py-2 px-3 rounded-full font-semibold text-sm flex items-center justify-center space-x-2 transform transition duration-200 hover:scale-105 hover:text-green-500 w-full md:w-auto"
         >
           <i class="fab fa-spotify"></i> <span>Spotify</span>
         </button>
         <button
-          class="bg-yellow-500 hover:bg-yellow-600 text-black py-2 px-3 rounded-full font-semibold text-sm flex items-center justify-center space-x-2 hover:text-orange-200 w-full md:w-auto"
+          class="bg-yellow-500 hover:bg-yellow-600 text-black py-2 px-3 rounded-full font-semibold text-sm flex items-center justify-center space-x-2 transform transition duration-200 hover:scale-105 hover:text-orange-200 w-full md:w-auto"
         >
           <i class="fab fa-soundcloud"></i>
           <span>SoundCloud</span>
         </button>
         <button
-          class="bg-yellow-500 hover:bg-yellow-600 text-black py-2 px-3 rounded-full font-semibold text-sm flex items-center justify-center space-x-2 hover:text-white w-full md:w-auto"
+          class="bg-yellow-500 hover:bg-yellow-600 text-black py-2 px-3 rounded-full font-semibold text-sm flex items-center justify-center space-x-2 transform transition duration-200 hover:scale-105 hover:text-white w-full md:w-auto"
         >
           <i class="fab fa-apple"></i> <span>Apple Podcast</span>
         </button>
@@ -49,7 +56,7 @@
       <img
         src="public/img/Image_hero.png"
         alt="Main Image"
-        class="w-2/3 h-auto rounded-lg shadow-lg lg:transform lg:translate-x-1/4"
+        class="w-2/3 h-auto rounded-lg shadow-lg lg:transform lg:translate-x-1/4 transform transition duration-200 hover:scale-105"
       />
     </div>
 

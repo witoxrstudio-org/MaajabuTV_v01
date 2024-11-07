@@ -11,7 +11,7 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      train: ["Train+One"],
+      dancing: ["Dancing+Script"],
     },
   },
   plugins: [],
