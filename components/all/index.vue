@@ -58,11 +58,6 @@
                   <h3 class="font-semibold text-sm mb-1">{{ card.title }}</h3>
                   <p class="text-gray-500 text-xs mb-1">{{ card.time }}</p>
                   <div class="flex items-center mt-2">
-                    <img
-                      :src="card.channelAvatar"
-                      alt="Channel Avatar"
-                      class="w-6 h-6 rounded-full mr-2"
-                    />
                     <p class="text-gray-700 text-xs">{{ card.channel }}</p>
                   </div>
                 </div>
@@ -88,11 +83,6 @@
                   <h3 class="font-semibold text-sm mb-1">{{ card.title }}</h3>
                   <p class="text-gray-500 text-xs mb-1">{{ card.time }}</p>
                   <div class="flex items-center mt-2">
-                    <img
-                      :src="card.channelAvatar"
-                      alt="Channel Avatar"
-                      class="w-6 h-6 rounded-full mr-2"
-                    />
                     <p class="text-gray-700 text-xs">{{ card.channel }}</p>
                   </div>
                 </div>
