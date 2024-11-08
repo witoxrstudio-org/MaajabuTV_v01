@@ -10,7 +10,7 @@
           :key="index"
           :to="localPath(item)"
           class="hover:text-yellow-400 hover:underline transform transition duration-400 hover:scale-105"
-          :class="{ 'text-yellow-500': index === 0 }"
+          :class="{ 'text-yellow-500': isActiveLink(localPath(item)) }"
         >
           {{ item }}
         </NuxtLink>
@@ -25,6 +25,7 @@
       @click="toggleMenu"
       class="md:hidden text-yellow-500 fixed top-6 right-6 z-50"
     >
+      <!-- SVG pour le bouton du menu -->
       <svg
         v-if="!menuOpen"
         xmlns="http://www.w3.org/2000/svg"
@@ -64,6 +65,7 @@
           :key="index"
           :to="localPath(item)"
           class="font-semibold hover:text-yellow-400 text-2xl transition-opacity duration-300 opacity-0 animate-fadeIn delay-{{ index * 100 }} hover:underline"
+          :class="{ 'text-yellow-500': isActiveLink(localPath(item)) }"
         >
           {{ item }}
         </NuxtLink>
@@ -75,12 +77,19 @@
 </template>
 
 <script setup>
+import { ref, computed } from "vue";
+import { useRoute } from "vue-router";
+import { useI18n } from "vue-i18n";
+
 const { t, locale } = useI18n();
+const route = useRoute();
 const menuOpen = ref(false);
+
 // Méthode pour basculer l'état du menu
 const toggleMenu = () => {
   menuOpen.value = !menuOpen.value;
 };
+
 // Les éléments de menu, calculés en fonction de la langue actuelle
 const menuItems = computed(() => [
   t("menu.home"),
@@ -111,4 +120,7 @@ const localPath = (item) => {
       return `${prefix}/`;
   }
 };
+
+// Vérification si le lien est actif
+const isActiveLink = (path) => route.path === path;
 </script>
