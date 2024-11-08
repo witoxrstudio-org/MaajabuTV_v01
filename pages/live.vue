@@ -47,10 +47,6 @@
 const toggleMenu = (value) => {
     menuOpen.value = value;
 };
-
-import pub1 from "../assets/img/a1.png";
-import pub2 from "../assets/img/a2.png";
-import pub3 from "../assets/img/a3.png";
 import LiveVideo from '@/components/Latest/LiveVideo.vue';
 import RecentVideo from '@/components/Latest/RecentVideo.vue';
 
