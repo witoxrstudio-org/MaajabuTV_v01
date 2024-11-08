@@ -1,94 +1,74 @@
 <template>
-  <!-- Titre principal responsive -->
-  <div>
-    <div class="mb-4">
+  <section
+    class="rm-container flex flex-col lg:flex-row items-center lg:justify-between bg-black text-white py-12 px-6 mb-16 lg:px-16 relative overflow-hidden"
+  >
+    <!-- Texte à gauche -->
+    <div class="lg:w-1/2 space-y-6">
+      <!-- Petite ligne avec texte -->
+      <p class="text-yellow-500 text-2xl font-semibold flex items-center">
+        <span class="inline-block w-8 h-0.5 bg-yellow-500 mr-3"></span>
+        <span
+          class="transform transition duration-200 hover:scale-105 font-title"
+          >{{ welcome }}</span
+        >
+      </p>
+
+      <!-- Titre principal -->
       <h1
-        class="text-3xl sm:text-5xl md:text-2xl lg:text-6xl font-bold mt-6 text-center"
+        class="text-4xl lg:text-6xl font-bold transform transition duration-200 hover:scale-105"
       >
-        {{ title }}
-      </h1>
-      <h1
-        class="text-3xl sm:text-5xl md:text-2xl lg:text-6xl font-bold mt-6 text-center"
-      >
+        {{ title }} <br />
         {{ titles }}
       </h1>
-    </div>
 
-    <!-- La Section des cartes avec gradient et filigrane -->
-    <div
-      class="relative flex flex-wrap justify-center mt-10 space-y-4 sm:space-y-0 sm:space-x-0 md:space-x-4"
-    >
-      <div
-        v-for="(person, index) in people"
-        :key="index"
-        :class="[
-          'relative bg-gradient-to-b from-transparent to-yellow-400 w-40 h-60 md:w-60 md:h-80 overflow-hidden m-2 transform transition-transform duration-500 hover:scale-105 hover:shadow-lg',
-          index === 0 || index === 2
-            ? '-translate-y-4 sm:-translate-y-6 md:-translate-y-8'
-            : '',
-        ]"
+      <!-- Description -->
+      <p
+        class="text-lg text-gray-300 transform transition duration-200 hover:scale-105 hover:text-yellow-500 hover:underline"
       >
-        <img
-          :src="person.image"
-          :alt="person.name"
-          class="w-full h-full object-cover opacity-75 transition-all duration-300 hover:scale-110"
-        />
-        <div class="absolute bottom-0 p-4 text-left text-white">
-          <h2
-            class="text-lg md:text-xl font-semibold hover:underline hover:text-yellow-300 transition duration-300"
-          >
-            {{ person.name }}
-          </h2>
-          <p class="text-sm">{{ person.role }}</p>
-        </div>
-      </div>
-
-      <!-- "MAAJABU TV" -->
+        {{ desc }}
+      </p>
+      <!-- Boutons -->
       <div
-        class="absolute opacity-20 font-bold text-white font-train"
-        :class="[
-          'flex items-center justify-start text-4xl md:text-7xl',
-          'left-1 md:left-0',
-          'top-auto bottom-12',
-        ]"
-        style="transform: translateY(100px)"
+        class="flex flex-col md:flex-row md:space-x-4 mt-4 space-y-2 md:space-y-0"
       >
-        MAAJABU TV
+        <button
+          class="bg-yellow-500 hover:bg-yellow-600 text-black py-2 px-3 rounded-full font-semibold text-sm flex items-center justify-center space-x-2 transform transition duration-200 hover:scale-105 hover:text-green-500 w-full md:w-auto"
+        >
+          <i class="fab fa-spotify"></i> <span>Spotify</span>
+        </button>
+        <button
+          class="bg-yellow-500 hover:bg-yellow-600 text-black py-2 px-3 rounded-full font-semibold text-sm flex items-center justify-center space-x-2 transform transition duration-200 hover:scale-105 hover:text-orange-200 w-full md:w-auto"
+        >
+          <i class="fab fa-soundcloud"></i>
+          <span>SoundCloud</span>
+        </button>
+        <button
+          class="bg-yellow-500 hover:bg-yellow-600 text-black py-2 px-3 rounded-full font-semibold text-sm flex items-center justify-center space-x-2 transform transition duration-200 hover:scale-105 hover:text-white w-full md:w-auto"
+        >
+          <i class="fab fa-apple"></i> <span>Apple Podcast</span>
+        </button>
       </div>
     </div>
 
-    <!-- Bouton Spotify -->
-    <div class="mt-10 mb-36 flex justify-center">
-      <button
-        class="bg-yellow-400 text-black px-4 py-3 font-semibold flex items-center space-x-2 transform transition-transform duration-300 hover:scale-105 hover:bg-yellow-500"
-      >
-        <img src="assets/img/spotify.png" alt="Spotify Icon" class="h-5 w-5" />
-        <span>Connect Spotify</span>
-      </button>
+    <!-- Image à droite -->
+    <div class="lg:w-1/2 flex justify-center mt-8 lg:mt-0 relative">
+      <!-- Grand image principale avec débordement à droite -->
+      <img
+        src="public/img/Image_hero.png"
+        alt="Main Image"
+        class="w-2/3 h-auto rounded-lg shadow-lg lg:transform lg:translate-x-1/4 transform transition duration-200 hover:scale-105"
+      />
     </div>
-  </div>
+
+    <!-- Grand espace en bas de la section -->
+    <div class="h-24 lg:h-48"></div>
+  </section>
 </template>
+
 <script setup>
 const { t } = useI18n();
-import mike from "../assets/img/pastor-mike.png";
-import dada from "../assets/img/deborah.png";
-import david from "../assets/img/david.png";
-import rosny from "../assets/img/rosny.png";
-
-// Déclaration des variables réactives
-const menuOpen = ref(false);
-const people = [
-  { name: "PASTOR MIKE KALAMBAY", role: "PODCASTMASTER", image: mike },
-  { name: "SISTER DEBORAH LUKALU", role: "GIRLSPOD", image: dada },
-  { name: "PASTOR DAVID IZE", role: "AMERICANOPOD", image: david },
-  { name: "SISTER ROSNY", role: "BARBARPOD", image: rosny },
-];
-
-// Méthode pour basculer l'état du menu
-const toggleMenu = (value) => {
-  menuOpen.value = value;
-};
-// Le Titre
 const title = ref(t("title.title"));
 const titles = ref(t("title.titles"));
+const welcome = ref(t("title.welcome"));
+const desc = ref(t("title.desc"));
 </script>

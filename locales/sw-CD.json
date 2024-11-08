@@ -1,0 +1,63 @@
+{
+  "menu": {
+    "home": "Nyumbani",
+    "news": "Habari",
+    "events": "Matukio",
+    "apps": "Programu",
+    "prod": "Bidhaa",
+    "about": "Kuhusu"
+  },
+  "title": {
+    "title": " Inaonyeshwa sasa!",
+    "titles": "Tushiriki ndoto",
+    "desc": "Inapatikana kwenye Apple Soundcast na Spotify",
+    "welcome": "Tuanzishe",
+    "about": "Maajabu Gospel ni lebo maarufu ya uzalishaji wa muziki, inayojumuisha mabalozi wanne wenye vipaji na maarufu: Mike Kalambay, Sandra Mbuyi, Deborah Lukalu, na Rosny Kayiba. Wasanii hawa, ambao ni miongoni mwa waimbaji bora wa injili katika DRC, wamechangia umaarufu wa lebo hiyo, hasa kupitia matukio kama Maajabu Talent, ambako wanashiriki kama makocha na majaji.",
+    "abouter": "Kupitia mashindano kama Maajabu Talent na Maajabu Rafiki, wameonyesha kujitolea kwao katika kukuza kizazi kijacho cha wasanii wa injili, wakiwapa jukwaa la kuangaza na kushiriki hekima waliyojipatia kwa miaka.",
+    "bouton_un": "ZAIDI"
+  },
+  "latest": {
+    "title": "Muziki wa Hivi Punde",
+    "btn": "Angalia Yote",
+    "btn_alt": "Angalia Singles Zaidi"
+  },
+  "champs": {
+    "title": "Mwito wa kiroho",
+    "btn": "Onyesha zaidi ya kategoria"
+  },
+  "album": {
+    "title": "Albamu",
+    "title_2": "Albamu Bora",
+    "desc": "Hapa kuna wapodkasti walio na wafuasi na watazamaji wengi. Fuata papo hapo ili kufuatilia podikasti",
+    "follow": "FUATA",
+    "followed": "UMEFUATA"
+  },
+  "sub": {
+    "title_1": "Kipindi kipya ",
+    "title_2": "kila wiki",
+    "desc": "Mabadiliko ya hivi punde moja kwa moja kwenye kikasha chako.",
+    "form": "Weka barua pepe yako...",
+    "label": "Jiandikishe"
+  },
+  "about": {
+    "one": "Mahali pa kujiendeleza",
+    "two": "Nyimbo Bora za Injili kwa Akili Zenye Moyo wa Kujifunza",
+    "three": "sisi ni mahali pazuri kwa ajili yako unayetaka kujikuza kupitia sauti. kwa wale ambao wana shughuli nyingi na hawana muda wa kusoma vitabu vya kujikuza.",
+    "about_icon_1": "Fikia lengo",
+    "about_icon_desc1": "Jifunze jinsi ya vidokezo na mbinu za kufikia malengo na ndoto zako",
+
+    "about_icon_2": "Mahusiano",
+    "about_icon_desc2": "Tunaongelea pia jinsi ya kudumisha na kutunza mahusiano mazuri na mwenzi wako",
+
+    "about_icon_3": "Kujenga tabia",
+    "about_icon_desc3": "tunatoa podikasti zenye vipindi vinavyozungumzia tabia",
+
+    "about_icon_4": "Kuendelea na kazi",
+    "about_icon_desc4": "Kuzungumzia safari ya kufikia kazi unayoitamani na mazingira yanayohusiana nayo"
+  },
+  "news": {
+    "btn1": "Hivi Punde",
+    "btn2": "Habari Zote",
+    "btn3": "Orodha Zangu za Kucheza"
+  }
+}

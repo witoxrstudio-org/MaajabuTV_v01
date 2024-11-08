@@ -62,7 +62,7 @@
       <button
         class="bg-yellow-400 text-black px-4 py-3 font-semibold flex items-center space-x-2 transform transition-transform duration-300 hover:scale-105 hover:bg-yellow-500"
       >
-        <img src="assets/img/spotify.png" alt="Spotify Icon" class="h-5 w-5" />
+        <img src="/img/spotify.png" alt="Spotify Icon" class="h-5 w-5" />
         <span>Connect Spotify</span>
       </button>
     </div>
@@ -70,21 +70,22 @@
 </template>
 <script setup>
 const { t } = useI18n();
-import mike from "../assets/img/pastor-mike.png";
-import dada from "../assets/img/deborah.png";
-import david from "../assets/img/david.png";
-import rosny from "../assets/img/rosny.png";
-
 // Déclaration des variables réactives
 const menuOpen = ref(false);
 const people = [
-  { name: "PASTOR MIKE KALAMBAY", role: "PODCASTMASTER", image: mike },
-  { name: "SISTER DEBORAH LUKALU", role: "GIRLSPOD", image: dada },
-  { name: "PASTOR DAVID IZE", role: "AMERICANOPOD", image: david },
-  { name: "SISTER ROSNY", role: "BARBARPOD", image: rosny },
+  {
+    name: "PASTOR MIKE KALAMBAY",
+    role: "PODCASTMASTER",
+    image: "/img/pastor-mike.png",
+  },
+  {
+    name: "SISTER DEBORAH LUKALU",
+    role: "GIRLSPOD",
+    image: "/img/deborah.png",
+  },
+  { name: "PASTOR DAVID IZE", role: "AMERICANOPOD", image: "/img/david.png" },
+  { name: "SISTER ROSNY", role: "BARBARPOD", image: "/img/rosny.png" },
 ];
-
-// Méthode pour basculer l'état du menu
 const toggleMenu = (value) => {
   menuOpen.value = value;
 };

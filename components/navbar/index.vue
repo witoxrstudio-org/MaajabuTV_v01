@@ -2,20 +2,20 @@
   <header
     class="rm-container w-full p-6 flex justify-between items-center z-50"
   >
-    <img src="~/assets/img/logo.png" alt="Maajabu Logo" class="h-24" />
+    <img src="/img/logo.png" alt="Maajabu Logo" class="h-24" />
 
     <!-- Menu Desktop -->
     <div class="flex-grow">
       <nav class="hidden md:flex justify-center font-semibold space-x-6">
-        <a
+        <NuxtLink
           v-for="(item, index) in menuItems"
           :key="index"
-          href="#"
-          class="hover:text-yellow-400 transition duration-300 hover:underline"
+          :to="localPath(item)"
+          class="hover:text-yellow-400 hover:underline transform transition duration-400 hover:scale-105"
           :class="{ 'text-yellow-500': index === 0 }"
         >
           {{ item }}
-        </a>
+        </NuxtLink>
       </nav>
     </div>
 
@@ -61,14 +61,14 @@
         v-if="menuOpen"
         class="fixed inset-0 bg-gradient-to-b from-black via-black/70 to-black/40 backdrop-blur-lg border border-gray-700 rounded-lg m-4 p-8 flex flex-col items-center space-y-6 flex-grow transition-transform duration-300 ease-out z-40"
       >
-        <a
+        <NuxtLink
           v-for="(item, index) in menuItems"
           :key="index"
-          href="#"
+          :to="localPath(item)"
           class="font-semibold hover:text-yellow-400 text-2xl transition-opacity duration-300 opacity-0 animate-fadeIn delay-{{ index * 100 }} hover:underline"
         >
           {{ item }}
-        </a>
+        </NuxtLink>
         <!-- LangSwitcher à l'intérieur du menu mobile -->
         <LangSwitcher class="block md:hidden mt-4" />
       </nav>
@@ -77,16 +77,14 @@
 </template>
 
 <script setup>
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const menuOpen = ref(false);
-
 // Méthode pour basculer l'état du menu
 const toggleMenu = () => {
   menuOpen.value = !menuOpen.value;
 };
-
-// Définir les éléments de menu en utilisant la fonction de traduction
-const menuItems = ref([
+// Les éléments de menu, calculés en fonction de la langue actuelle
+const menuItems = computed(() => [
   t("menu.home"),
   t("menu.news"),
   t("menu.events"),
@@ -94,4 +92,25 @@ const menuItems = ref([
   t("menu.prod"),
   t("menu.about"),
 ]);
+
+// Fonction de gestion des liens avec la langue actuelle
+const localPath = (item) => {
+  const prefix = locale.value === "en-UK" ? "" : `/${locale.value}`;
+  switch (item) {
+    case t("menu.home"):
+      return `${prefix}/`;
+    case t("menu.news"):
+      return `${prefix}/news`;
+    case t("menu.events"):
+      return `${prefix}/events`;
+    case t("menu.apps"):
+      return `${prefix}/apps`;
+    case t("menu.prod"):
+      return `${prefix}/products`;
+    case t("menu.about"):
+      return `${prefix}/about`;
+    default:
+      return `${prefix}/`;
+  }
+};
 </script>

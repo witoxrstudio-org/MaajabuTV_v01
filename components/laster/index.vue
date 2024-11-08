@@ -5,7 +5,11 @@
       <div class="flex flex-col md:flex-row justify-between">
         <!-- Logo Section -->
         <div class="w-full md:w-1/4 mb-4 md:mb-0 flex flex-col items-center">
-          <img src="/assets/img/logo.png" alt="Maajabu TV" class="mb-2 h-24 w-auto mx-auto" />
+          <img
+            src="/img/logo.png"
+            alt="Maajabu TV"
+            class="mb-2 h-24 w-auto mx-auto"
+          />
         </div>
 
         <!-- Links Section avec Grid -->

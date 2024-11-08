@@ -9,7 +9,7 @@
         <h2
           class="text-xl sm:text-3xl font-bold text-yellow-500 transform transition duration-200 hover:scale-105"
         >
-          Albums
+          {{ title }}
         </h2>
         <div
           class="w-1/3 sm:w-[35%] border-t border-gray-300 ml-4 mr-1 hidden sm:block"
@@ -19,75 +19,35 @@
 
       <div class="flex items-start gap-6 justify-between flex-wrap">
         <!-- Cards Section -->
-        <div class="flex flex-wrap gap-6 justify-center">
-          <!-- Card 1 -->
-          <div
-            class="bg-white w-full sm:w-48 md:w-56 shadow-md overflow-hidden transform transition duration-200 hover:scale-105 hover:text-yellow-500 hover:underline"
-          >
-            <img
-              src="assets/img/e1.png"
-              alt="Psaumes"
-              class="w-full h-52 object-cover"
-            />
-            <div class="p-3 transform transition duration-200 hover:scale-105">
-              <h3 class="text-md font-semibold">PSAUMES</h3>
-              <p class="text-gray-500 text-sm">Story Life • 102 Podcast</p>
-              <p class="text-gray-500 text-sm">535K Followers</p>
+        <div
+          class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center"
+        >
+          <baseSlideTransition v-for="(card, index) in cards" :key="index">
+            <div
+              class="bg-white w-full sm:w-48 md:w-56 shadow-md overflow-hidden transform transition duration-200 hover:scale-105"
+            >
+              <img
+                :src="card.image"
+                :alt="card.title"
+                class="w-full h-52 object-cover transition-all duration-300 hover:scale-110 hover:z-10 hover:shadow-lg"
+              />
+              <div class="p-3">
+                <h3 class="text-md font-semibold">{{ card.title }}</h3>
+                <p class="text-gray-500 text-sm">{{ card.description }}</p>
+                <p class="text-gray-500 text-sm">
+                  {{ card.followers }} Followers
+                </p>
+              </div>
+              <div>
+                <button
+                  :class="card.buttonStyle"
+                  class="mt-3 px-3 py-1.5 w-full text-sm"
+                >
+                  {{ card.buttonText }}
+                </button>
+              </div>
             </div>
-            <div>
-              <button
-                class="mt-3 bg-black text-yellow-500 px-3 py-1.5 w-full text-sm"
-              >
-                FOLLOWED
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div
-            class="bg-white w-full sm:w-48 md:w-56 shadow-md overflow-hidden transform transition duration-200 hover:scale-105 hover:text-yellow-500 hover:underline"
-          >
-            <img
-              src="assets/img/e2.png"
-              alt="Dayly Artist"
-              class="w-full h-52 object-cover"
-            />
-            <div class="p-3 transform transition duration-200 hover:scale-105">
-              <h3 class="text-md font-semibold">DAYLY ARTIST</h3>
-              <p class="text-gray-500 text-sm">Rimance • 94 Podcast</p>
-              <p class="text-gray-500 text-sm">412K Followers</p>
-            </div>
-            <div>
-              <button
-                class="mt-3 bg-white border border-black text-black px-3 py-1.5 w-full text-sm"
-              >
-                FOLLOW
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div
-            class="bg-white w-full sm:w-48 md:w-56 shadow-md overflow-hidden transform transition duration-200 hover:scale-105 hover:text-yellow-500 hover:underline"
-          >
-            <img
-              src="assets/img/e3.jpeg"
-              alt="Faveur Mukoko"
-              class="w-full h-52 object-cover transition-all duration-300 hover:scale-110 hover:z-10 hover:shadow-lg"
-            />
-            <div class="p-3">
-              <h3 class="text-md font-semibold">AMOUR INCONDITIONNEL</h3>
-              <p class="text-gray-500 text-sm">Comedy • 152 Podcast</p>
-              <p class="text-gray-500 text-sm">389 Followers</p>
-            </div>
-            <div>
-              <button
-                class="mt-3 bg-white border border-black text-black px-3 py-1.5 w-full text-sm"
-              >
-                FOLLOW
-              </button>
-            </div>
-          </div>
+          </baseSlideTransition>
         </div>
 
         <!-- Description & Navigation Section -->
@@ -96,13 +56,10 @@
           <h2
             class="text-2xl font-bold text-yellow-500 transform transition duration-200 hover:scale-105 hover:text-yellow-500 hover:underline"
           >
-            Top Albums
+            {{ title_2 }}
           </h2>
           <div class="text-black mt-2 space-y-1">
-            <p>Here are the podcasters</p>
-            <p>with the highest followers</p>
-            <p>and viewers. Immediately follow</p>
-            <p>to follow the podcast</p>
+            <p v-html="formattedDesc"></p>
           </div>
 
           <!-- Navigation Section -->
@@ -134,3 +91,43 @@
     </div>
   </section>
 </template>
+<script setup>
+const { t } = useI18n();
+const title = ref(t("album.title"));
+const title_2 = ref(t("album.title_2"));
+const desc = ref(t("album.desc"));
+const follow = ref(t("album.follow"));
+const followed = ref(t("album.followed"));
+
+const formatTextWithLineBreaks = (text) => {
+  return text.replace(/(.{23})/g, "$1<br>");
+};
+const formattedDesc = computed(() => formatTextWithLineBreaks(desc.value));
+const cards = [
+  {
+    image: "img/e1.png",
+    title: "PSAUMES",
+    description: "Story Life • 102 Podcast",
+    followers: "535K",
+    buttonText: "FOLLOWED",
+    buttonStyle: "bg-black text-yellow-500",
+  },
+  {
+    image: "img/e2.png",
+    title: "DAYLY ARTIST",
+    description: "Rimance • 94 Podcast",
+    followers: "412K",
+    buttonText: "FOLLOW",
+    buttonStyle: "bg-white border border-black text-black",
+  },
+  {
+    image: "img/e3.jpeg",
+    title: "AMOUR INCONDITIONNEL",
+    description: "Comedy • 152 Podcast",
+    followers: "389",
+    buttonText: "FOLLOW",
+    buttonStyle: "bg-white border border-black text-black",
+  },
+];
+</script>
+

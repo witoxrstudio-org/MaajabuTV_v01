@@ -11,19 +11,23 @@
     <div class="rm-wrapper">
       <Latest />
     </div>
+    <!-- chants Section -->
     <div class="rm-wrapper">
       <champs />
     </div>
-
+    <!-- brands Section -->
     <div class="bg-black">
       <brands />
     </div>
+    <!-- Albums Section -->
     <div>
       <albums />
     </div>
+    <!-- Subscription -->
     <div>
       <subscription />
     </div>
+    <!-- Footer -->
     <div>
       <laster />
     </div>

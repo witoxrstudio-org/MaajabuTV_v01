@@ -9,7 +9,56 @@
   },
 
   "title": {
-    "title": "Maintenant en cours de diffusion!",
-    "titles": "Partageons nos rêves"
+    "title": "Maintenant...",
+    "titles": "Partageons nos rêves",
+    "desc": "Disponible sur Apple Soundcast et Spotify",
+    "welcome": "Commençons...",
+    "about": "Maajabu Gospel est un label de production musicale bien connu, associé à quatre ambassadeurs talentueux et populaires : Mike Kalambay, Sandra Mbuyi, Deborah Lukalu et Rosny Kayiba. Ces artistes, qui figurent parmi les chanteurs gospel les plus cotés en RDC, ont contribué à la popularité du label, notamment à travers des événements comme Maajabu Talent, où ils jouent le rôle de coachs et de juges.",
+    "abouter": "À travers les concours Maajabu Talent ou encore Maajabu Rafiki, ils ont démontré leur dévouement à cultiver la prochaine génération d'artistes gospel, en leur offrant une plateforme pour briller et en partageant leur sagesse accumulée au fil des années.",
+    "bouton_un": "PLUS"
+  },
+  "latest": {
+    "title": "Dernières Musiques",
+    "btn": "Voir Tout",
+    "btn_alt": "Voir Plus de Singles"
+  },
+  "champs": {
+    "title": "Une invocation spirituelle",
+    "btn": "Voir plus de catégories"
+  },
+  "album": {
+    "title": "Album",
+    "title_2": "Meilleurs Albums",
+    "desc": "Voici les podcasteurs avec le plus grand nombre de followers et de vues. Suivez immédiatement pour ne rien manquer du podcast",
+    "follow": "SUIVRE",
+    "followed": "SUIVI"
+  },
+  "sub": {
+    "title_1": "Nouvel épisode ",
+    "title_2": "chaque semaine",
+    "desc": "Les dernières mises à jour directement dans votre boîte mail.",
+    "form": "Entrez votre email...",
+    "label": "S'abonner"
+  },
+  "about": {
+    "one": "Le lieu pour l'amélioration personnelle",
+    "two": "Les meilleures chansons gospel pour les esprits curieux",
+    "three": "Nous sommes le meilleur endroit pour vous qui voulez vous développer à travers la voix. Pour ceux d'entre vous qui sont occupés et n'ont pas le temps de lire des livres de développement personnel.",
+    "about_icon_1": "Atteindre l'objectif",
+    "about_icon_desc1": "Découvrez des conseils et astuces pour atteindre vos objectifs et vos rêves",
+
+    "about_icon_2": "Relation",
+    "about_icon_desc2": "Nous parlons également de la façon de maintenir et d'entretenir une bonne relation avec votre partenaire",
+
+    "about_icon_3": "Formation d'une habitude",
+    "about_icon_desc3": "Nous proposons des podcasts avec des épisodes qui parlent d'habitudes",
+
+    "about_icon_4": "Évoluer avec la carrière",
+    "about_icon_desc4": "Parler du parcours pour atteindre votre carrière de rêve et des circonstances qui l'entourent"
+  },
+  "news": {
+    "btn1": "Les Plus récents",
+    "btn2": "Toutes les nouveautés",
+    "btn3": "Mes Plays Lists"
   }
 }
