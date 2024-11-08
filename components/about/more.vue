@@ -1,5 +1,5 @@
 <template>
-  <section class="rm-container -pt-8 px-8 sm:px-6 md:px-8 relative mb-10">
+  <section class="rm-container sm:px-6 md:px-8 relative mb-10">
     <!-- Upper Section Title -->
     <img
       src="public/img/Titik-titik.png"

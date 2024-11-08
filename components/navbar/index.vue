@@ -93,11 +93,11 @@ const toggleMenu = () => {
 // Les éléments de menu, calculés en fonction de la langue actuelle
 const menuItems = computed(() => [
   t("menu.home"),
+  t("menu.about"),
   t("menu.news"),
   t("menu.events"),
   t("menu.apps"),
   t("menu.prod"),
-  t("menu.about"),
 ]);
 
 // Fonction de gestion des liens avec la langue actuelle

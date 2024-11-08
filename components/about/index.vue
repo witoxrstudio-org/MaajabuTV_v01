@@ -1,5 +1,5 @@
 <template>
-  <section class="rm-container bg-white py-16 px-8">
+  <section class="rm-container bg-white px-8">
     <!-- Upper Section Title -->
     <p
       class="text-yellow-500 text-2xl font-semibold flex items-center justify-center text-center"
