@@ -2,7 +2,7 @@
   <header
     class="rm-container w-full p-6 flex justify-between items-center z-50"
   >
-    <img src="~/assets/img/logo.png" alt="Maajabu Logo" class="h-24" />
+    <img src="/img/logo.png" alt="Maajabu Logo" class="h-24" />
 
     <!-- Menu Desktop -->
     <div class="flex-grow">
@@ -77,17 +77,12 @@
 </template>
 
 <script setup>
-import { useI18n } from "vue-i18n";
-import { ref, computed } from "vue";
-
 const { t, locale } = useI18n();
 const menuOpen = ref(false);
-
 // Méthode pour basculer l'état du menu
 const toggleMenu = () => {
   menuOpen.value = !menuOpen.value;
 };
-
 // Les éléments de menu, calculés en fonction de la langue actuelle
 const menuItems = computed(() => [
   t("menu.home"),
