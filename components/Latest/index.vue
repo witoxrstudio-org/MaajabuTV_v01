@@ -25,7 +25,7 @@
             <div class="flex-1 mt-4 md:mt-0 text-center md:text-left">
               <h3
                 class="text-base sm:text-lg font-semibold hover:text-yellow-500 hover:underline hover:translate-y-[-3px] transition-all duration-300">
-                <NuxtLink :to="`/Latest/${episode.id}`">
+                <NuxtLink :to="`/musics/${episode.id}`">
                   {{ episode.title }}</NuxtLink>
               </h3>
               <p
@@ -39,7 +39,7 @@
                     class="fas fa-headphones w-5 h-5 transition-transform duration-300 hover:text-yellow-500 hover:scale-110"></i>
                   <span class="text-xs sm:text-sm">{{
                     episode.stats.listen
-                    }}</span>
+                  }}</span>
                 </div>
 
                 <div class="flex items-center space-x-2">
@@ -47,7 +47,7 @@
                     class="fas fa-heart w-5 h-5 transition-transform duration-300 hover:text-red-500 hover:scale-110"></i>
                   <span class="text-xs sm:text-sm">{{
                     episode.stats.likes
-                    }}</span>
+                  }}</span>
                 </div>
 
                 <div class="flex items-center space-x-2">
@@ -55,7 +55,7 @@
                     class="fas fa-comment w-5 h-5 transition-transform duration-300 hover:text-blue-500 hover:scale-110"></i>
                   <span class="text-xs sm:text-sm">{{
                     episode.stats.comments
-                    }}</span>
+                  }}</span>
                 </div>
 
                 <div class="flex items-center space-x-2">
@@ -63,7 +63,7 @@
                     class="fas fa-download w-5 h-5 transition-transform duration-300 hover:text-green-500 hover:scale-110"></i>
                   <span class="text-xs sm:text-sm">{{
                     episode.stats.downloads
-                    }}</span>
+                  }}</span>
                 </div>
               </div>
             </div>

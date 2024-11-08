@@ -5,17 +5,11 @@
       <div class="flex flex-col md:flex-row justify-between">
         <!-- Logo Section -->
         <div class="w-full md:w-1/4 mb-4 md:mb-0 flex flex-col items-center">
-          <img
-            src="/assets/img/logo.png"
-            alt="Maajabu TV"
-            class="mb-2 h-24 w-auto mx-auto"
-          />
+          <img src="/assets/img/logo.png" alt="Maajabu TV" class="mb-2 h-24 w-auto mx-auto" />
         </div>
 
         <!-- Links Section avec Grid -->
-        <div
-          class="grid grid-cols-2 md:grid-cols-4 gap-8 w-full justify-items-center"
-        >
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 w-full justify-items-center">
           <!-- Product Links -->
           <div>
             <h4 class="text-yellow-400 font-semibold mb-2 text-sm">Product</h4>
@@ -65,14 +59,10 @@
                 <a href="#" class="hover:text-yellow-400 text-sm">Contact</a>
               </li>
               <li>
-                <a href="#" class="hover:text-yellow-400 text-sm"
-                  >Privacy Policy</a
-                >
+                <a href="#" class="hover:text-yellow-400 text-sm">Privacy Policy</a>
               </li>
               <li>
-                <a href="#" class="hover:text-yellow-400 text-sm"
-                  >Terms & Service</a
-                >
+                <a href="#" class="hover:text-yellow-400 text-sm">Terms & Service</a>
               </li>
             </ul>
           </div>
@@ -82,9 +72,7 @@
             <h4 class="text-yellow-400 font-semibold mb-2 text-sm">Other</h4>
             <ul class="space-y-1">
               <li>
-                <a href="#" class="hover:text-yellow-400 text-sm"
-                  >Documentation</a
-                >
+                <a href="#" class="hover:text-yellow-400 text-sm">Documentation</a>
               </li>
               <li>
                 <a href="#" class="hover:text-yellow-400 text-sm">Question</a>
@@ -93,9 +81,7 @@
                 <a href="#" class="hover:text-yellow-400 text-sm">Our team</a>
               </li>
               <li>
-                <a href="#" class="hover:text-yellow-400 text-sm"
-                  >Social Media</a
-                >
+                <a href="#" class="hover:text-yellow-400 text-sm">Social Media</a>
               </li>
             </ul>
           </div>

@@ -1,5 +1,4 @@
 <template>
-    <link rel="stylesheet" href="path/to/plyr.css" />
     <div>
         <div :class="{ 'backdrop-blur-sm': menuOpen }"
             class="relative bg-black text-white min-h-screen flex flex-col items-center">
@@ -8,9 +7,9 @@
             <!-- Video Player -->
 
             <div class="rm-container">
-                <div class="flex flex-row space-x-4">
+                <div class="flex justify-around space-x-4">
                     <!-- Première colonne -->
-                    <div class="w-full lg:w-8/12 sm:w-full">
+                    <div class="">
                         <!-- Contenu de la première colonne -->
                         <div class="w-full bg-none border-none">
                             <div class="flex flex-wrap">
@@ -62,7 +61,7 @@
 
                     </div>
                     <!-- Deuxième colonne  -->
-                    <div class="w-full sm:w-3/12">
+                    <div class="overflow-y-auto h-[430px] :hidden">
                         <!-- Contenu de la deuxième colonne -->
                         <h3 class="text-base mt-0 sm:text-lg font-semibold transition-all duration-300">
                             The same artist
@@ -97,53 +96,24 @@
                         </div>
                     </div>
                 </div>
-                <div class="container mt-4">
+                <div class="container mt-4 mb-5">
                     <h3 class="text-base mt-0 sm:text-lg font-semibold transition-all duration-300">
                         Recommandations
                     </h3>
+                    <!-- <SliderVideo/> -->
                     <div class="grid grid-cols-4 gap-4">
                         <div v-for="row in recommandations" :key="row.id">
-                            <a href="javascript:void(0)">
-                                <div class="relative flex flex-col my-2 rounded-lg">
-                                    <div class="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
-                                        <iframe class="w-full h-full" :src="row.link" title="{{ row.title }}"
-                                            frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                    </div>
-                                    <div class="p-3">
-                                        <div
-                                            class="mb-4 rounded-full bg-yellow-400 py-0.3 px-2.2 border border-transparent text-xs text-white transition-all shadow-sm w-20 text-center">
-                                            Popular
-                                        </div>
-                                        <h6 class="mb-1 text-light-800 text-xl font-semibold">
-                                            {{ row.title }}
-                                        </h6>
-                                    </div>
-
-                                    <div class="flex items-center justify-between p-3">
-                                        <div class="flex items-center">
-                                            <img alt="{{ row.artist }}" :src="row.photo"
-                                                class="relative inline-block h-8 w-8 rounded-full" />
-                                            <div class="flex flex-col ml-3 text-sm">
-                                                <span class="text-light-800 font-semibold">{{ row.artist }}</span>
-                                                <span class="text-yellow-400">
-                                                    Artist
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+                            <RecentVideo :videoTitle="row.title" :videoUrl="row.link" :videoPhoto="row.photo" />
                         </div>
-
                     </div>
                 </div>
             </div>
 
         </div>
 
-
+        <div>
+            <subscription />
+        </div>
         <div>
             <laster />
         </div>
@@ -161,7 +131,7 @@ const toggleMenu = (value) => {
 import pub1 from "../assets/img/a1.png";
 import pub2 from "../assets/img/a2.png";
 import pub3 from "../assets/img/a3.png";
-
+import RecentVideo from '@/components/Latest/RecentVideo.vue';
 
 const episodes = ref([
     {
