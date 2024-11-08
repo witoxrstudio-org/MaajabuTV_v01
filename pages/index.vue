@@ -8,7 +8,6 @@
       class="relative bg-black text-white min-h-screen flex flex-col items-center"
     >
       <!-- Barre de navigation -->
-
       <!-- HomePage -->
       <Home />
     </div>
