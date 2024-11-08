@@ -1,9 +1,6 @@
 <template>
   <section>
     <div>
-      <Navbar @toggleMenu="toggleMenu" class="text white" />
-    </div>
-    <div>
       <h1 class="text-3xl items-center justify-center">
         {{ route.params.id }}
       </h1>
@@ -16,7 +13,7 @@
             <img
               :src="currentPost.image"
               alt="Main Post Image"
-              class="w-full h-60 object-cover transform transition duration-400 hover:scale-105"
+              class="w-full h-60 object-cover transition-transform duration-400 ease-out transform hover:scale-105"
             />
             <div
               class="absolute top-2 left-2 bg-yellow-500 text-white px-2 py-1 text-sm rounded"
