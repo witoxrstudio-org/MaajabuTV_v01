@@ -21,6 +21,10 @@
     "btn": "Ver Todo",
     "btn_alt": "Ver Más Sencillos"
   },
+  "champs": {
+    "title": "Una invocación espiritual",
+    "btn": "Mostrar más categorías"
+  },
   "about": {
     "one": "El lugar para el auto-mejoramiento",
     "two": "Las mejores canciones gospel para mentes curiosas",

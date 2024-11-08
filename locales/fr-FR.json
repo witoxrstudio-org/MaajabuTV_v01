@@ -22,6 +22,10 @@
     "btn": "Voir Tout",
     "btn_alt": "Voir Plus de Singles"
   },
+  "champs": {
+    "title": "Une invocation spirituelle",
+    "btn": "Voir plus de catégories"
+  },
   "about": {
     "one": "Le lieu pour l'amélioration personnelle",
     "two": "Les meilleures chansons gospel pour les esprits curieux",

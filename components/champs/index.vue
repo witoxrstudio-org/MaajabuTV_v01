@@ -9,7 +9,7 @@
         <h2
           class="text-xl sm:text-3xl font-bold text-yellow-600 transform transition duration-200 hover:scale-105"
         >
-          Plus qu'un champs
+          {{ title }}
         </h2>
         <div
           class="w-1/3 sm:w-[35%] border-t border-gray-300 ml-4 mr-1 hidden sm:block"
@@ -24,7 +24,7 @@
       <!-- Carte à gauche -->
       <div class="relative h-96 overflow-hidden">
         <img
-          src="assets/img/c1.jpeg"
+          src="/img/c1.jpeg"
           alt="Music"
           class="object-cover w-full h-full transition-all duration-300 hover:scale-110 hover:z-10 hover:shadow-lg"
         />
@@ -42,7 +42,7 @@
         <!-- Carte du haut -->
         <div class="relative h-48 overflow-hidden">
           <img
-            src="assets/img/c2.jpg"
+            src="/img/c2.jpg"
             alt="Clip du jours"
             class="object-cover w-full h-full transition-all duration-300 hover:scale-110 hover:z-10 hover:shadow-lg"
           />
@@ -60,7 +60,7 @@
           <!-- Story Life -->
           <div class="relative w-1/2 h-48 overflow-hidden">
             <img
-              src="assets/img/c3.jpeg"
+              src="/img/c3.jpeg"
               alt="Story Life"
               class="object-cover w-full h-full transition-all duration-300 hover:scale-110 hover:z-10 hover:shadow-lg"
             />
@@ -75,7 +75,7 @@
           <!-- Concerts -->
           <div class="relative w-1/2 h-48 overflow-hidden">
             <img
-              src="assets/img/c4.jpg"
+              src="/img/c4.jpg"
               alt="Concerts"
               class="object-cover w-full h-full transition-all duration-300 hover:scale-110 hover:z-10 hover:shadow-lg"
             />
@@ -94,7 +94,7 @@
       <div class="relative h-96 flex flex-col">
         <div class="flex-1 relative overflow-hidden">
           <img
-            src="assets/img/c5.jpeg"
+            src="/img/c5.jpeg"
             alt="Music"
             class="object-cover w-full h-full transition-all duration-300 hover:scale-110 hover:z-10 hover:shadow-lg"
           />
@@ -113,7 +113,7 @@
           <span
             class="hover:text-yellow-200 transition duration-300 hover:scale-110"
           >
-            Afficher plus de catégorie
+            {{ btn }}
           </span>
         </button>
       </div>
@@ -122,64 +122,12 @@
 </template>
 
 <script setup>
-import pub1 from "../assets/img/a1.png";
-import pub2 from "../assets/img/a2.png";
-import pub3 from "../assets/img/a3.png";
-
-const episodes = ref([
-  {
-    id: 1,
-    artist: "SHEKINAH MPIANA",
-    duration: "46 min",
-    episode: 10,
-    title: "Désormais",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac neque sagittis...",
-    image: pub1,
-    stats: {
-      listen: "8.9K",
-      likes: "2.1K",
-      comments: "982K",
-      downloads: "284K",
-    },
-  },
-  {
-    id: 2,
-    artist: "LORD LOMBO",
-    duration: "34 min",
-    episode: 9,
-    title: "CELEBRONS HEBRON AUJOURD'HUI",
-    description:
-      "Quisque sit amet lacus luctus, ultrices eros ac, laoreet sem...",
-    image: pub2,
-    stats: {
-      listen: "24K",
-      likes: "3.2K",
-      comments: "5.6K",
-      downloads: "1.9K",
-    },
-  },
-  {
-    id: 3,
-    artist: "FAVEUR MUKOKO",
-    duration: "46 min",
-    episode: 8,
-    title: "Hakuniacaha",
-    description:
-      "Cras facilisis orci in arcu ullamcorper viverra. Maecenas vulputate risus...",
-    image: pub3,
-    stats: {
-      listen: "42K",
-      likes: "10K",
-      comments: "16K",
-      downloads: "5.1K",
-    },
-  },
-]);
+const { t } = useI18n();
+const title = ref(t("champs.title"));
+const btn = ref(t("champs.btn"));
 </script>
 
 <style scoped>
-/* Responsive grid */
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
