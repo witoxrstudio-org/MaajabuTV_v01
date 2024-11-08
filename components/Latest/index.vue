@@ -1,6 +1,8 @@
 <template>
   <div class="rm-container" id="rm-latest">
-    <div class="bg-white shadow-md px-10 py-6 max-w-6xl mx-auto w-full relative z-10 -mt-12 sm:-mt-16 lg:-mt-20">
+    <div
+      class="bg-white shadow-md px-10 py-6 max-w-6xl mx-auto w-full relative z-10 -mt-12 sm:-mt-16 lg:-mt-20"
+    >
       <div class="bg-white max-w-6xl mx-4 sm:mx-2 py-6 px-4">
         <!-- Section Header -->
 
@@ -14,36 +16,48 @@
           </h2>
 
           <!-- Ligne séparatrice centrée avec décalage vers le bouton -->
-          <div class="w-1/3 sm:w-[35%] border-t border-gray-300 ml-4 mr-1 hidden sm:block"></div>
+          <div
+            class="w-1/3 sm:w-[35%] border-t border-gray-300 ml-4 mr-1 hidden sm:block"
+          ></div>
 
           <button
             class="border border-yellow-500 text-yellow-500 px-3 sm:px-4 py-1 sm:py-2 text-xs sm:text-sm font-medium hover:bg-yellow-50 transform transition duration-200 hover:scale-105"
           >
             {{ btn }}
-
           </button>
         </div>
         <!-- Section Musics -->
         <div class="py-6 space-y-8">
-          <div v-for="episode in episodes" :key="episode.id"
-            class="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4 border-b pb-4">
-            <img :src="episode.image" alt="Album cover"
-              class="w-full h-64 sm:h-80 md:w-40 md:h-40 object-cover transition-transform duration-300 hover:scale-105" />
+          <div
+            v-for="episode in episodes"
+            :key="episode.id"
+            class="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4 border-b pb-4"
+          >
+            <img
+              :src="episode.image"
+              alt="Album cover"
+              class="w-full h-64 sm:h-80 md:w-40 md:h-40 object-cover transition-transform duration-300 hover:scale-105"
+            />
             <div class="flex-1 mt-4 md:mt-0 text-center md:text-left">
               <h3
-                class="text-base sm:text-lg font-semibold hover:text-yellow-500 hover:underline hover:translate-y-[-3px] transition-all duration-300">
+                class="text-base sm:text-lg font-semibold hover:text-yellow-500 hover:underline hover:translate-y-[-3px] transition-all duration-300"
+              >
                 <NuxtLink :to="`/musics/${episode.id}`">
-                  {{ episode.title }}</NuxtLink>
+                  {{ episode.title }}</NuxtLink
+                >
               </h3>
               <p
-                class="text-gray-600 mt-1 text-xs sm:text-sm hover:text-yellow-500 hover:underline hover:translate-y-[-3px] transition-all duration-300">
+                class="text-gray-600 mt-1 text-xs sm:text-sm hover:text-yellow-500 hover:underline hover:translate-y-[-3px] transition-all duration-300"
+              >
                 {{ episode.description }}
               </p>
               <div
-                class="grid grid-cols-4 gap-4 mt-3 text-gray-400 sm:grid-cols-4 sm:space-x-1 md:space-x-1 md:flex md:text-left">
+                class="grid grid-cols-4 gap-4 mt-3 text-gray-400 sm:grid-cols-4 sm:space-x-1 md:space-x-1 md:flex md:text-left"
+              >
                 <div class="flex items-center space-x-2">
                   <i
-                    class="fas fa-headphones w-5 h-5 transition-transform duration-300 hover:text-yellow-500 hover:scale-110"></i>
+                    class="fas fa-headphones w-5 h-5 transition-transform duration-300 hover:text-yellow-500 hover:scale-110"
+                  ></i>
                   <span class="text-xs sm:text-sm">{{
                     episode.stats.listen
                   }}</span>
@@ -51,7 +65,8 @@
 
                 <div class="flex items-center space-x-2">
                   <i
-                    class="fas fa-heart w-5 h-5 transition-transform duration-300 hover:text-red-500 hover:scale-110"></i>
+                    class="fas fa-heart w-5 h-5 transition-transform duration-300 hover:text-red-500 hover:scale-110"
+                  ></i>
                   <span class="text-xs sm:text-sm">{{
                     episode.stats.likes
                   }}</span>
@@ -59,7 +74,8 @@
 
                 <div class="flex items-center space-x-2">
                   <i
-                    class="fas fa-comment w-5 h-5 transition-transform duration-300 hover:text-blue-500 hover:scale-110"></i>
+                    class="fas fa-comment w-5 h-5 transition-transform duration-300 hover:text-blue-500 hover:scale-110"
+                  ></i>
                   <span class="text-xs sm:text-sm">{{
                     episode.stats.comments
                   }}</span>
@@ -67,7 +83,8 @@
 
                 <div class="flex items-center space-x-2">
                   <i
-                    class="fas fa-download w-5 h-5 transition-transform duration-300 hover:text-green-500 hover:scale-110"></i>
+                    class="fas fa-download w-5 h-5 transition-transform duration-300 hover:text-green-500 hover:scale-110"
+                  ></i>
                   <span class="text-xs sm:text-sm">{{
                     episode.stats.downloads
                   }}</span>
@@ -90,15 +107,16 @@
 
         <div class="mt-6 text-center">
           <button
-            class="relative inline-block px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base font-semibold text-yellow-400 bg-black border-2 border-black overflow-hidden group">
+            class="relative inline-block px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base font-semibold text-yellow-400 bg-black border-2 border-black overflow-hidden group"
+          >
             <span
               class="relative z-10 transition-all duration-300 ease-in-out group-hover:text-black group-hover:translate-x-0 transform translate-x-full"
             >
               {{ btn_alt }}
             </span>
             <div
-              class="absolute inset-0 w-full h-full bg-yellow-500 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out">
-            </div>
+              class="absolute inset-0 w-full h-full bg-yellow-500 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"
+            ></div>
           </button>
         </div>
       </div>

@@ -124,23 +124,7 @@
             </div>
           </div>
         </div>
-        <div class="container mt-4 mb-5">
-          <h3
-            class="text-base mt-0 sm:text-lg font-semibold transition-all duration-300"
-          >
-            Recommandations
-          </h3>
-          <!-- <SliderVideo/> -->
-          <div class="grid grid-cols-4 gap-4">
-            <div v-for="row in recommandations" :key="row.id">
-              <RecentVideo
-                :videoTitle="row.title"
-                :videoUrl="row.link"
-                :videoPhoto="row.photo"
-              />
-            </div>
-          </div>
-        </div>
+        <!-- cards -->
       </div>
     </div>
 
