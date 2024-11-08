@@ -94,7 +94,7 @@
               class="flex self-center items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-gray-100 rounded-full mt-10 hover:bg-yellow-300 hover:scale-105 transition-colors duration-300 ease-in-out"
             >
               <img
-                src="assets/img/frame 4.png"
+                src="/img/frame.png"
                 alt="Play icon"
                 class="w-6 h-6 sm:w-8 sm:h-8"
               />

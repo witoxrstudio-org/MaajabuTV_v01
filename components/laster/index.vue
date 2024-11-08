@@ -6,7 +6,7 @@
         <!-- Logo Section -->
         <div class="w-full md:w-1/4 mb-4 md:mb-0 flex flex-col items-center">
           <img
-            src="/assets/img/logo.png"
+            src="/img/logo.png"
             alt="Maajabu TV"
             class="mb-2 h-24 w-auto mx-auto"
           />
