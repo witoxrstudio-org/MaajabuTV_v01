@@ -30,7 +30,6 @@
     </div>
   </div>
 </template>
-
 <script setup>
 const { t } = useI18n();
 const title_1 = ref(t("sub.title_1"));
