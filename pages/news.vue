@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div class="rm-wrapper bg-black text-white">
+      <Navbar @toggleMenu="toggleMenu" />
+    </div>
     <div class="rm-wrapper">
       <all />
     </div>

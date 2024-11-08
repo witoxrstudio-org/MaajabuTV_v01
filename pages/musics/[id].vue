@@ -1,5 +1,8 @@
 <template>
   <section>
+    <div class="rm-wrapper bg-black text-white">
+      <Navbar @toggleMenu="toggleMenu" />
+    </div>
     <div>
       <h1 class="text-3xl items-center justify-center">
         {{ route.params.id }}

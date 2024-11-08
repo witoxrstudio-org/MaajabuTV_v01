@@ -1,7 +1,5 @@
 <template>
-  <header
-    class="rm-container w-full p-6 flex justify-between items-center z-50"
-  >
+  <header class="rm-container w-full flex justify-between items-center z-50">
     <img src="/img/logo.png" alt="Maajabu Logo" class="h-24" />
 
     <!-- Menu Desktop -->

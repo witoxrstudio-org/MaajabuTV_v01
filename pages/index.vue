@@ -1,11 +1,14 @@
 <template>
   <div>
+    <div class="rm-wrapper bg-black text-white">
+      <Navbar @toggleMenu="toggleMenu" />
+    </div>
     <div
       :class="{ 'backdrop-blur-sm': menuOpen }"
       class="relative bg-black text-white min-h-screen flex flex-col items-center"
     >
       <!-- Barre de navigation -->
-      <Navbar @toggleMenu="toggleMenu" />
+
       <!-- HomePage -->
       <Home />
     </div>
