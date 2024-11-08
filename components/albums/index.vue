@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-white px-10 py-6 max-w-6xl mx-auto w-full">
+  <section class="bg-white px-4 sm:px-10 py-6 max-w-6xl mx-auto w-full">
     <div class="bg-white max-w-6xl mx-4 sm:mx-2 py-6 px-4">
       <!-- Section Header -->
       <div class="flex items-center justify-between border-gray-200 py-4">

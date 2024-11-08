@@ -1,9 +1,11 @@
+import { defineProps } from 'vue';
+import { type } from '../../.nuxt/types/imports';
 <template>
   <div class="rm-container" id="rm-latest">
     <div
-      class="bg-white shadow-md px-10 py-6 max-w-6xl mx-auto w-full relative z-10 -mt-12 sm:-mt-16 lg:-mt-20"
+      class="bg-white md:shadow-md lg:px-10 py-6 max-w-6xl mx-auto w-full relative z-10 -mt-0 sm:-mt-16 lg:-mt-20"
     >
-      <div class="bg-white max-w-6xl mx-4 sm:mx-2 py-6 px-4">
+      <div class="bg-white max-w-6xl sm:mx-4 py-6 sm:px-4">
         <!-- Section Header -->
 
         <div
@@ -179,4 +181,16 @@ const episodes = ref([
     },
   },
 ]);
+
+defineProps({
+  musics: {
+    type: Array,
+    default: [
+      {
+        title: "Je suis un titre",
+        id: "2349495858",
+      },
+    ],
+  },
+});
 </script>
