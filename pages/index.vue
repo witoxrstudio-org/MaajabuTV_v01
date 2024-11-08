@@ -13,15 +13,15 @@
     <div class="rm-wrapper">
       <Latest />
     </div>
-      <!-- chants Section -->
+    <!-- chants Section -->
     <div class="rm-wrapper">
       <champs />
     </div>
-  <!-- brands Section -->
+    <!-- brands Section -->
     <div class="bg-black">
       <brands />
     </div>
-      <!-- Albums Section -->
+    <!-- Albums Section -->
     <div>
       <albums />
     </div>
