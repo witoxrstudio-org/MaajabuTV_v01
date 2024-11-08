@@ -9,7 +9,7 @@
         <h2
           class="text-xl sm:text-3xl font-bold text-yellow-500 transform transition duration-200 hover:scale-105"
         >
-          Albums
+          {{ title }}
         </h2>
         <div
           class="w-1/3 sm:w-[35%] border-t border-gray-300 ml-4 mr-1 hidden sm:block"
@@ -56,13 +56,10 @@
           <h2
             class="text-2xl font-bold text-yellow-500 transform transition duration-200 hover:scale-105 hover:text-yellow-500 hover:underline"
           >
-            Top Albums
+            {{ title_2 }}
           </h2>
           <div class="text-black mt-2 space-y-1">
-            <p>Here are the podcasters</p>
-            <p>with the highest followers</p>
-            <p>and viewers. Immediately follow</p>
-            <p>to follow the podcast</p>
+            <p v-html="formattedDesc"></p>
           </div>
 
           <!-- Navigation Section -->
@@ -95,6 +92,17 @@
   </section>
 </template>
 <script setup>
+const { t } = useI18n();
+const title = ref(t("album.title"));
+const title_2 = ref(t("album.title_2"));
+const desc = ref(t("album.desc"));
+const follow = ref(t("album.follow"));
+const followed = ref(t("album.followed"));
+
+const formatTextWithLineBreaks = (text) => {
+  return text.replace(/(.{23})/g, "$1<br>");
+};
+const formattedDesc = computed(() => formatTextWithLineBreaks(desc.value));
 const cards = [
   {
     image: "img/e1.png",

@@ -25,6 +25,20 @@
     "title": "Una invocación espiritual",
     "btn": "Mostrar más categorías"
   },
+  "album": {
+    "title": "Álbum",
+    "title_2": "Álbumes Principales",
+    "desc": "Aquí están los podcasters con más seguidores y espectadores. Síguelos de inmediato para no perderte el podcast",
+    "follow": "SEGUIR",
+    "followed": "SIGUIENDO"
+  },
+  "sub": {
+    "title_1": "Nuevo episodio ",
+    "title_2": "cada semana",
+    "desc": "Las últimas actualizaciones directamente en tu bandeja de entrada.",
+    "form": "Ingresa tu correo electrónico...",
+    "label": "Suscribirse"
+  },
   "about": {
     "one": "El lugar para el auto-mejoramiento",
     "two": "Las mejores canciones gospel para mentes curiosas",

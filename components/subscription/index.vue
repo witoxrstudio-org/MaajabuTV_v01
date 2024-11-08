@@ -7,24 +7,24 @@
       <h1
         class="text-3xl font-bold mb-4 transform transition duration-200 hover:scale-105 hover:text-yellow-500 hover:underline"
       >
-        Nouvel épisode<br />chaque semaine
+        {{ title_1 }}<br />{{ title_2 }}
       </h1>
       <p
         class="text-gray-300 mb-6 transform transition duration-200 hover:scale-105"
       >
-        Les dernières mises à jour directement dans votre boîte de réception.
+        {{ desc }}
       </p>
       <div class="relative max-w-lg mx-auto">
         <input
           type="text"
           class="w-full bg-black py-4 pl-3 pr-16 border border-gray-300"
-          placeholder="Entrez du texte"
+          :placeholder="form"
         />
         <button
           type="submit"
           class="absolute inset-y-0 right-0 px-4 py-2 m-2 bg-yellow-500 text-white hover: focus:outline-none transition-all duration-300 hover:scale-110"
         >
-          Subscribe
+          {{ label }}
         </button>
       </div>
     </div>
@@ -32,6 +32,12 @@
 </template>
 
 <script setup>
+const { t } = useI18n();
+const title_1 = ref(t("sub.title_1"));
+const title_2 = ref(t("sub.title_2"));
+const desc = ref(t("sub.desc"));
+const form = ref(t("sub.form"));
+const label = ref(t("sub.label"));
 </script>
 
 <style>

@@ -26,6 +26,20 @@
     "title": "Une invocation spirituelle",
     "btn": "Voir plus de catégories"
   },
+  "album": {
+    "title": "Album",
+    "title_2": "Meilleurs Albums",
+    "desc": "Voici les podcasteurs avec le plus grand nombre de followers et de vues. Suivez immédiatement pour ne rien manquer du podcast",
+    "follow": "SUIVRE",
+    "followed": "SUIVI"
+  },
+  "sub": {
+    "title_1": "Nouvel épisode ",
+    "title_2": "chaque semaine",
+    "desc": "Les dernières mises à jour directement dans votre boîte mail.",
+    "form": "Entrez votre email...",
+    "label": "S'abonner"
+  },
   "about": {
     "one": "Le lieu pour l'amélioration personnelle",
     "two": "Les meilleures chansons gospel pour les esprits curieux",

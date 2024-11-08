@@ -25,6 +25,20 @@
     "title": "A spiritual invocation",
     "btn": "Show more categories"
   },
+  "album": {
+    "title": "Album",
+    "title_2": "Top Albums",
+    "desc": "Here are the podcasters with the highest followers and viewers. Immediately follow to follow the podcast",
+    "follow": "FOLLOW",
+    "followed": "FOLLOWED"
+  },
+  "sub": {
+    "title_1": "New episode ",
+    "title_2": "every week",
+    "desc": "The latest updates straight to your inbox.",
+    "form": "Enter your email...",
+    "label": "Subscribe"
+  },
   "about": {
     "one": "The place for self-improvement",
     "two": "Best Gospel Songs for Curious Minds",
