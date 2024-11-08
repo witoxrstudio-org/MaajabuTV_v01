@@ -1,4 +1,3 @@
-
 <template>
   <div
     class="flex items-center justify-center bg-pattern bg-cover bg-center p-4"
