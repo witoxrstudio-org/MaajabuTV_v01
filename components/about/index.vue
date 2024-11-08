@@ -41,11 +41,15 @@
             Maajabu
           </h3>
         </div>
-        <div class="transform transition duration-400 hover:scale-105">
-          <p class="text-gray-700 font-roboto text-justify">
+        <div>
+          <p
+            class="text-gray-700 font-roboto text-justify transform transition duration-400 hover:scale-105 hover:underline"
+          >
             {{ about }}
           </p>
-          <p class="text-gray-700 font-roboto text-justify">
+          <p
+            class="text-gray-700 font-roboto text-justify transform transition duration-400 hover:scale-105 hover:underline"
+          >
             {{ abouter }}
           </p>
         </div>
