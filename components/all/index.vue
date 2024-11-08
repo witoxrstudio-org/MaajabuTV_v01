@@ -1,5 +1,5 @@
 <template>
-  <section class="rm-container bg-white py-16 px-8 relative">
+  <section class="rm-container bg-white relative">
     <img
       src="public/img/wellness.png"
       alt="Filigrane"
