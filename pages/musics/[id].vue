@@ -16,16 +16,17 @@
             <img
               :src="currentPost.image"
               alt="Main Post Image"
-              class="w-full h-60 object-cover"
+              class="w-full h-60 object-cover transform transition duration-400 hover:scale-105"
             />
             <div
               class="absolute top-2 left-2 bg-yellow-500 text-white px-2 py-1 text-sm rounded"
             >
               {{ currentPost.category }}
             </div>
-            <div class="p-4">
+            <div class="p-4 hover:underline">
               <h2 class="text-2xl font-bold">{{ currentPost.title }}</h2>
               <p class="text-gray-600 mt-2">{{ currentPost.description }}</p>
+              <hr />
               <button class="mt-4 px-4 py-2 bg-yellow-500 text-white">
                 Read More
               </button>
@@ -51,20 +52,20 @@
 
         <!-- Sidebar avec les posts récents -->
         <div class="w-full md:w-1/3">
-          <h3 class="font-semibold text-lg mb-4">Recent Posts</h3>
+          <h3 class="font-bold text-lg mb-4 text-yblack p-2">Recent Posts</h3>
           <ul class="space-y-4">
             <li
               v-for="(post, index) in posts"
               :key="index"
               @click="setCurrentPost(post)"
-              class="flex items-center cursor-pointer space-x-3 p-3 hover:bg-gray-100 rounded-lg transition"
+              class="flex items-center cursor-pointer space-x-3 p-3 hover:bg-yellow-100 rounded-lg transition"
             >
               <img
                 :src="post.image"
                 alt="Post Thumbnail"
-                class="w-16 h-16 object-cover rounded-lg"
+                class="w-16 h-16 object-cover rounded-lg transform transition duration-400 hover:scale-105"
               />
-              <div>
+              <div class="hover:underline">
                 <h4 class="text-sm font-semibold">{{ post.title }}</h4>
                 <p class="text-xs text-gray-500">{{ post.date }}</p>
               </div>
@@ -72,6 +73,15 @@
           </ul>
         </div>
       </div>
+    </div>
+    <div class="mt-10">
+      <subscription />
+    </div>
+    <div>
+      <laster />
+    </div>
+    <div class="bg-stone-800 rm-wrapper">
+      <lasterUnderLaster />
     </div>
   </section>
 </template>
@@ -93,16 +103,19 @@ const posts = ref([
     title: "Amelia’s Journey of Resilience and Joy",
     image: "/img/r3.png",
     date: "Jun 12, 2024",
+    category: "Impact Stories",
   },
   {
     title: "The Never-Ending Need for Lifesavers",
     image: "/img/r4.png",
     date: "Sep 30, 2024",
+    category: "Impact Stories",
   },
   {
     title: "Pairing Insulin With Brighter Tomorrows",
     image: "/img/r5.png",
     date: "Aug 22, 2024",
+    category: "Impact Stories",
   },
 ]);
 
