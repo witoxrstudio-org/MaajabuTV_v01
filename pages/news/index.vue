@@ -50,8 +50,9 @@
                 <div
                   class="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
                 >
-                  <div
+                  <NuxtLink
                     v-for="(card, index) in cards"
+                    :to="`/news/${card.id}`"
                     :key="index"
                     class="bg-white shadow-md overflow-hidden max-w-xs mx-auto hover:text-yellow-500 hover:underline cursor-pointer"
                     @click="addToPlaylist(card)"
@@ -70,7 +71,7 @@
                         <p class="text-gray-700 text-xs">{{ card.channel }}</p>
                       </div>
                     </div>
-                  </div>
+                  </NuxtLink>
                 </div>
               </div>
             </baseSlideTransition>
@@ -79,8 +80,9 @@
                 <div
                   class="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
                 >
-                  <div
+                  <NuxtLink
                     v-for="(card, index) in cards"
+                    :to="`/news/${card.id}`"
                     :key="index"
                     class="bg-white shadow-md overflow-hidden max-w-xs mx-auto hover:text-yellow-500 hover:underline cursor-pointer"
                     @click="addToPlaylist(card)"
@@ -99,7 +101,7 @@
                         <p class="text-gray-700 text-xs">{{ card.channel }}</p>
                       </div>
                     </div>
-                  </div>
+                  </NuxtLink>
                 </div>
               </div>
             </baseZoomTransition>
@@ -114,8 +116,9 @@
                   class="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
                   v-else
                 >
-                  <div
+                  <NuxtLink
                     v-for="(card, index) in playlists"
+                    :to="`/news/${card.id}`"
                     :key="index"
                     class="bg-white shadow-md overflow-hidden max-w-xs mx-auto"
                   >
@@ -133,7 +136,7 @@
                         <p class="text-gray-700 text-xs">{{ card.channel }}</p>
                       </div>
                     </div>
-                  </div>
+                  </NuxtLink>
                 </div>
               </div>
             </baseSlideTransition>
@@ -172,54 +175,63 @@ function setActiveButton(button) {
 }
 const cards = [
   {
+    id: "1",
     image: "/img/r1.png",
     title: "News Title Lorem Ipsum Dolor Sit Amet",
     time: "1 Hour Ago",
     channel: "Maajabu TV",
   },
   {
+    id: "2",
     image: "/img/r2.png",
     title: "News Title Lorem Ipsum Dolor Sit Amet",
     time: "1 Hour Ago",
     channel: "Maajabu TV",
   },
   {
+    id: "3",
     image: "/img/r3.png",
     title: "News Title Lorem Ipsum Dolor Sit Amet",
     time: "1 Hour Ago",
     channel: "Maajabu TV",
   },
   {
+    id: "4",
     image: "/img/r4.png",
     title: "News Title Lorem Ipsum Dolor Sit Amet",
     time: "1 Hour Ago",
     channel: "Maajabu TV",
   },
   {
+    id: "5",
     image: "/img/r5.png",
     title: "News Title Lorem Ipsum Dolor Sit Amet",
     time: "1 Hour Ago",
     channel: "Maajabu TV",
   },
   {
+    id: "6",
     image: "/img/r6.png",
     title: "News Title Lorem Ipsum Dolor Sit Amet",
     time: "1 Hour Ago",
     channel: "Maajabu TV",
   },
   {
+    id: "7",
     image: "/img/r7.png",
     title: "News Title Lorem Ipsum Dolor Sit Amet",
     time: "1 Hour Ago",
     channel: "Maajabu TV",
   },
   {
+    id: "8",
     image: "/img/r8.png",
     title: "News Title Lorem Ipsum Dolor Sit Amet",
     time: "1 Hour Ago",
     channel: "Maajabu TV",
   },
 ];
+
 const playlists = ref([]);
 function addToPlaylist(card) {
   // Évite d'ajouter des duplications dans la playlist
