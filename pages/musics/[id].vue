@@ -3,48 +3,66 @@
     <div class="rm-wrapper bg-black text-white">
       <Navbar @toggleMenu="toggleMenu" />
     </div>
+
     <div>
       <h1 class="text-3xl items-center justify-center">
-        {{ route.params.id }}
+        <!-- {{ route.params.id }} -->
+        Coolest
       </h1>
     </div>
-    <div class="rm-container">
+    <div class="relative">
+      <!-- Image en filigrane en haut à gauche -->
+      <img
+        src="/img/Titik-titik.png"
+        class="absolute top-0 left-0 opacity-20 w-32 h-32"
+        alt="Watermark Top Left"
+      />
+
+      <!-- Image en filigrane en bas à droite -->
+    </div>
+    <div class="rm-container relative border-l border-r">
       <div class="flex flex-col md:flex-row md:space-x-4">
         <!-- Contenu principal -->
         <div class="w-full md:w-2/3 mb-4 md:mb-0">
-          <div class="relative bg-white shadow-lg overflow-hidden">
+          <div class="relative bg-white shadow-lg overflow-hidden rounded-lg">
             <img
               :src="currentPost.image"
               alt="Main Post Image"
-              class="w-full h-60 object-cover transition-transform duration-400 ease-out transform hover:scale-105"
+              class="w-full h-72 md:h-80 lg:h-96 object-cover transition-transform duration-300 ease-out transform hover:scale-105"
             />
             <div
-              class="absolute top-2 left-2 bg-yellow-500 text-white px-2 py-1 text-sm rounded"
+              class="absolute top-2 left-2 bg-yellow-500 text-white px-3 py-1 text-sm rounded"
             >
               {{ currentPost.category }}
             </div>
-            <div class="p-4 hover:underline">
-              <h2 class="text-2xl font-bold">{{ currentPost.title }}</h2>
-              <p class="text-gray-600 mt-2">{{ currentPost.description }}</p>
-              <hr />
-              <button class="mt-4 px-4 py-2 bg-yellow-500 text-white">
-                Read More
-              </button>
+            <div class="p-6">
+              <h2 class="text-2xl font-bold mb-2">{{ currentPost.title }}</h2>
+              <p class="text-gray-600 mb-4">{{ currentPost.description }}</p>
+              <hr class="mb-4" />
               <div
-                class="flex items-center text-sm text-gray-500 mt-2 space-x-4"
+                class="flex flex-col md:flex-row md:justify-between md:items-center mt-4 space-y-4 md:space-y-0"
               >
-                <span class="flex items-center space-x-1">
-                  <i class="fas fa-star"></i>
-                  <span>sticky post</span>
-                </span>
-                <span class="flex items-center space-x-1">
-                  <i class="fas fa-user"></i>
-                  <span>{{ currentPost.author }}</span>
-                </span>
-                <span class="flex items-center space-x-1">
-                  <i class="fas fa-calendar"></i>
-                  <span>{{ currentPost.date }}</span>
-                </span>
+                <button
+                  class="px-4 py-2 bg-yellow-500 text-white transition-transform hover:scale-105 self-center md:self-auto"
+                >
+                  Read More
+                </button>
+                <div
+                  class="flex flex-row items-center text-sm text-gray-500 space-x-4"
+                >
+                  <span class="flex items-center space-x-1">
+                    <i class="fas fa-star"></i>
+                    <span>sticky post</span>
+                  </span>
+                  <span class="flex items-center space-x-1">
+                    <i class="fas fa-user"></i>
+                    <span>{{ currentPost.author }}</span>
+                  </span>
+                  <span class="flex items-center space-x-1">
+                    <i class="fas fa-calendar"></i>
+                    <span>{{ currentPost.date }}</span>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -58,12 +76,12 @@
               v-for="(post, index) in posts"
               :key="index"
               @click="setCurrentPost(post)"
-              class="flex items-center cursor-pointer space-x-3 p-3 hover:bg-yellow-100 rounded-lg transition"
+              class="flex items-center cursor-pointer space-x-3 p-3 shadow-md hover:bg-yellow-100 rounded-lg transition-transform hover:scale-105"
             >
               <img
                 :src="post.image"
                 alt="Post Thumbnail"
-                class="w-16 h-16 object-cover rounded-lg transform transition duration-400 hover:scale-105"
+                class="w-16 h-16 object-cover rounded-lg transition-transform duration-300 hover:scale-105"
               />
               <div class="hover:underline">
                 <h4 class="text-sm font-semibold">{{ post.title }}</h4>
@@ -73,6 +91,13 @@
           </ul>
         </div>
       </div>
+    </div>
+    <div class="relative">
+      <img
+        src="/img/Titik-titik.png"
+        class="absolute bottom-0 right-0 opacity-20 w-32 h-32"
+        alt="Watermark Bottom Right"
+      />
     </div>
     <div class="mt-10">
       <subscription />
