@@ -3,23 +3,6 @@
     <div class="rm-wrapper bg-black text-white">
       <Navbar @toggleMenu="toggleMenu" />
     </div>
-
-    <div>
-      <h1 class="text-3xl items-center justify-center">
-        <!-- {{ route.params.id }} -->
-        Coolest
-      </h1>
-    </div>
-    <div class="relative">
-      <!-- Image en filigrane en haut à gauche -->
-      <img
-        src="/img/Titik-titik.png"
-        class="absolute top-0 left-0 opacity-20 w-32 h-32"
-        alt="Watermark Top Left"
-      />
-
-      <!-- Image en filigrane en bas à droite -->
-    </div>
     <div class="rm-container relative border-l border-r">
       <div class="flex flex-col md:flex-row md:space-x-4">
         <!-- Contenu principal -->
@@ -92,13 +75,7 @@
         </div>
       </div>
     </div>
-    <div class="relative">
-      <img
-        src="/img/Titik-titik.png"
-        class="absolute bottom-0 right-0 opacity-20 w-32 h-32"
-        alt="Watermark Bottom Right"
-      />
-    </div>
+
     <div class="mt-10">
       <subscription />
     </div>
