@@ -14,7 +14,8 @@
       </p>
       <h1 class="text-4xl font-bold">Meet the hosts and get the insight</h1>
     </div>
-    <hr />
+    <hr class="border-t-1 border-gray-500" />
+
     <!-- Hosts Section -->
     <div
       class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 justify-items-center"
@@ -29,8 +30,14 @@
           :alt="host.title"
           class="mb-2 mx-auto transition-transform duration-300 hover:scale-105"
         />
-        <h3 class="text-xl font-semibold">{{ host.title }}</h3>
-        <p class="text-gray-400 text-sm mb-2">{{ host.description }}</p>
+        <h3
+          class="text-xl font-bold text-yellow-500 transition-transform duration-300 hover:scale-105"
+        >
+          {{ host.title }}
+        </h3>
+        <p class="text-gray-400 text-sm mb-2 hover:underline">
+          {{ host.description }}
+        </p>
         <div class="flex justify-center space-x-2 text-yellow-500 p-2">
           <i class="fab fa-spotify"></i>
           <i class="fab fa-soundcloud"></i>
