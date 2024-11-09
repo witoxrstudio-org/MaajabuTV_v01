@@ -42,14 +42,10 @@
           </h3>
         </div>
         <div>
-          <p
-            class="text-gray-700 font-roboto text-justify transform transition duration-400 hover:scale-105 hover:underline"
-          >
+          <p class="text-gray-700 font-roboto text-justify hover:underline">
             {{ about }}
           </p>
-          <p
-            class="text-gray-700 font-roboto text-justify transform transition duration-400 hover:scale-105 hover:underline"
-          >
+          <p class="text-gray-700 font-roboto text-justify hover:underline">
             {{ abouter }}
           </p>
         </div>

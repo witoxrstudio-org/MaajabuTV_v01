@@ -17,6 +17,7 @@
     "@primevue/themes": "^4.2.1",
     "nuxt": "^3.13.2",
     "primevue": "^4.2.1",
+    "spinkit": "^2.0.1",
     "swiper": "^11.1.14",
     "vue": "latest",
     "vue-router": "latest"

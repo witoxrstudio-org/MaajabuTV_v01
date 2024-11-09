@@ -14,13 +14,8 @@
           <img
             :src="card.image"
             alt="Singer"
-            class="rounded-lg w-full h-auto"
+            class="rounded-lg w-full h-auto transition-all duration-300 hover:scale-110"
           />
-
-          <!-- Texte en bas à droite -->
-          <span class="absolute bottom-4 right-4 text-xs text-gray-300">
-            Mavako Music
-          </span>
 
           <!-- Image vectorielle en haut à gauche -->
           <img
@@ -46,7 +41,7 @@
             Your Playlist, Your Mood
           </h2>
 
-          <p class="text-gray-300 mb-6">
+          <p class="text-gray-300 mb-6 hover:underline">
             Symphra brings you closer to the music you love, with personalized
             playlists, high-quality sound, and endless tracks to match every
             moment. Dive into a world where every beat, song, and melody is
@@ -71,7 +66,7 @@
         </div>
       </div>
       <div v-else>
-        <p class="text-center text-gray-500">Chargement...</p>
+        <p class="text-center text-xl text-gray-500 font-bold">Chargement...</p>
       </div>
     </div>
     <div class="bg-stone-800">
