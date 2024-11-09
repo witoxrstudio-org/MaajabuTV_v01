@@ -79,6 +79,9 @@
         <p class="text-center text-xl text-gray-500 font-bold">Chargement...</p>
       </div>
     </div>
+    <div class="bg-black">
+      <hosted />
+    </div>
     <div class="bg-stone-800">
       <brands />
     </div>
