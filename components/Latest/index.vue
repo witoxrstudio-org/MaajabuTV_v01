@@ -1,5 +1,3 @@
-import { defineProps } from 'vue';
-import { type } from '../../.nuxt/types/imports';
 <template>
   <div class="rm-container" id="rm-latest">
     <div
