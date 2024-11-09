@@ -20,11 +20,12 @@
             class="w-1/3 sm:w-[35%] border-t border-gray-300 ml-4 mr-1 hidden sm:block"
           ></div>
 
-          <button
-            class="border border-yellow-500 text-yellow-500 px-3 sm:px-4 py-1 sm:py-2 text-xs sm:text-sm font-medium hover:bg-yellow-50 transform transition duration-200 hover:scale-105"
+          <NuxtLink
+            to="/news"
+            class="border border-yellow-500 text-yellow-500 px-3 sm:px-4 py-1 sm:py-2 text-xs sm:text-sm font-medium hover:bg-yellow-50 transform transition duration-200 hover:scale-105 inline-block text-center"
           >
             {{ btn }}
-          </button>
+          </NuxtLink>
         </div>
         <!-- Section Musics -->
         <div class="py-6 space-y-8">
@@ -106,7 +107,8 @@
         </div>
 
         <div class="mt-6 text-center">
-          <button
+          <NuxtLink
+            to="/news"
             class="relative inline-block px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base font-semibold text-yellow-400 bg-black border-2 border-black overflow-hidden group"
           >
             <span
@@ -117,7 +119,7 @@
             <div
               class="absolute inset-0 w-full h-full bg-yellow-500 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"
             ></div>
-          </button>
+          </NuxtLink>
         </div>
       </div>
     </div>
