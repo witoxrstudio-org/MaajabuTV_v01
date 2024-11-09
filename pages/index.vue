@@ -15,10 +15,12 @@
     <div class="rm-wrapper">
       <Latest />
     </div>
+
     <!-- chants Section -->
     <div class="rm-wrapper">
       <champs />
     </div>
+
     <!-- brands Section -->
     <div class="bg-black">
       <brands />

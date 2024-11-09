@@ -3,80 +3,86 @@
     <div class="rm-wrapper bg-black text-white">
       <Navbar @toggleMenu="toggleMenu" />
     </div>
-    <div class="rm-container relative border-l border-r">
-      <div class="flex flex-col md:flex-row md:space-x-4">
-        <!-- Contenu principal -->
-        <div class="w-full md:w-2/3 mb-4 md:mb-0">
-          <div class="relative bg-white shadow-lg overflow-hidden rounded-lg">
-            <img
-              :src="currentPost.image"
-              alt="Main Post Image"
-              class="w-full h-72 md:h-80 lg:h-96 object-cover transition-transform duration-300 ease-out transform hover:scale-105"
-            />
-            <div
-              class="absolute top-2 left-2 bg-yellow-500 text-white px-3 py-1 text-sm rounded"
-            >
-              {{ currentPost.category }}
+    <div class="flex justify-center items-center bg-black text-white py-12">
+      <div
+        class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+        v-if="episode"
+      >
+        <!-- Section de l'image -->
+        <div class="relative mb-8 md:mb-0">
+          <!-- Image principale de l'épisode -->
+          <img
+            :src="episode.image"
+            :alt="episode.title"
+            class="rounded-lg w-full h-auto transition-all duration-300 hover:grayscale"
+          />
+
+          <!-- Image vectorielle en haut à gauche -->
+          <img
+            src="/img/vector_4.png"
+            alt="Vector 4"
+            class="absolute top-2 left-2 sm:-top-4 sm:-left-4 md:w-16 md:h-16 w-10 h-10 z-10"
+          />
+
+          <!-- Image vectorielle en bas à droite -->
+          <img
+            src="/img/vector_3.png"
+            alt="Vector 3"
+            class="absolute bottom-2 right-2 sm:-bottom-4 sm:-right-4 md:w-16 md:h-16 w-10 h-10 z-10"
+          />
+        </div>
+
+        <!-- Section de texte -->
+        <div class="text-center md:text-left">
+          <h1 class="text-yellow-500 text-3xl md:text-4xl font-bold mb-2">
+            {{ episode.title }}
+          </h1>
+          <h2 class="text-lg md:text-xl font-semibold mb-4">
+            {{ episode.artist }}
+          </h2>
+          <p class="text-gray-300 mb-6 hover:underline">
+            {{ episode.description }}
+          </p>
+
+          <!-- Statistiques -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 text-center"
+          >
+            <div>
+              <p class="text-2xl md:text-3xl font-bold">
+                {{ episode.stats.listen }}
+              </p>
+              <p class="text-gray-400 text-xs md:text-sm">Écoutes</p>
             </div>
-            <div class="p-6">
-              <h2 class="text-2xl font-bold mb-2">{{ currentPost.title }}</h2>
-              <p class="text-gray-600 mb-4">{{ currentPost.description }}</p>
-              <hr class="mb-4" />
-              <div
-                class="flex flex-col md:flex-row md:justify-between md:items-center mt-4 space-y-4 md:space-y-0"
-              >
-                <button
-                  class="px-4 py-2 bg-yellow-500 text-white transition-transform hover:scale-105 self-center md:self-auto"
-                >
-                  Read More
-                </button>
-                <div
-                  class="flex flex-row items-center text-sm text-gray-500 space-x-4"
-                >
-                  <span class="flex items-center space-x-1">
-                    <i class="fas fa-star"></i>
-                    <span>sticky post</span>
-                  </span>
-                  <span class="flex items-center space-x-1">
-                    <i class="fas fa-user"></i>
-                    <span>{{ currentPost.author }}</span>
-                  </span>
-                  <span class="flex items-center space-x-1">
-                    <i class="fas fa-calendar"></i>
-                    <span>{{ currentPost.date }}</span>
-                  </span>
-                </div>
-              </div>
+            <div>
+              <p class="text-2xl md:text-3xl font-bold">
+                {{ episode.stats.likes }}
+              </p>
+              <p class="text-gray-400 text-xs md:text-sm">J'aime</p>
+            </div>
+            <div>
+              <p class="text-2xl md:text-3xl font-bold">
+                {{ episode.stats.comments }}
+              </p>
+              <p class="text-gray-400 text-xs md:text-sm">Commentaires</p>
+            </div>
+            <div>
+              <p class="text-2xl md:text-3xl font-bold">
+                {{ episode.stats.downloads }}
+              </p>
+              <p class="text-gray-400 text-xs md:text-sm">Téléchargements</p>
             </div>
           </div>
         </div>
-
-        <!-- Sidebar avec les posts récents -->
-        <div class="w-full md:w-1/3">
-          <h3 class="font-bold text-lg mb-4 text-yblack p-2">Recent Posts</h3>
-          <ul class="space-y-4">
-            <li
-              v-for="(post, index) in posts"
-              :key="index"
-              @click="setCurrentPost(post)"
-              class="flex items-center cursor-pointer space-x-3 p-3 shadow-md hover:bg-yellow-100 rounded-lg transition-transform hover:scale-105"
-            >
-              <img
-                :src="post.image"
-                alt="Post Thumbnail"
-                class="w-16 h-16 object-cover rounded-lg transition-transform duration-300 hover:scale-105"
-              />
-              <div class="hover:underline">
-                <h4 class="text-sm font-semibold">{{ post.title }}</h4>
-                <p class="text-xs text-gray-500">{{ post.date }}</p>
-              </div>
-            </li>
-          </ul>
-        </div>
+      </div>
+      <div v-else>
+        <p class="text-center text-xl text-gray-500 font-bold">Chargement...</p>
       </div>
     </div>
-
-    <div class="mt-10">
+    <div class="bg-stone-800">
+      <brands />
+    </div>
+    <div>
       <subscription />
     </div>
     <div>
@@ -89,41 +95,89 @@
 </template>
 
 <script setup>
-import { useRoute } from "#app";
-const route = useRoute();
-const posts = ref([
+import { useRoute, useRouter } from "vue-router";
+import { ref, onMounted } from "vue";
+
+const episodes = ref([
   {
-    title: "Our Giving Champions: Thank You to Our Top Supporters",
-    image: "/img/r2.png",
-    category: "Impact Stories",
+    id: 1,
+    artist: "SHEKINAH MPIANA",
+    duration: "46 min",
+    episode: 10,
+    title: "Désormais",
     description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    author: "merklove",
-    date: "Jun 12, 2024",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac neque sagittis...",
+    image: "/img/a1.png",
+    stats: {
+      listen: "8.9K",
+      likes: "2.1K",
+      comments: "982K",
+      downloads: "284K",
+    },
   },
   {
-    title: "Amelia’s Journey of Resilience and Joy",
-    image: "/img/r3.png",
-    date: "Jun 12, 2024",
-    category: "Impact Stories",
+    id: 2,
+    artist: "LORD LOMBO",
+    duration: "34 min",
+    episode: 9,
+    title: "CELEBRONS HEBRON AUJOURD'HUI",
+    description:
+      "Quisque sit amet lacus luctus, ultrices eros ac, laoreet sem...",
+    image: "/img/a2.png",
+    stats: {
+      listen: "24K",
+      likes: "3.2K",
+      comments: "5.6K",
+      downloads: "1.9K",
+    },
   },
   {
-    title: "The Never-Ending Need for Lifesavers",
-    image: "/img/r4.png",
-    date: "Sep 30, 2024",
-    category: "Impact Stories",
-  },
-  {
-    title: "Pairing Insulin With Brighter Tomorrows",
-    image: "/img/r5.png",
-    date: "Aug 22, 2024",
-    category: "Impact Stories",
+    id: 3,
+    artist: "FAVEUR MUKOKO",
+    duration: "46 min",
+    episode: 8,
+    title: "Hakuniacaha",
+    description:
+      "Cras facilisis orci in arcu ullamcorper viverra. Maecenas vulputate risus...",
+    image: "/img/a3.png",
+    stats: {
+      listen: "42K",
+      likes: "10K",
+      comments: "16K",
+      downloads: "5.1K",
+    },
   },
 ]);
 
-const currentPost = ref(posts.value[0]);
+const route = useRoute();
+const router = useRouter();
+const episode = ref(null);
 
-const setCurrentPost = (post) => {
-  currentPost.value = post;
-};
+// Fonction pour obtenir l'épisode par ID
+function fetchEpisodeById(id) {
+  episode.value = episodes.value.find((e) => e.id === id);
+  if (!episode.value) {
+    router.push("/404");
+  }
+}
+
+onMounted(() => {
+  const id = parseInt(route.params.id);
+  fetchEpisodeById(id);
+});
+
+// Ajouter à la playlist
+const playlists = ref([]);
+
+function addToPlaylist(episode) {
+  if (!playlists.value.some((item) => item.title === episode.title)) {
+    playlists.value.push(episode);
+  }
+}
 </script>
+
+<style scoped>
+button {
+  transition: background-color 0.3s, color 0.3s;
+}
+</style>

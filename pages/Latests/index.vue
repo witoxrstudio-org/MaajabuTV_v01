@@ -5,7 +5,6 @@
     >
       <div class="bg-white max-w-6xl sm:mx-4 py-6 sm:px-4">
         <!-- Section Header -->
-
         <div
           class="flex items-center justify-between border-b border-gray-200 py-4"
         >
@@ -179,16 +178,4 @@ const episodes = ref([
     },
   },
 ]);
-
-defineProps({
-  musics: {
-    type: Array,
-    default: [
-      {
-        title: "Je suis un titre",
-        id: "2349495858",
-      },
-    ],
-  },
-});
 </script>
