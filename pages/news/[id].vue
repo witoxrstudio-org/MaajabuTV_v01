@@ -3,41 +3,81 @@
     <div class="rm-wrapper bg-black text-white">
       <Navbar @toggleMenu="toggleMenu" />
     </div>
-    <div class="rm-container bg-white relative">
-      <div v-if="card">
-        <!-- Image de la carte -->
-        <img
-          :src="card.image"
-          alt="Image de la carte"
-          class="w-full h-72 object-cover mb-6"
-        />
+    <div class="flex justify-center items-center bg-black text-white py-12">
+      <div
+        class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+        v-if="card"
+      >
+        <!-- Section de l'image -->
+        <div class="relative mb-8 md:mb-0">
+          <!-- Image principale de la carte -->
+          <img
+            :src="card.image"
+            alt="Singer"
+            class="rounded-lg w-full h-auto"
+          />
 
-        <!-- Titre de la carte -->
-        <h1 class="text-center text-3xl font-bold mb-4">{{ card.title }}</h1>
+          <!-- Texte en bas à droite -->
+          <span class="absolute bottom-4 right-4 text-xs text-gray-300">
+            Mavako Music
+          </span>
 
-        <!-- Informations supplémentaires -->
-        <p class="text-center text-gray-500 text-sm mb-2">
-          Publié il y a : {{ card.time }}
-        </p>
-        <p class="text-center text-gray-700 text-base mb-4">
-          Chaîne : {{ card.channel }}
-        </p>
+          <!-- Image vectorielle en haut à gauche -->
+          <img
+            src="/img/vector_4.png"
+            alt="Vector 4"
+            class="absolute top-2 left-2 sm:-top-4 sm:-left-4 md:w-16 md:h-16 w-10 h-10 z-10"
+          />
 
-        <!-- Bouton pour ajouter à la playlist -->
-        <div class="flex justify-center">
-          <button
-            @click="addToPlaylist(card)"
-            class="bg-yellow-500 text-white px-6 py-2 rounded transition duration-300 hover:bg-yellow-600"
-          >
-            Ajouter à la playlist
-          </button>
+          <!-- Image vectorielle en bas à droite -->
+          <img
+            src="/img/vector_3.png"
+            alt="Vector 3"
+            class="absolute bottom-2 right-2 sm:-bottom-4 sm:-right-4 md:w-16 md:h-16 w-10 h-10 z-10"
+          />
+        </div>
+
+        <!-- Section de texte -->
+        <div class="text-center md:text-left">
+          <h1 class="text-yellow-500 text-3xl md:text-4xl font-bold mb-2">
+            {{ card.title }}
+          </h1>
+          <h2 class="text-lg md:text-xl font-semibold mb-4">
+            Your Playlist, Your Mood
+          </h2>
+
+          <p class="text-gray-300 mb-6">
+            Symphra brings you closer to the music you love, with personalized
+            playlists, high-quality sound, and endless tracks to match every
+            moment. Dive into a world where every beat, song, and melody is
+            tailored just for you.
+          </p>
+
+          <!-- Statistiques -->
+          <div class="grid grid-cols-3 gap-4 text-center">
+            <div>
+              <p class="text-2xl md:text-3xl font-bold">50M+</p>
+              <p class="text-gray-400 text-xs md:text-sm">Tracks Streamed</p>
+            </div>
+            <div>
+              <p class="text-2xl md:text-3xl font-bold">10M+</p>
+              <p class="text-gray-400 text-xs md:text-sm">Listeners</p>
+            </div>
+            <div>
+              <p class="text-2xl md:text-3xl font-bold">12M+</p>
+              <p class="text-gray-400 text-xs md:text-sm">Downloads App</p>
+            </div>
+          </div>
         </div>
       </div>
       <div v-else>
         <p class="text-center text-gray-500">Chargement...</p>
       </div>
     </div>
-    <div class="mt-10">
+    <div class="bg-stone-800">
+      <brands />
+    </div>
+    <div>
       <subscription />
     </div>
     <div>
