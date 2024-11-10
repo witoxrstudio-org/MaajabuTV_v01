@@ -94,11 +94,3 @@
     </form>
   </div>
 </template>
-
-<script setup>
-// You can add your JavaScript logic here if needed
-</script>
-
-<style scoped>
-/* Additional custom styles if needed */
-</style>
