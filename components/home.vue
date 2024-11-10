@@ -23,7 +23,7 @@
 
       <!-- Description -->
       <p
-        class="text-lg text-gray-300 transform transition duration-200 hover:scale-105 hover:text-yellow-500 hover:underline"
+        class="text-lg text-gray-300 transform transition duration-200 hover:scale-105 hover:text-yellow-500 "
       >
         {{ desc }}
       </p>

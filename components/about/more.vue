@@ -25,7 +25,7 @@
       </h1>
 
       <p
-        class="text-black leading-relaxed text-center px-4 sm:px-0 transform transition duration-500 hover:scale-105 hover:underline"
+        class="text-black leading-relaxed text-center px-4 sm:px-0 transform transition duration-500 hover:scale-105 "
       >
         {{ three }}
       </p>
@@ -35,7 +35,7 @@
       <!-- Première Colonne -->
       <div class="flex flex-col justify-between space-y-12">
         <div
-          class="flex flex-col items-center text-center transform transition duration-200 hover:scale-105 hover:underline"
+          class="flex flex-col items-center text-center transform transition duration-200 hover:scale-105 "
         >
           <div class="text-yellow-500 text-4xl mb-2">
             <img src="public/img/z1.png" alt="Trophy" class="w-12 h-auto" />
@@ -44,7 +44,7 @@
           <p>{{ about_icon_desc1 }}</p>
         </div>
         <div
-          class="flex flex-col items-center text-center transform transition duration-200 hover:scale-105 hover:underline"
+          class="flex flex-col items-center text-center transform transition duration-200 hover:scale-105 "
         >
           <div class="text-yellow-500 text-4xl mb-2">
             <img src="public/img/z2.png" alt="Trophy" class="w-12 h-auto" />
@@ -74,7 +74,7 @@
       <!-- Troisième Colonne -->
       <div class="flex flex-col justify-between space-y-12">
         <div
-          class="flex flex-col items-center text-center transform transition duration-200 hover:scale-105 hover:underline"
+          class="flex flex-col items-center text-center transform transition duration-200 hover:scale-105 "
         >
           <div class="text-yellow-500 text-4xl mb-2">
             <img src="public/img/z3.png" alt="Trophy" class="w-12 h-auto" />
@@ -83,7 +83,7 @@
           <p>{{ about_icon_desc3 }}</p>
         </div>
         <div
-          class="flex flex-col items-center text-center transform transition duration-200 hover:scale-105 hover:underline"
+          class="flex flex-col items-center text-center transform transition duration-200 hover:scale-105 "
         >
           <div class="text-yellow-500 text-4xl mb-2">
             <img src="public/img/z4.png" alt="Trophy" class="w-12 h-auto" />

@@ -2,21 +2,17 @@
   <!-- Titre principal responsive -->
   <div>
     <div class="mb-4">
-      <h1
-        class="text-3xl sm:text-5xl md:text-2xl lg:text-6xl font-bold mt-6 text-center"
-      >
+      <h1 class="mt-6 text-center text-3xl font-bold sm:text-5xl md:text-2xl lg:text-6xl">
         {{ title }}
       </h1>
-      <h1
-        class="text-3xl sm:text-5xl md:text-2xl lg:text-6xl font-bold mt-6 text-center"
-      >
+      <h1 class="mt-6 text-center text-3xl font-bold sm:text-5xl md:text-2xl lg:text-6xl">
         {{ titles }}
       </h1>
     </div>
 
     <!-- La Section des cartes avec gradient et filigrane -->
     <div
-      class="relative flex flex-wrap justify-center mt-10 space-y-4 sm:space-y-0 sm:space-x-0 md:space-x-4"
+      class="relative mt-10 flex flex-wrap justify-center space-y-4 sm:space-x-0 sm:space-y-0 md:space-x-4"
     >
       <div
         v-for="(person, index) in people"
@@ -31,11 +27,11 @@
         <img
           :src="person.image"
           :alt="person.name"
-          class="w-full h-full object-cover opacity-75 transition-all duration-300 hover:scale-110"
+          class="h-full w-full object-cover opacity-75 transition-all duration-300 hover:scale-110"
         />
         <div class="absolute bottom-0 p-4 text-left text-white">
           <h2
-            class="text-lg md:text-xl font-semibold hover:underline hover:text-yellow-300 transition duration-300"
+            class="text-lg font-semibold transition duration-300 hover:text-yellow-300 md:text-xl"
           >
             {{ person.name }}
           </h2>
@@ -45,7 +41,7 @@
 
       <!-- "MAAJABU TV" -->
       <div
-        class="absolute opacity-20 font-bold text-white font-train"
+        class="font-train absolute font-bold text-white opacity-20"
         :class="[
           'flex items-center justify-start text-4xl md:text-7xl',
           'left-1 md:left-0',
@@ -58,9 +54,9 @@
     </div>
 
     <!-- Bouton Spotify -->
-    <div class="mt-10 mb-36 flex justify-center">
+    <div class="mb-36 mt-10 flex justify-center">
       <button
-        class="bg-yellow-400 text-black px-4 py-3 font-semibold flex items-center space-x-2 transform transition-transform duration-300 hover:scale-105 hover:bg-yellow-500"
+        class="flex transform items-center space-x-2 bg-yellow-400 px-4 py-3 font-semibold text-black transition-transform duration-300 hover:scale-105 hover:bg-yellow-500"
       >
         <img src="/img/spotify.png" alt="Spotify Icon" class="h-5 w-5" />
         <span>Connect Spotify</span>

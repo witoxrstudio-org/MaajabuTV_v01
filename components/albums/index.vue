@@ -54,7 +54,7 @@
         <!-- Description & Navigation Section -->
         <div class="flex flex-col justify-center text-center mt-8 sm:mt-0">
           <h2
-            class="text-2xl font-bold text-yellow-500 transform transition duration-200 hover:scale-105 hover:text-yellow-500 hover:underline"
+            class="text-2xl font-bold text-yellow-500 transform transition duration-200 hover:scale-105 hover:text-yellow-500 "
           >
             {{ title_2 }}
           </h2>

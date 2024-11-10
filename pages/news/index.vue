@@ -54,7 +54,7 @@
                     v-for="(card, index) in cards"
                     :to="`/news/${card.id}`"
                     :key="index"
-                    class="bg-white shadow-md overflow-hidden max-w-xs mx-auto hover:text-yellow-500 hover:underline cursor-pointer"
+                    class="bg-white shadow-md overflow-hidden max-w-xs mx-auto hover:text-yellow-500  cursor-pointer"
                     @click="addToPlaylist(card)"
                   >
                     <img
@@ -84,7 +84,7 @@
                     v-for="(card, index) in cards"
                     :to="`/news/${card.id}`"
                     :key="index"
-                    class="bg-white shadow-md overflow-hidden max-w-xs mx-auto hover:text-yellow-500 hover:underline cursor-pointer"
+                    class="bg-white shadow-md overflow-hidden max-w-xs mx-auto hover:text-yellow-500  cursor-pointer"
                     @click="addToPlaylist(card)"
                   >
                     <img

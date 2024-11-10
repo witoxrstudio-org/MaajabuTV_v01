@@ -35,7 +35,7 @@
         >
           {{ host.title }}
         </h3>
-        <p class="text-gray-400 text-sm mb-2 hover:underline">
+        <p class="text-gray-400 text-sm mb-2 ">
           {{ host.description }}
         </p>
         <div class="flex justify-center space-x-2 text-yellow-500 p-2">

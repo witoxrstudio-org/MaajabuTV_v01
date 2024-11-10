@@ -19,14 +19,14 @@
 
           <!-- Image vectorielle en haut à gauche -->
           <img
-            src="/img/vector_4.png"
+            src="/img/Vector_4.png"
             alt="Vector 4"
             class="absolute top-2 left-2 sm:-top-4 sm:-left-4 md:w-16 md:h-16 w-10 h-10 z-10"
           />
 
           <!-- Image vectorielle en bas à droite -->
           <img
-            src="/img/vector_3.png"
+            src="/img/Vector_3.png"
             alt="Vector 3"
             class="absolute bottom-2 right-2 sm:-bottom-4 sm:-right-4 md:w-16 md:h-16 w-10 h-10 z-10"
           />
@@ -37,15 +37,12 @@
           <h1 class="text-yellow-500 text-3xl md:text-4xl font-bold mb-2">
             {{ card.title }}
           </h1>
-          <h2 class="text-lg md:text-xl font-semibold mb-4">
-            Your Playlist, Your Mood
-          </h2>
+          <h2 class="text-lg md:text-xl font-semibold mb-4">Your Playlist, Your Mood</h2>
 
-          <p class="text-gray-300 mb-6 hover:underline">
-            Symphra brings you closer to the music you love, with personalized
-            playlists, high-quality sound, and endless tracks to match every
-            moment. Dive into a world where every beat, song, and melody is
-            tailored just for you.
+          <p class="text-gray-300 mb-6 ">
+            Symphra brings you closer to the music you love, with personalized playlists,
+            high-quality sound, and endless tracks to match every moment. Dive into a
+            world where every beat, song, and melody is tailored just for you.
           </p>
 
           <!-- Statistiques -->

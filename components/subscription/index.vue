@@ -4,7 +4,7 @@
   >
     <div class="text-center text-yellow-500 p-8 rounded-lg max-w-md w-full">
       <h1
-        class="text-3xl font-bold mb-4 transform transition duration-200 hover:scale-105 hover:text-yellow-500 hover:underline"
+        class="text-3xl font-bold mb-4 transform transition duration-200 hover:scale-105 hover:text-yellow-500 "
       >
         {{ title_1 }}<br />{{ title_2 }}
       </h1>

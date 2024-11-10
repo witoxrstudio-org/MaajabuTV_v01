@@ -3,9 +3,9 @@
     <div class="rm-wrapper bg-black text-white">
       <Navbar @toggleMenu="toggleMenu" />
     </div>
-    <div class="flex justify-center items-center bg-black text-white py-12">
+    <div class="flex items-center justify-center bg-black py-12 text-white">
       <div
-        class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+        class="mx-auto grid max-w-4xl grid-cols-1 items-center gap-8 md:grid-cols-2"
         v-if="episode"
       >
         <!-- Section de l'image -->
@@ -14,69 +14,69 @@
           <img
             :src="episode.image"
             :alt="episode.title"
-            class="rounded-lg w-full h-auto transition-all duration-300 hover:grayscale"
+            class="h-auto w-full rounded-lg transition-all duration-300 hover:grayscale"
           />
 
           <!-- Image vectorielle en haut à gauche -->
           <img
-            src="/img/vector_4.png"
+            src="/img/Vector_4.png"
             alt="Vector 4"
-            class="absolute top-2 left-2 sm:-top-4 sm:-left-4 md:w-16 md:h-16 w-10 h-10 z-10"
+            class="absolute left-2 top-2 z-10 h-10 w-10 sm:-left-4 sm:-top-4 md:h-16 md:w-16"
           />
 
           <!-- Image vectorielle en bas à droite -->
           <img
-            src="/img/vector_3.png"
+            src="/img/Vector_3.png"
             alt="Vector 3"
-            class="absolute bottom-2 right-2 sm:-bottom-4 sm:-right-4 md:w-16 md:h-16 w-10 h-10 z-10"
+            class="absolute bottom-2 right-2 z-10 h-10 w-10 sm:-bottom-4 sm:-right-4 md:h-16 md:w-16"
           />
         </div>
 
         <!-- Section de texte -->
         <div class="text-center md:text-left">
-          <h1 class="text-yellow-500 text-3xl md:text-4xl font-bold mb-2">
+          <h1 class="mb-2 text-3xl font-bold text-yellow-500 md:text-4xl">
             {{ episode.title }}
           </h1>
-          <h2 class="text-lg md:text-xl font-semibold mb-4">
+          <h2 class="mb-4 text-lg font-semibold md:text-xl">
             {{ episode.artist }}
           </h2>
-          <p class="text-gray-300 mb-6 hover:underline">
+          <p class="mb-6 text-gray-300 ">
             {{ episode.description }}
           </p>
 
           <!-- Statistiques -->
           <div
-            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 text-center"
+            class="grid grid-cols-1 gap-2 text-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
           >
             <div>
-              <p class="text-2xl md:text-3xl font-bold">
+              <p class="text-2xl font-bold md:text-3xl">
                 {{ episode.stats.listen }}
               </p>
-              <p class="text-gray-400 text-xs md:text-sm">Écoutes</p>
+              <p class="text-xs text-gray-400 md:text-sm">Écoutes</p>
             </div>
             <div>
-              <p class="text-2xl md:text-3xl font-bold">
+              <p class="text-2xl font-bold md:text-3xl">
                 {{ episode.stats.likes }}
               </p>
-              <p class="text-gray-400 text-xs md:text-sm">J'aime</p>
+              <p class="text-xs text-gray-400 md:text-sm">J'aime</p>
             </div>
             <div>
-              <p class="text-2xl md:text-3xl font-bold">
+              <p class="text-2xl font-bold md:text-3xl">
                 {{ episode.stats.comments }}
               </p>
-              <p class="text-gray-400 text-xs md:text-sm">Commentaires</p>
+              <p class="text-xs text-gray-400 md:text-sm">Commentaires</p>
             </div>
             <div>
-              <p class="text-2xl md:text-3xl font-bold">
+              <p class="text-2xl font-bold md:text-3xl">
                 {{ episode.stats.downloads }}
               </p>
-              <p class="text-gray-400 text-xs md:text-sm">Téléchargements</p>
+              <p class="text-xs text-gray-400 md:text-sm">Téléchargements</p>
             </div>
           </div>
         </div>
       </div>
       <div v-else>
-        <p class="text-center text-xl text-gray-500 font-bold">Chargement...</p>
+        <p class="text-center text-xl font-bold text-gray-500">Chargement...</p>
       </div>
     </div>
     <div class="bg-black">
@@ -91,7 +91,7 @@
     <div>
       <laster />
     </div>
-    <div class="bg-stone-800 rm-wrapper">
+    <div class="rm-wrapper bg-stone-800">
       <lasterUnderLaster />
     </div>
   </section>
@@ -124,8 +124,7 @@ const episodes = ref([
     duration: "34 min",
     episode: 9,
     title: "CELEBRONS HEBRON AUJOURD'HUI",
-    description:
-      "Quisque sit amet lacus luctus, ultrices eros ac, laoreet sem...",
+    description: "Quisque sit amet lacus luctus, ultrices eros ac, laoreet sem...",
     image: "/img/a2.png",
     stats: {
       listen: "24K",

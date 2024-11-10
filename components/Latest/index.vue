@@ -41,14 +41,14 @@
             />
             <div class="flex-1 mt-4 md:mt-0 text-center md:text-left">
               <h3
-                class="text-base sm:text-lg font-semibold hover:text-yellow-500 hover:underline hover:translate-y-[-3px] transition-all duration-300"
+                class="text-base sm:text-lg font-semibold hover:text-yellow-500  hover:translate-y-[-3px] transition-all duration-300"
               >
                 <NuxtLink :to="`/musics/${episode.id}`">
                   {{ episode.title }}</NuxtLink
                 >
               </h3>
               <p
-                class="text-gray-600 mt-1 text-xs sm:text-sm hover:text-yellow-500 hover:underline hover:translate-y-[-3px] transition-all duration-300"
+                class="text-gray-600 mt-1 text-xs sm:text-sm hover:text-yellow-500  hover:translate-y-[-3px] transition-all duration-300"
               >
                 {{ episode.description }}
               </p>

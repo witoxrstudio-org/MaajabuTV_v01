@@ -9,7 +9,7 @@
           v-for="(item, index) in menuItems"
           :key="index"
           :to="localPath(item)"
-          class="hover:text-yellow-400 hover:underline transform transition duration-400 hover:scale-105"
+          class="hover:text-yellow-400  transform transition duration-400 hover:scale-105"
           :class="{ 'text-yellow-500': isActiveLink(localPath(item)) }"
         >
           {{ item }}
@@ -64,7 +64,7 @@
           v-for="(item, index) in menuItems"
           :key="index"
           :to="localPath(item)"
-          class="font-semibold hover:text-yellow-400 text-2xl transition-opacity duration-300 opacity-0 animate-fadeIn delay-{{ index * 100 }} hover:underline"
+          class="font-semibold hover:text-yellow-400 text-2xl transition-opacity duration-300 opacity-0 animate-fadeIn delay-{{ index * 100 }} "
           :class="{ 'text-yellow-500': isActiveLink(localPath(item)) }"
         >
           {{ item }}
