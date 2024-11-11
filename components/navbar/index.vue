@@ -100,7 +100,7 @@ const menuItems = computed(() => [
   t("menu.home"),
   t("menu.about"),
   t("menu.tv"),
-  t("menu.submit"),
+  t("menu.submit-video"),
   t("menu.news"),
   t("menu.events"),
 ]);
@@ -117,8 +117,8 @@ const localPath = (item) => {
       return `${prefix}/events`;
     case t("menu.tv"):
       return `${prefix}/tv`;
-    case t("menu.sumbit"):
-      return `${prefix}/submit`;
+    case t("menu.submit-video"):
+      return `${prefix}/submit-video`;
     case t("menu.about"):
       return `${prefix}/about`;
     default:
