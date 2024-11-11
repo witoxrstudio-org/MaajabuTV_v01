@@ -1,18 +1,13 @@
 <template>
   <div>
-    <div
-      :class="{ 'backdrop-blur-sm': menuOpen }"
-      class="relative flex min-h-screen flex-col items-center bg-black text-white"
-    >
+    <div :class="{ 'backdrop-blur-sm': menuOpen }"
+      class="relative flex min-h-screen flex-col items-center bg-black text-white">
       <div class="mj-container">
         <div class="flex justify-around space-x-4">
           <div class="w-full rounded border-none bg-none">
             <div class="h-[80vh] w-full">
-              <!-- <LiveVideo
-                class="h-full"
-                :videoUrl="'https://www.youtube.com/embed/8rhNPSmj0_c'"
-                :videoTitle="'Live Recording MUNGU WA MAAJABU - Mungu wa Maajabu by Deborah Lukalu feat Mike Kalambay'"
-              /> -->
+              <LatestLiveVideo class="h-full" :videoUrl="'https://www.youtube.com/embed/8rhNPSmj0_c'"
+                :videoTitle="'Live Recording MUNGU WA MAAJABU - Mungu wa Maajabu by Deborah Lukalu feat Mike Kalambay'" />
             </div>
           </div>
         </div>
@@ -20,15 +15,12 @@
           <h3 class="text-base font-semibold transition-all duration-300 sm:text-lg">
             Recents Lives
           </h3>
-          <!-- <SliderVideo/> -->
-          <div class="grid grid-cols-4 gap-4">
-            <!-- <div v-for="row in recommandations" :key="row.id">
-              <RecentVideo
-                :videoTitle="row.title"
-                :videoUrl="row.link"
-                :videoPhoto="row.photo"
-              />
-            </div> -->
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 md:gap-2 lg:gap-4 w-full">
+            <div v-for="row in recommandations" :key="row.id">
+              <LatestRecentVideo :videoTitle="row.title" :videoUrl="row.link" :videoPhoto="row.photo"
+                :videoArtist="row.artist" />
+            </div>
           </div>
         </div>
       </div>
@@ -52,8 +44,7 @@ const menuOpen = ref(false);
 const toggleMenu = (value) => {
   menuOpen.value = value;
 };
-// import LiveVideo from "@/components/Latest/LiveVideo.vue";
-// import RecentVideo from "@/components/Latest/RecentVideo.vue";
+
 
 const recommandations = ref([
   {
