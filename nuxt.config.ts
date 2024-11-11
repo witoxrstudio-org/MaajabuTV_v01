@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 		pageTransition: { name: "fade", mode: "out-in" },
 
 		head: {
-			title: "Maajabu Gospel",
+			title: "Maajabu TV",
 			htmlAttrs: {
 				lang: "fr"
 			},
@@ -26,7 +26,7 @@ export default defineNuxtConfig({
 				{ property: "og:url", content: "https://maajabu-gospel.vercel.app" },
 				{
 					property: "og:image",
-					content: "https://maajabu-gospel.vercel.app/cover.jpg"
+					content: "/img/tv.png"
 				},
 				{ name: "twitter:title", content: "Maajabu Gospel" },
 				{
@@ -35,7 +35,7 @@ export default defineNuxtConfig({
 				},
 				{
 					name: "twitter:image",
-					content: "https://maajabu-gospel.vercel.app/cover.jpg"
+					content: "/img/tv.png"
 				},
 				{ name: "twitter:card", content: "summary_large_image" }
 			],
