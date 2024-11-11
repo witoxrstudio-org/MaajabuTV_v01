@@ -18,7 +18,49 @@
   },
   "submit": {
     "title": "Tuma video",
-    "desc": "Tafadhali kumbuka, huwezi kubadilisha data mara baada ya kutumwa."
+    "desc": "Tafadhali kumbuka, huwezi kubadilisha data mara baada ya kutumwa.",
+    "form": {
+      "prenom": {
+        "label": "Jina la Kwanza *",
+        "placeholder": "Tafadhali ingiza jina lako la kwanza"
+      },
+      "nom": {
+        "label": "Jina la Familia *",
+        "placeholder": "Tafadhali ingiza jina lako la familia"
+      },
+      "gender": {
+        "label": "Ni nani wewe?",
+        "options": {
+          "male": "Mwanaume",
+          "female": "Mwanamke",
+          "other": "Nyingine"
+        }
+      },
+      "country": {
+        "label": "Nchi *",
+        "placeholder": "Tafadhali ingiza nchi yako"
+      },
+      "email": {
+        "label": "Anwani ya Barua pepe *",
+        "placeholder": "Tafadhali ingiza barua pepe yako",
+        "error": "Barua pepe si sahihi"
+      },
+      "phone": {
+        "label": "Nambari ya Simu *",
+        "placeholder": "Tafadhali ingiza nambari yako ya simu",
+        "error": "Nambari ya simu si sahihi"
+      },
+      "social": {
+        "label": "Profaili ya Mitandao ya Kijamii *",
+        "placeholder": "Tafadhali ingiza kiungo cha mtandao wako wa kijamii"
+      },
+      "image": {
+        "label": "Picha ya Msanii *"
+      },
+      "submitButton": {
+        "text": "Endelea"
+      }
+    }
   },
   "latest": {
     "title": "Muziki wa Hivi Punde",

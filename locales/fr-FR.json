@@ -19,7 +19,49 @@
   },
   "submit": {
     "title": "Soumettre la vidéo",
-    "desc": "Faites attention, vous ne pouvez plus modifier une fois les données envoyées."
+    "desc": "Faites attention, vous ne pouvez plus modifier une fois les données envoyées.",
+    "form": {
+      "prenom": {
+        "label": "Prénom *",
+        "placeholder": "Veuillez saisir votre prénom"
+      },
+      "nom": {
+        "label": "Nom de famille *",
+        "placeholder": "Veuillez saisir votre nom de famille"
+      },
+      "gender": {
+        "label": "Qui es-tu ?",
+        "options": {
+          "male": "Homme",
+          "female": "Femme",
+          "other": "Autre"
+        }
+      },
+      "country": {
+        "label": "Pays *",
+        "placeholder": "Veuillez saisir votre pays"
+      },
+      "email": {
+        "label": "Adresse E-mail *",
+        "placeholder": "Veuillez saisir votre email",
+        "error": "Email invalide"
+      },
+      "phone": {
+        "label": "Téléphone *",
+        "placeholder": "Veuillez entrer votre numéro de téléphone",
+        "error": "Numéro de téléphone invalide"
+      },
+      "social": {
+        "label": "Profil Social media *",
+        "placeholder": "Veuillez entrer votre lien de réseau social"
+      },
+      "image": {
+        "label": "Image de l'artiste *"
+      },
+      "submitButton": {
+        "text": "Continuer"
+      }
+    }
   },
   "latest": {
     "title": "Dernières Musiques",

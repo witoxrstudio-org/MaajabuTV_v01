@@ -18,7 +18,49 @@
   },
   "submit": {
     "title": "Submit the video",
-    "desc": "Please note, you can no longer modify the data once submitted."
+    "desc": "Please note, you can no longer modify the data once submitted.",
+    "form": {
+      "prenom": {
+        "label": "First Name *",
+        "placeholder": "Please enter your first name"
+      },
+      "nom": {
+        "label": "Last Name *",
+        "placeholder": "Please enter your last name"
+      },
+      "gender": {
+        "label": "What is your gender?",
+        "options": {
+          "male": "Male",
+          "female": "Female",
+          "other": "Other"
+        }
+      },
+      "country": {
+        "label": "Country *",
+        "placeholder": "Please enter your country"
+      },
+      "email": {
+        "label": "Email Address *",
+        "placeholder": "Please enter your email",
+        "error": "Invalid email"
+      },
+      "phone": {
+        "label": "Phone Number *",
+        "placeholder": "Please enter your phone number",
+        "error": "Invalid phone number"
+      },
+      "social": {
+        "label": "Social Media Profile *",
+        "placeholder": "Please enter your social media link"
+      },
+      "image": {
+        "label": "Artist's Image *"
+      },
+      "submitButton": {
+        "text": "Continue"
+      }
+    }
   },
   "latest": {
     "title": "Latest Music",

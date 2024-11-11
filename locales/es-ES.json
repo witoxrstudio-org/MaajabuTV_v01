@@ -16,10 +16,51 @@
     "abouter": "A través de concursos como Maajabu Talent y Maajabu Rafiki, han demostrado su dedicación para cultivar la próxima generación de artistas de gospel, ofreciéndoles una plataforma para brillar y compartiendo su sabiduría acumulada a lo largo de los años.",
     "bouton_un": "MÁS"
   },
-
   "submit": {
     "title": "Enviar el video",
-    "desc": "Tenga en cuenta que no podrá modificar los datos una vez enviados."
+    "desc": "Tenga en cuenta que no podrá modificar los datos una vez enviados.",
+    "form": {
+      "prenom": {
+        "label": "Primer Nombre *",
+        "placeholder": "Por favor ingrese su primer nombre"
+      },
+      "nom": {
+        "label": "Apellido *",
+        "placeholder": "Por favor ingrese su apellido"
+      },
+      "gender": {
+        "label": "¿Cuál es tu género?",
+        "options": {
+          "male": "Hombre",
+          "female": "Mujer",
+          "other": "Otro"
+        }
+      },
+      "country": {
+        "label": "País *",
+        "placeholder": "Por favor ingrese su país"
+      },
+      "email": {
+        "label": "Dirección de correo electrónico *",
+        "placeholder": "Por favor ingrese su correo electrónico",
+        "error": "Correo electrónico inválido"
+      },
+      "phone": {
+        "label": "Número de teléfono *",
+        "placeholder": "Por favor ingrese su número de teléfono",
+        "error": "Número de teléfono inválido"
+      },
+      "social": {
+        "label": "Perfil de redes sociales *",
+        "placeholder": "Por favor ingrese su enlace de redes sociales"
+      },
+      "image": {
+        "label": "Imagen del artista *"
+      },
+      "submitButton": {
+        "text": "Continuar"
+      }
+    }
   },
   "latest": {
     "title": "Última Música",
