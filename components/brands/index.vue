@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="rm-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-8"
+      class="mj-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-8"
     >
       <img
         class="max-h-24 w-full object-contain transition-all duration-300 hover:scale-110"

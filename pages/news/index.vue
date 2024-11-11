@@ -1,34 +1,29 @@
 <template>
-  <div>
-    <div class="rm-wrapper bg-black text-white">
-      <Navbar @toggleMenu="toggleMenu" />
-    </div>
+  <div class="pb-24 pt-32">
     <div class="rm-wrapper">
-      <div class="rm-container bg-white relative">
+      <div class="mj-container relative bg-white">
         <img
           src="public/img/wellness.png"
           alt="Filigrane"
-          class="absolute top-10 left-10 w-32 h-32 z-10"
+          class="absolute left-10 top-10 z-10 h-32 w-32"
         />
         <!-- Upper Section Title -->
         <p
-          class="text-yellow-500 text-2xl font-semibold flex items-center justify-center text-center"
+          class="flex items-center justify-center text-center text-sm font-semibold text-yellow-500"
         >
-          <span class="inline-block w-8 h-0.5 bg-yellow-500 mr-3"></span>
-          <span
-            class="transform transition duration-200 hover:scale-105 font-title"
-          >
+          <span class="mr-3 inline-block h-0.5 w-8 bg-yellow-500"></span>
+          <span class="font-title">
             {{ menu }}
           </span>
         </p>
         <h1
-          class="text-center text-3xl font-bold mb-12 transform transition duration-400 hover:scale-105"
+          class="duration-400 mb-12 transform text-center text-3xl font-bold transition hover:scale-105"
         >
           {{ menu }}
         </h1>
         <div>
           <!-- Les Boutons -->
-          <div class="flex space-x-4 justify-center text-center">
+          <div class="flex justify-center space-x-4 text-center">
             <button
               v-for="(button, index) in buttons"
               :key="index"
@@ -44,102 +39,88 @@
             </button>
           </div>
           <!-- Le Contenu -->
-          <div class="mt-4">
-            <baseSlideTransition>
-              <div v-if="activeButton === 'recent'">
-                <div
-                  class="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+          <div class="mt-4 pb-24 pt-8">
+            <div v-if="activeButton === 'recent'">
+              <div class="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
+                <NuxtLink
+                  v-for="(card, index) in cards"
+                  to="#"
+                  :key="index"
+                  class="mx-auto max-w-xs cursor-pointer overflow-hidden bg-white shadow-md hover:text-yellow-500"
+                  @click="addToPlaylist(card)"
                 >
-                  <NuxtLink
-                    v-for="(card, index) in cards"
-                    :to="`/news/${card.id}`"
-                    :key="index"
-                    class="bg-white shadow-md overflow-hidden max-w-xs mx-auto hover:text-yellow-500  cursor-pointer"
-                    @click="addToPlaylist(card)"
-                  >
-                    <img
-                      :src="card.image"
-                      alt="Card Image"
-                      class="w-full h-36 object-cover transform transition duration-200 hover:scale-105"
-                    />
-                    <div class="p-3">
-                      <h3 class="font-semibold text-sm mb-1">
-                        {{ card.title }}
-                      </h3>
-                      <p class="text-gray-500 text-xs mb-1">{{ card.time }}</p>
-                      <div class="flex items-center mt-2">
-                        <p class="text-gray-700 text-xs">{{ card.channel }}</p>
-                      </div>
+                  <img
+                    :src="card.image"
+                    alt="Card Image"
+                    class="h-36 w-full object-cover"
+                  />
+                  <div class="p-3">
+                    <h3 class="mb-1 text-sm font-semibold">
+                      {{ card.title }}
+                    </h3>
+                    <p class="mb-1 text-xs text-gray-500">{{ card.time }}</p>
+                    <div class="mt-2 flex items-center">
+                      <p class="text-xs text-gray-700">{{ card.channel }}</p>
                     </div>
-                  </NuxtLink>
-                </div>
+                  </div>
+                </NuxtLink>
               </div>
-            </baseSlideTransition>
-            <baseZoomTransition>
-              <div v-if="activeButton === 'new'">
-                <div
-                  class="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+            </div>
+            <div v-if="activeButton === 'new'">
+              <div class="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
+                <NuxtLink
+                  v-for="(card, index) in cards"
+                  to="#"
+                  :key="index"
+                  class="mx-auto max-w-xs cursor-pointer overflow-hidden bg-white shadow-md hover:text-yellow-500"
+                  @click="addToPlaylist(card)"
                 >
-                  <NuxtLink
-                    v-for="(card, index) in cards"
-                    :to="`/news/${card.id}`"
-                    :key="index"
-                    class="bg-white shadow-md overflow-hidden max-w-xs mx-auto hover:text-yellow-500  cursor-pointer"
-                    @click="addToPlaylist(card)"
-                  >
-                    <img
-                      :src="card.image"
-                      alt="Card Image"
-                      class="w-full h-36 object-cover transform transition duration-200 hover:scale-105"
-                    />
-                    <div class="p-3">
-                      <h3 class="font-semibold text-sm mb-1">
-                        {{ card.title }}
-                      </h3>
-                      <p class="text-gray-500 text-xs mb-1">{{ card.time }}</p>
-                      <div class="flex items-center mt-2">
-                        <p class="text-gray-700 text-xs">{{ card.channel }}</p>
-                      </div>
+                  <img
+                    :src="card.image"
+                    alt="Card Image"
+                    class="h-36 w-full object-cover"
+                  />
+                  <div class="p-3">
+                    <h3 class="mb-1 text-sm font-semibold">
+                      {{ card.title }}
+                    </h3>
+                    <p class="mb-1 text-xs text-gray-500">{{ card.time }}</p>
+                    <div class="mt-2 flex items-center">
+                      <p class="text-xs text-gray-700">{{ card.channel }}</p>
                     </div>
-                  </NuxtLink>
-                </div>
+                  </div>
+                </NuxtLink>
               </div>
-            </baseZoomTransition>
-            <baseSlideTransition>
-              <div v-if="activeButton === 'playlists'">
-                <div v-if="playlists.length === 0">
-                  <p class="text-center text-gray-500">
-                    Aucune carte dans la playlist.
-                  </p>
-                </div>
-                <div
-                  class="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-                  v-else
+            </div>
+
+            <div v-if="activeButton === 'playlists'">
+              <div v-if="playlists.length === 0">
+                <p class="text-center text-gray-500">Aucune carte dans la playlist.</p>
+              </div>
+              <div class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4" v-else>
+                <NuxtLink
+                  v-for="(card, index) in playlists"
+                  to="#"
+                  :key="index"
+                  class="mx-auto max-w-xs overflow-hidden bg-white shadow-md"
                 >
-                  <NuxtLink
-                    v-for="(card, index) in playlists"
-                    :to="`/news/${card.id}`"
-                    :key="index"
-                    class="bg-white shadow-md overflow-hidden max-w-xs mx-auto"
-                  >
-                    <img
-                      :src="card.image"
-                      alt="Card Image"
-                      class="w-full h-36 object-cover"
-                    />
-                    <div class="p-3">
-                      <h3 class="font-semibold text-sm mb-1">
-                        {{ card.title }}
-                      </h3>
-                      <p class="text-gray-500 text-xs mb-1">{{ card.time }}</p>
-                      <div class="flex items-center mt-2">
-                        <p class="text-gray-700 text-xs">{{ card.channel }}</p>
-                      </div>
+                  <img
+                    :src="card.image"
+                    alt="Card Image"
+                    class="h-36 w-full object-cover"
+                  />
+                  <div class="p-3">
+                    <h3 class="mb-1 text-sm font-semibold">
+                      {{ card.title }}
+                    </h3>
+                    <p class="mb-1 text-xs text-gray-500">{{ card.time }}</p>
+                    <div class="mt-2 flex items-center">
+                      <p class="text-xs text-gray-700">{{ card.channel }}</p>
                     </div>
-                  </NuxtLink>
-                </div>
+                  </div>
+                </NuxtLink>
               </div>
-            </baseSlideTransition>
+            </div>
           </div>
         </div>
       </div>
@@ -150,7 +131,7 @@
     <div>
       <laster />
     </div>
-    <div class="bg-stone-800 rm-wrapper">
+    <div class="rm-wrapper bg-stone-800">
       <lasterUnderLaster />
     </div>
   </div>

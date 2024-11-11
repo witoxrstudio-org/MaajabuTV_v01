@@ -3,6 +3,9 @@
     <NuxtLayout>
       <NuxtLoadingIndicator />
       <NuxtRouteAnnouncer />
+      <div class="rm-wrapper bg-black text-white">
+        <Navbar @toggleMenu="toggleMenu" />
+      </div>
       <transition name="page" mode="out-in">
         <NuxtPage />
       </transition>
@@ -33,8 +36,3 @@ useSeoMeta({
   opacity: 1;
 }
 </style>
-
-
-
-
-

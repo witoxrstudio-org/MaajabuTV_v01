@@ -1,5 +1,5 @@
 <template>
-  <section class="rm-container sm:px-6 md:px-8 relative mb-10">
+  <section class="mj-container sm:px-6 md:px-8 relative mb-10">
     <!-- Upper Section Title -->
     <img
       src="public/img/Titik-titik.png"
@@ -12,7 +12,7 @@
       >
         <span class="inline-block w-8 h-1 sm:w-10 bg-yellow-500"></span>
         <span
-          class="transform transition duration-200 hover:scale-105 font-title"
+          class=" font-title"
         >
           {{ one }}
         </span>
@@ -25,7 +25,7 @@
       </h1>
 
       <p
-        class="text-black leading-relaxed text-center px-4 sm:px-0 transform transition duration-500 hover:scale-105 "
+        class="text-black leading-relaxed text-center px-4 sm:px-0 transform transition duration-500 "
       >
         {{ three }}
       </p>
@@ -35,7 +35,7 @@
       <!-- Première Colonne -->
       <div class="flex flex-col justify-between space-y-12">
         <div
-          class="flex flex-col items-center text-center transform transition duration-200 hover:scale-105 "
+          class="flex flex-col items-center text-center  "
         >
           <div class="text-yellow-500 text-4xl mb-2">
             <img src="public/img/z1.png" alt="Trophy" class="w-12 h-auto" />
@@ -44,7 +44,7 @@
           <p>{{ about_icon_desc1 }}</p>
         </div>
         <div
-          class="flex flex-col items-center text-center transform transition duration-200 hover:scale-105 "
+          class="flex flex-col items-center text-center  "
         >
           <div class="text-yellow-500 text-4xl mb-2">
             <img src="public/img/z2.png" alt="Trophy" class="w-12 h-auto" />
@@ -74,7 +74,7 @@
       <!-- Troisième Colonne -->
       <div class="flex flex-col justify-between space-y-12">
         <div
-          class="flex flex-col items-center text-center transform transition duration-200 hover:scale-105 "
+          class="flex flex-col items-center text-center  "
         >
           <div class="text-yellow-500 text-4xl mb-2">
             <img src="public/img/z3.png" alt="Trophy" class="w-12 h-auto" />
@@ -83,7 +83,7 @@
           <p>{{ about_icon_desc3 }}</p>
         </div>
         <div
-          class="flex flex-col items-center text-center transform transition duration-200 hover:scale-105 "
+          class="flex flex-col items-center text-center  "
         >
           <div class="text-yellow-500 text-4xl mb-2">
             <img src="public/img/z4.png" alt="Trophy" class="w-12 h-auto" />
@@ -97,18 +97,18 @@
       class="flex flex-col justify-center md:flex-row md:space-x-4 mt-4 space-y-2 md:space-y-0"
     >
       <button
-        class="bg-black hover:bg-yellow-600 text-white py-2 px-3 rounded-full font-semibold text-sm flex items-center justify-center space-x-2 transform transition duration-200 hover:scale-105 hover:text-green-500 w-full md:w-auto"
+        class="bg-black hover:bg-yellow-600 text-white py-2 px-3 rounded-full font-semibold text-sm flex items-center justify-center space-x-2  hover:text-green-500 w-full md:w-auto"
       >
         <i class="fab fa-spotify"></i> <span>Spotify</span>
       </button>
       <button
-        class="bg-black hover:bg-yellow-600 text-white py-2 px-3 rounded-full font-semibold text-sm flex items-center justify-center space-x-2 transform transition duration-200 hover:scale-105 hover:text-orange-200 w-full md:w-auto"
+        class="bg-black hover:bg-yellow-600 text-white py-2 px-3 rounded-full font-semibold text-sm flex items-center justify-center space-x-2  hover:text-orange-200 w-full md:w-auto"
       >
         <i class="fab fa-soundcloud"></i>
         <span>SoundCloud</span>
       </button>
       <button
-        class="bg-black hover:bg-yellow-600 text-white py-2 px-3 rounded-full font-semibold text-sm flex items-center justify-center space-x-2 transform transition duration-200 hover:scale-105 hover:text-white w-full md:w-auto"
+        class="bg-black hover:bg-yellow-600 text-white py-2 px-3 rounded-full font-semibold text-sm flex items-center justify-center space-x-2  hover:text-white w-full md:w-auto"
       >
         <i class="fab fa-apple"></i> <span>Apple Podcast</span>
       </button>
