@@ -16,14 +16,54 @@
         {{ menu }}
       </h1>
 
-      <div class="flex flex-col items-center gap-8 pt-8 lg:flex-row lg:items-start">
+      <div
+        class="flex flex-col items-center gap-8 pt-8 lg:flex-row lg:items-start"
+      >
         <!-- Left Image Section -->
-        <div class="relative -top-8 w-full lg:w-1/2">
+        <!-- <div class="relative -top-24 w-full lg:w-1/2">
           <img
-            src="public/img/about.png"
+            src="public/img/pastor.png"
             alt="Maajabu Gospel"
             class="duration-400 transform rounded-lg transition hover:scale-105"
           />
+        </div> -->
+        <div class="relative -top-24 w-full lg:w-1/2">
+          <img
+            src="/img/pastor.png"
+            alt="Maajabu Gospel"
+            class="duration-400 transform rounded-lg transition hover:scale-105"
+          />
+
+          <!-- Card en bas à gauche -->
+          <div
+            class="absolute bottom-2 left-12 flex flex-col items-center bg-white p-3 rounded-lg shadow-lg"
+          >
+            <div class="flex space-x-2">
+              <img
+                src="/img/profile_1.png"
+                alt="Profile 1"
+                class="w-14 h-14 rounded-full"
+              />
+              <img
+                src="/img/profile_2.png"
+                alt="Profile 2"
+                class="w-14 h-14 rounded-full"
+              />
+            </div>
+            <span class="mt-2 text-sm font-semibold text-gray-700 text-center"
+              >8000+ reviews</span
+            >
+          </div>
+
+          <!-- Nouveau card en haut à droite -->
+          <div
+            class="absolute top-2 right-2 bg-white p-3 rounded-lg shadow-lg flex flex-col items-center"
+          >
+            <span class="text-sm font-semibold text-gray-700">New Feature</span>
+            <p class="mt-1 text-xs text-gray-500 text-center">
+              Explore our latest update!
+            </p>
+          </div>
         </div>
 
         <!-- Right Text Section -->
