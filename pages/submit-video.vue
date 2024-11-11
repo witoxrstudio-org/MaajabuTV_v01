@@ -2,7 +2,7 @@
   <div>
     <section class="rm-container flex items-center pt-20 justify-center">
       <form
-        class="bg-gray-50 px-8 pt-6 pb-8 mb-4 max-w-lg w-full"
+        class="bg-black bg-opacity-5 px-8 pt-6 pb-8 mb-4 max-w-lg w-full"
         @submit.prevent="handleSubmit"
       >
         <h1 class="text-4xl font-bold text-center pb-8">{{ title }}</h1>

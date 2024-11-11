@@ -11,7 +11,9 @@
       </p>
 
       <!-- Titre principal -->
-      <h1 class="transform text-4xl font-bold transition duration-200 lg:text-6xl">
+      <h1
+        class="transform text-4xl font-bold transition duration-200 lg:text-6xl"
+      >
         {{ title }} <br />
         {{ titles }}
       </h1>
@@ -23,7 +25,9 @@
         {{ desc }}
       </p>
       <!-- Boutons -->
-      <div class="mt-4 flex flex-col space-y-2 md:flex-row md:space-x-4 md:space-y-0">
+      <div
+        class="mt-4 flex flex-col space-y-2 md:flex-row md:space-x-4 md:space-y-0"
+      >
         <button
           class="flex w-full transform items-center justify-center space-x-2 rounded-full bg-yellow-500 px-3 py-2 text-sm font-semibold text-black transition duration-200 hover:bg-yellow-600 hover:text-green-500 md:w-auto"
         >
