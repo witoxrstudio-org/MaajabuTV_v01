@@ -12,11 +12,11 @@
         <div class="flex justify-around space-x-4">
           <div class="w-full rounded border-none bg-none">
             <div class="h-[80vh] w-full">
-              <LiveVideo
+              <!-- <LiveVideo
                 class="h-full"
                 :videoUrl="'https://www.youtube.com/embed/8rhNPSmj0_c'"
                 :videoTitle="'Live Recording MUNGU WA MAAJABU - Mungu wa Maajabu by Deborah Lukalu feat Mike Kalambay'"
-              />
+              /> -->
             </div>
           </div>
         </div>
@@ -26,13 +26,13 @@
           </h3>
           <!-- <SliderVideo/> -->
           <div class="grid grid-cols-4 gap-4">
-            <div v-for="row in recommandations" :key="row.id">
+            <!-- <div v-for="row in recommandations" :key="row.id">
               <RecentVideo
                 :videoTitle="row.title"
                 :videoUrl="row.link"
                 :videoPhoto="row.photo"
               />
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -56,8 +56,8 @@ const menuOpen = ref(false);
 const toggleMenu = (value) => {
   menuOpen.value = value;
 };
-import LiveVideo from "@/components/Latest/LiveVideo.vue";
-import RecentVideo from "@/components/Latest/RecentVideo.vue";
+// import LiveVideo from "@/components/Latest/LiveVideo.vue";
+// import RecentVideo from "@/components/Latest/RecentVideo.vue";
 
 const recommandations = ref([
   {
