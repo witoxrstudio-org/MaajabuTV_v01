@@ -1,49 +1,42 @@
 <template>
   <section
-    class="rm-container flex flex-col lg:flex-row items-center lg:justify-between bg-black text-white py-12 px-6 mb-16 lg:px-16 relative overflow-hidden"
+    class="mj-container relative flex flex-col items-center space-x-8 overflow-hidden bg-black px-6 pt-32 text-white sm:py-24 md:mb-24 lg:flex-row lg:justify-between"
   >
     <!-- Texte à gauche -->
-    <div class="lg:w-1/2 space-y-6">
+    <div class="space-y-6 lg:w-1/2">
       <!-- Petite ligne avec texte -->
-      <p class="text-yellow-500 text-2xl font-semibold flex items-center">
-        <span class="inline-block w-8 h-0.5 bg-yellow-500 mr-3"></span>
-        <span
-          class="transform transition duration-200 hover:scale-105 font-title"
-          >{{ welcome }}</span
-        >
+      <p class="flex items-center text-2xl font-semibold text-yellow-500">
+        <span class="mr-3 inline-block h-0.5 w-8 bg-yellow-500"></span>
+        <span class="font-title">{{ welcome }}</span>
       </p>
 
       <!-- Titre principal -->
-      <h1
-        class="text-4xl lg:text-6xl font-bold transform transition duration-200 hover:scale-105"
-      >
+      <h1 class="transform text-4xl font-bold transition duration-200 lg:text-6xl">
         {{ title }} <br />
         {{ titles }}
       </h1>
 
       <!-- Description -->
       <p
-        class="text-lg text-gray-300 transform transition duration-200 hover:scale-105 hover:text-yellow-500 "
+        class="transform text-lg text-gray-300 transition duration-200 hover:text-yellow-500"
       >
         {{ desc }}
       </p>
       <!-- Boutons -->
-      <div
-        class="flex flex-col md:flex-row md:space-x-4 mt-4 space-y-2 md:space-y-0"
-      >
+      <div class="mt-4 flex flex-col space-y-2 md:flex-row md:space-x-4 md:space-y-0">
         <button
-          class="bg-yellow-500 hover:bg-yellow-600 text-black py-2 px-3 rounded-full font-semibold text-sm flex items-center justify-center space-x-2 transform transition duration-200 hover:scale-105 hover:text-green-500 w-full md:w-auto"
+          class="flex w-full transform items-center justify-center space-x-2 rounded-full bg-yellow-500 px-3 py-2 text-sm font-semibold text-black transition duration-200 hover:bg-yellow-600 hover:text-green-500 md:w-auto"
         >
           <i class="fab fa-spotify"></i> <span>Spotify</span>
         </button>
         <button
-          class="bg-yellow-500 hover:bg-yellow-600 text-black py-2 px-3 rounded-full font-semibold text-sm flex items-center justify-center space-x-2 transform transition duration-200 hover:scale-105 hover:text-orange-200 w-full md:w-auto"
+          class="flex w-full transform items-center justify-center space-x-2 rounded-full bg-yellow-500 px-3 py-2 text-sm font-semibold text-black transition duration-200 hover:bg-yellow-600 hover:text-orange-200 md:w-auto"
         >
           <i class="fab fa-soundcloud"></i>
           <span>SoundCloud</span>
         </button>
         <button
-          class="bg-yellow-500 hover:bg-yellow-600 text-black py-2 px-3 rounded-full font-semibold text-sm flex items-center justify-center space-x-2 transform transition duration-200 hover:scale-105 hover:text-white w-full md:w-auto"
+          class="flex w-full transform items-center justify-center space-x-2 rounded-full bg-yellow-500 px-3 py-2 text-sm font-semibold text-black transition duration-200 hover:bg-yellow-600 hover:text-white md:w-auto"
         >
           <i class="fab fa-apple"></i> <span>Apple Podcast</span>
         </button>
@@ -51,12 +44,12 @@
     </div>
 
     <!-- Image à droite -->
-    <div class="lg:w-1/2 flex justify-center mt-8 lg:mt-0 relative">
+    <div class="relative mt-8 flex justify-center lg:mt-0 lg:w-1/2">
       <!-- Grand image principale avec débordement à droite -->
       <img
         src="public/img/Image_hero.png"
         alt="Main Image"
-        class="w-2/3 h-auto rounded-lg shadow-lg lg:transform lg:translate-x-1/4 transform transition duration-200 hover:scale-105"
+        class="w-3/3 h-auto transform rounded-lg shadow-lg transition duration-200"
       />
     </div>
 

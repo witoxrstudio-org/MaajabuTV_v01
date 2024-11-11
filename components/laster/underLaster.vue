@@ -1,7 +1,7 @@
 <template>
-  <div class="rm-container flex flex-cols-2 justify-between items-center my-2">
+  <div class="mj-container flex flex-cols-2 justify-between items-center my-2">
     <p
-      class="text-yellow-300 text-sm transform transition duration-200 hover:scale-105 hover:text-yellow-500 "
+      class="text-yellow-300 text-sm  hover:text-yellow-500 "
     >
       © 2024 Maajabu. All rights reserved.
     </p>

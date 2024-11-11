@@ -4,7 +4,7 @@
       <Navbar @toggleMenu="toggleMenu" />
     </div>
     <div class="rm-wrapper">
-      <div class="rm-container bg-white relative">
+      <div class="mj-container bg-white relative">
         <img
           src="public/img/wellness.png"
           alt="Filigrane"
@@ -16,7 +16,7 @@
         >
           <span class="inline-block w-8 h-0.5 bg-yellow-500 mr-3"></span>
           <span
-            class="transform transition duration-200 hover:scale-105 font-title"
+            class=" font-title"
           >
             {{ menu }}
           </span>
@@ -60,7 +60,7 @@
                     <img
                       :src="card.image"
                       alt="Card Image"
-                      class="w-full h-36 object-cover transform transition duration-200 hover:scale-105"
+                      class="w-full h-36 object-cover "
                     />
                     <div class="p-3">
                       <h3 class="font-semibold text-sm mb-1">
@@ -90,7 +90,7 @@
                     <img
                       :src="card.image"
                       alt="Card Image"
-                      class="w-full h-36 object-cover transform transition duration-200 hover:scale-105"
+                      class="w-full h-36 object-cover "
                     />
                     <div class="p-3">
                       <h3 class="font-semibold text-sm mb-1">

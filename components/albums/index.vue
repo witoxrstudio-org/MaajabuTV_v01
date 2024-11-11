@@ -1,72 +1,61 @@
 <template>
-  <section class="bg-white px-4 sm:px-10 py-6 max-w-6xl mx-auto w-full">
-    <div class="bg-white max-w-6xl mx-4 sm:mx-2 py-6 px-4">
+  <section class="mx-auto w-full max-w-6xl bg-white px-4 py-6 sm:px-10">
+    <div class="max-w-6xl bg-white py-6 pb-12 sm:mx-2">
       <!-- Section Header -->
-      <div class="flex items-center justify-between border-gray-200 py-4">
-        <div
-          class="w-1/3 sm:w-[35%] border-t border-gray-300 ml-4 mr-1 hidden sm:block"
-        ></div>
-        <h2
-          class="text-xl sm:text-3xl font-bold text-yellow-500 transform transition duration-200 hover:scale-105"
-        >
+      <div class="flex items-center justify-between border-gray-200 py-4 pb-12">
+        <div class="hidden w-1/3 border-t border-gray-300 sm:block sm:w-[35%]"></div>
+        <h2 class="text-xl font-bold text-yellow-500 sm:text-3xl">
           {{ title }}
         </h2>
-        <div
-          class="w-1/3 sm:w-[35%] border-t border-gray-300 ml-4 mr-1 hidden sm:block"
-        ></div>
+        <div class="hidden w-1/3 border-t border-gray-300 sm:block sm:w-[35%]"></div>
       </div>
       <!-- Fin Section Header -->
 
-      <div class="flex items-start gap-6 justify-between flex-wrap">
+      <div class="items-start justify-between sm:flex sm:flex-wrap">
         <!-- Cards Section -->
         <div
-          class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center"
+          class="grid grid-cols-1 justify-items-center gap-6 sm:grid-cols-2 md:grid-cols-3"
         >
-          <baseSlideTransition v-for="(card, index) in cards" :key="index">
-            <div
-              class="bg-white w-full sm:w-48 md:w-56 shadow-md overflow-hidden transform transition duration-200 hover:scale-105"
-            >
+          <div
+            class="w-full border border-gray-200"
+            v-for="(card, index) in cards"
+            :key="index"
+          >
+            <div class="w-full overflow-hidden bg-white">
               <img
                 :src="card.image"
                 :alt="card.title"
-                class="w-full h-52 object-cover transition-all duration-300 hover:scale-110 hover:z-10 hover:shadow-lg"
+                class="h-52 w-full object-cover transition-all duration-300 hover:z-10 hover:scale-110 hover:shadow-lg"
               />
               <div class="p-3">
                 <h3 class="text-md font-semibold">{{ card.title }}</h3>
-                <p class="text-gray-500 text-sm">{{ card.description }}</p>
-                <p class="text-gray-500 text-sm">
-                  {{ card.followers }} Followers
-                </p>
+                <p class="text-sm text-gray-500">{{ card.description }}</p>
+                <p class="text-sm text-gray-500">{{ card.followers }} Followers</p>
               </div>
               <div>
-                <button
-                  :class="card.buttonStyle"
-                  class="mt-3 px-3 py-1.5 w-full text-sm"
-                >
+                <button :class="card.buttonStyle" class="mt-3 w-full px-3 py-1.5 text-sm">
                   {{ card.buttonText }}
                 </button>
               </div>
             </div>
-          </baseSlideTransition>
+          </div>
         </div>
 
         <!-- Description & Navigation Section -->
         <!-- Description & Navigation Section -->
-        <div class="flex flex-col justify-center text-center mt-8 sm:mt-0">
-          <h2
-            class="text-2xl font-bold text-yellow-500 transform transition duration-200 hover:scale-105 hover:text-yellow-500 "
-          >
+        <div class="mt-8 flex flex-col justify-center text-center sm:mt-0">
+          <h2 class="text-2xl font-bold text-yellow-500 hover:text-yellow-500">
             {{ title_2 }}
           </h2>
-          <div class="text-black mt-2 space-y-1">
+          <div class="mt-2 space-y-1 text-black">
             <p v-html="formattedDesc"></p>
           </div>
 
           <!-- Navigation Section -->
-          <div class="mt-8 flex items-center gap-4 justify-center">
+          <div class="mt-8 flex items-center justify-center gap-4">
             <!-- Flèche gauche -->
             <button
-              class="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 bg-gray-200 flex items-center justify-center object-cover transition-all duration-300 hover:scale-110 hover:z-10 hover:shadow-lg"
+              class="flex h-8 w-8 items-center justify-center bg-gray-200 object-cover transition-all duration-300 hover:z-10 hover:scale-110 hover:shadow-lg md:h-10 md:w-10 lg:h-12 lg:w-12"
             >
               <img
                 src="public/img/Arrow - Left.png"
@@ -77,7 +66,7 @@
 
             <!-- Flèche droite -->
             <button
-              class="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 bg-yellow-500 flex items-center justify-center object-cover transition-all duration-300 hover:scale-110 hover:z-10 hover:shadow-lg"
+              class="flex h-8 w-8 items-center justify-center bg-yellow-500 object-cover transition-all duration-300 hover:z-10 hover:scale-110 hover:shadow-lg md:h-10 md:w-10 lg:h-12 lg:w-12"
             >
               <img
                 src="public/img/Arrow - Right.png"
@@ -130,4 +119,3 @@ const cards = [
   },
 ];
 </script>
-

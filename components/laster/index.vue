@@ -1,91 +1,87 @@
 <template>
-  <footer class="bg-black text-gray-400 py-8">
-    <div class="max-w-6xl mx-auto">
-      <hr class="mb-8 -mt-8 bg-white" />
-      <div class="flex flex-col md:flex-row justify-between">
+  <footer class="flex items-center justify-center bg-black py-8 text-gray-400">
+    <div class="mj-container mx-auto w-full max-w-6xl">
+      <hr class="-mt-8 mb-8 bg-gray-500 opacity-30" />
+      <div class="flex flex-col justify-between md:flex-row">
         <!-- Logo Section -->
-        <div class="w-full md:w-1/4 mb-4 md:mb-0 flex flex-col items-center">
-          <img
-            src="/img/logo.png"
-            alt="Maajabu TV"
-            class="mb-2 h-24 w-auto mx-auto"
-          />
+        <div class="mb-4 flex w-full flex-col items-center md:mb-0 md:w-1/4">
+          <img src="/img/logo.png" alt="Maajabu TV" class="mx-auto mb-2 h-24 w-auto" />
         </div>
 
         <!-- Links Section avec Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 w-full justify-items-center">
+        <div class="grid w-full grid-cols-2 gap-8 md:grid-cols-4">
           <!-- Product Links -->
           <div>
-            <h4 class="text-yellow-400 font-semibold mb-2 text-sm">Product</h4>
+            <h4 class="mb-2 text-sm font-semibold text-yellow-400">Product</h4>
             <ul class="space-y-1">
               <li>
-                <a href="#" class="hover:text-yellow-400 text-sm">Event</a>
+                <a href="#" class="text-sm hover:text-yellow-400">Event</a>
               </li>
               <li>
-                <a href="#" class="hover:text-yellow-400 text-sm">Update</a>
+                <a href="#" class="text-sm hover:text-yellow-400">Update</a>
               </li>
               <li>
-                <a href="#" class="hover:text-yellow-400 text-sm">Service</a>
+                <a href="#" class="text-sm hover:text-yellow-400">Service</a>
               </li>
               <li>
-                <a href="#" class="hover:text-yellow-400 text-sm">Feature</a>
+                <a href="#" class="text-sm hover:text-yellow-400">Feature</a>
               </li>
             </ul>
           </div>
 
           <!-- Company Links -->
           <div>
-            <h4 class="text-yellow-400 font-semibold mb-2 text-sm">Company</h4>
+            <h4 class="mb-2 text-sm font-semibold text-yellow-400">Company</h4>
             <ul class="space-y-1">
               <li>
-                <a href="#" class="hover:text-yellow-400 text-sm">Home</a>
+                <a href="#" class="text-sm hover:text-yellow-400">Home</a>
               </li>
               <li>
-                <a href="#" class="hover:text-yellow-400 text-sm">Artist</a>
+                <a href="#" class="text-sm hover:text-yellow-400">Artist</a>
               </li>
               <li>
-                <a href="#" class="hover:text-yellow-400 text-sm">Album</a>
+                <a href="#" class="text-sm hover:text-yellow-400">Album</a>
               </li>
               <li>
-                <a href="#" class="hover:text-yellow-400 text-sm">Trending</a>
+                <a href="#" class="text-sm hover:text-yellow-400">Trending</a>
               </li>
             </ul>
           </div>
 
           <!-- Support Links -->
           <div>
-            <h4 class="text-yellow-400 font-semibold mb-2 text-sm">Support</h4>
+            <h4 class="mb-2 text-sm font-semibold text-yellow-400">Support</h4>
             <ul class="space-y-1">
               <li>
-                <a href="#" class="hover:text-yellow-400 text-sm">FAQs</a>
+                <a href="#" class="text-sm hover:text-yellow-400">FAQs</a>
               </li>
               <li>
-                <a href="#" class="hover:text-yellow-400 text-sm">Contact</a>
+                <a href="#" class="text-sm hover:text-yellow-400">Contact</a>
               </li>
               <li>
-                <a href="#" class="hover:text-yellow-400 text-sm">Privacy Policy</a>
+                <a href="#" class="text-sm hover:text-yellow-400">Privacy Policy</a>
               </li>
               <li>
-                <a href="#" class="hover:text-yellow-400 text-sm">Terms & Service</a>
+                <a href="#" class="text-sm hover:text-yellow-400">Terms & Service</a>
               </li>
             </ul>
           </div>
 
           <!-- Other Links -->
           <div>
-            <h4 class="text-yellow-400 font-semibold mb-2 text-sm">Other</h4>
+            <h4 class="mb-2 text-sm font-semibold text-yellow-400">Other</h4>
             <ul class="space-y-1">
               <li>
-                <a href="#" class="hover:text-yellow-400 text-sm">Documentation</a>
+                <a href="#" class="text-sm hover:text-yellow-400">Documentation</a>
               </li>
               <li>
-                <a href="#" class="hover:text-yellow-400 text-sm">Question</a>
+                <a href="#" class="text-sm hover:text-yellow-400">Question</a>
               </li>
               <li>
-                <a href="#" class="hover:text-yellow-400 text-sm">Our team</a>
+                <a href="#" class="text-sm hover:text-yellow-400">Our team</a>
               </li>
               <li>
-                <a href="#" class="hover:text-yellow-400 text-sm">Social Media</a>
+                <a href="#" class="text-sm hover:text-yellow-400">Social Media</a>
               </li>
             </ul>
           </div>

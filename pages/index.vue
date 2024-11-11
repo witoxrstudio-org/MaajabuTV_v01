@@ -5,7 +5,7 @@
     </div>
     <div
       :class="{ 'backdrop-blur-sm': menuOpen }"
-      class="relative flex min-h-screen flex-col items-center bg-black text-white"
+      class="relative flex flex-col items-center bg-black text-white"
     >
       <!-- HomePage -->
       <Home />

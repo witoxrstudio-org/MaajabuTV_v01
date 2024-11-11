@@ -1,5 +1,5 @@
 <template>
-  <div class="rm-container text-white py-12">
+  <div class="mj-container text-white py-12">
     <!-- Header Section -->
     <div class="text-center mb-8">
       <p
@@ -7,7 +7,7 @@
       >
         <span class="inline-block w-8 h-0.5 bg-yellow-500 mr-3"></span>
         <span
-          class="transform transition duration-200 hover:scale-105 font-title"
+          class=" font-title"
         >
           Our host
         </span>

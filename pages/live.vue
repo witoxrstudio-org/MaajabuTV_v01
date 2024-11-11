@@ -8,7 +8,7 @@
       <Navbar @toggleMenu="toggleMenu" />
       <!-- Video Player -->
 
-      <div class="rm-container">
+      <div class="mj-container">
         <div class="flex justify-around space-x-4">
           <div class="w-full rounded border-none bg-none">
             <div class="h-[80vh] w-full">

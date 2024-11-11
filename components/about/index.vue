@@ -1,12 +1,12 @@
 <template>
-  <section class="rm-container bg-white px-8">
+  <section class="mj-container bg-white px-8">
     <!-- Upper Section Title -->
     <p
       class="text-yellow-500 text-2xl font-semibold flex items-center justify-center text-center"
     >
       <span class="inline-block w-8 h-0.5 bg-yellow-500 mr-3"></span>
       <span
-        class="transform transition duration-200 hover:scale-105 font-title"
+        class=" font-title"
       >
         {{ menu }}
       </span>
