@@ -5,10 +5,9 @@
         class="bg-gray-50 px-8 pt-6 pb-8 mb-4 max-w-lg w-full"
         @submit.prevent="handleSubmit"
       >
-        <h1 class="text-4xl font-bold text-center pb-8">Submit video</h1>
+        <h1 class="text-4xl font-bold text-center pb-8">{{ title }}</h1>
         <h2 class="text-center font-bold text-lg mb-4">
-          Faites attention, vous ne pouvez plus modifier une fois les données
-          envoyées.
+          {{ desc }}
         </h2>
 
         <div class="grid grid-cols-2 gap-4 mb-4">
@@ -164,6 +163,10 @@
 </template>
 
 <script setup>
+const { t } = useI18n();
+const title = ref(t("submit.title"));
+const desc = ref(t("submit.desc"));
+
 const formData = reactive({
   prenom: "",
   nom: "",

@@ -16,6 +16,10 @@
     "abouter": "Through competitions like Maajabu Talent and Maajabu Rafiki, they have demonstrated their dedication to nurturing the next generation of gospel artists, providing them with a platform to shine and sharing their accumulated wisdom over the years.",
     "bouton_un": "MORE"
   },
+  "submit": {
+    "title": "Submit the video",
+    "desc": "Please note, you can no longer modify the data once submitted."
+  },
   "latest": {
     "title": "Latest Music",
     "btn": "See All",

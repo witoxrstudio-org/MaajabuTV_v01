@@ -4,7 +4,7 @@
     "news": "Habari",
     "events": "Matukio",
     "tv": "TV",
-    "submit-video": "Submit video",
+    "submit-video": "Tuma video",
     "about": "Kuhusu"
   },
   "title": {
@@ -15,6 +15,10 @@
     "about": "Maajabu Gospel ni lebo maarufu ya uzalishaji wa muziki, inayojumuisha mabalozi wanne wenye vipaji na maarufu: Mike Kalambay, Sandra Mbuyi, Deborah Lukalu, na Rosny Kayiba. Wasanii hawa, ambao ni miongoni mwa waimbaji bora wa injili katika DRC, wamechangia umaarufu wa lebo hiyo, hasa kupitia matukio kama Maajabu Talent, ambako wanashiriki kama makocha na majaji.",
     "abouter": "Kupitia mashindano kama Maajabu Talent na Maajabu Rafiki, wameonyesha kujitolea kwao katika kukuza kizazi kijacho cha wasanii wa injili, wakiwapa jukwaa la kuangaza na kushiriki hekima waliyojipatia kwa miaka.",
     "bouton_un": "ZAIDI"
+  },
+  "submit": {
+    "title": "Tuma video",
+    "desc": "Tafadhali kumbuka, huwezi kubadilisha data mara baada ya kutumwa."
   },
   "latest": {
     "title": "Muziki wa Hivi Punde",
