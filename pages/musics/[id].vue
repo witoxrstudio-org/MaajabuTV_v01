@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="flex items-center justify-center bg-black py-12 text-white">
+    <div class="flex items-center justify-center bg-black py-36 text-white">
       <div
         class="mx-auto grid max-w-4xl grid-cols-1 items-center gap-8 md:grid-cols-2"
         v-if="episode"
@@ -121,7 +121,8 @@ const episodes = ref([
     duration: "34 min",
     episode: 9,
     title: "CELEBRONS HEBRON AUJOURD'HUI",
-    description: "Quisque sit amet lacus luctus, ultrices eros ac, laoreet sem...",
+    description:
+      "Quisque sit amet lacus luctus, ultrices eros ac, laoreet sem...",
     image: "/img/a2.png",
     stats: {
       listen: "24K",
