@@ -5,7 +5,7 @@
     </div>
     <div
       :class="{ 'backdrop-blur-sm': menuOpen }"
-      class="relative bg-black text-white min-h-screen flex flex-col items-center"
+      class="relative flex min-h-screen flex-col items-center bg-black text-white"
     >
       <!-- HomePage -->
       <Home />
@@ -36,7 +36,7 @@
     <div>
       <laster />
     </div>
-    <div class="bg-stone-800 rm-wrapper">
+    <div class="rm-wrapper bg-stone-800">
       <lasterUnderLaster />
     </div>
   </div>
@@ -44,6 +44,7 @@
 
 <script setup>
 // Méthode pour basculer l'état du menu
+const menuOpen = ref(false);
 const toggleMenu = (value) => {
   menuOpen.value = value;
 };

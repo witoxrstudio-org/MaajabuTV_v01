@@ -1,68 +1,71 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@import url("https://api.fontshare.com/v2/css?f[]=synonym@400&f[]=amulya@700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html::-webkit-scrollbar {
-  width: 0.2rem;
+	width: 0.2rem;
 }
 
 html::-webkit-scrollbar-thumb {
-  border-radius: 2rem;
-  background: #000;
+	border-radius: 2rem;
+	background: #000;
 }
 
 /* Gestion Contenu */
 .rm-wrapper {
-  @apply flex justify-start items-center space-x-4 relative;
+	@apply relative flex items-center justify-start space-x-4;
 }
 
 .rm-container {
-  @apply max-w-6xl mx-auto px-4  md:px-8 w-full;
+	@apply mx-auto w-full max-w-6xl px-4 md:px-8;
 }
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s;
+	transition: opacity 0.5s;
 }
 
 .fade-enter,
 .fade-leave-to {
-  opacity: 0;
+	opacity: 0;
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 .animate-fadeIn {
-  animation: fadeIn 0.5s forwards;
+	animation: fadeIn 0.5s forwards;
 }
 
 .swiper {
-  width: 100%;
-  height: 100%;
+	width: 100%;
+	height: 100%;
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
 
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	/* Center slide text vertically */
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /* .swiper-slide img {
