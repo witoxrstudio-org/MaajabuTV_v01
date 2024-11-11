@@ -1,8 +1,5 @@
 <template>
   <section>
-    <div class="rm-wrapper bg-black text-white">
-      <Navbar @toggleMenu="toggleMenu" />
-    </div>
     <div class="flex items-center justify-center bg-black py-12 text-white">
       <div
         class="mx-auto grid max-w-4xl grid-cols-1 items-center gap-8 md:grid-cols-2"
@@ -40,7 +37,7 @@
           <h2 class="mb-4 text-lg font-semibold md:text-xl">
             {{ episode.artist }}
           </h2>
-          <p class="mb-6 text-gray-300 ">
+          <p class="mb-6 text-gray-300">
             {{ episode.description }}
           </p>
 

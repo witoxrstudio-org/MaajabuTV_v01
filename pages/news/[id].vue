@@ -1,11 +1,8 @@
 <template>
-  <section>
-    <div class="rm-wrapper bg-black text-white">
-      <Navbar @toggleMenu="toggleMenu" />
-    </div>
-    <div class="flex justify-center items-center bg-black text-white py-12">
+  <section class="pt-16">
+    <div class="flex items-center justify-center bg-black py-12 text-white">
       <div
-        class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+        class="mx-auto grid max-w-4xl grid-cols-1 items-center gap-8 md:grid-cols-2"
         v-if="card"
       >
         <!-- Section de l'image -->
@@ -14,32 +11,32 @@
           <img
             :src="card.image"
             alt="Singer"
-            class="rounded-lg w-full h-auto transition-all duration-300 hover:scale-110"
+            class="h-auto w-full rounded-lg transition-all duration-300 hover:scale-110"
           />
 
           <!-- Image vectorielle en haut à gauche -->
           <img
             src="/img/Vector_4.png"
             alt="Vector 4"
-            class="absolute top-2 left-2 sm:-top-4 sm:-left-4 md:w-16 md:h-16 w-10 h-10 z-10"
+            class="absolute left-2 top-2 z-10 h-10 w-10 sm:-left-4 sm:-top-4 md:h-16 md:w-16"
           />
 
           <!-- Image vectorielle en bas à droite -->
           <img
             src="/img/Vector_3.png"
             alt="Vector 3"
-            class="absolute bottom-2 right-2 sm:-bottom-4 sm:-right-4 md:w-16 md:h-16 w-10 h-10 z-10"
+            class="absolute bottom-2 right-2 z-10 h-10 w-10 sm:-bottom-4 sm:-right-4 md:h-16 md:w-16"
           />
         </div>
 
         <!-- Section de texte -->
         <div class="text-center md:text-left">
-          <h1 class="text-yellow-500 text-3xl md:text-4xl font-bold mb-2">
+          <h1 class="mb-2 text-3xl font-bold text-yellow-500 md:text-4xl">
             {{ card.title }}
           </h1>
-          <h2 class="text-lg md:text-xl font-semibold mb-4">Your Playlist, Your Mood</h2>
+          <h2 class="mb-4 text-lg font-semibold md:text-xl">Your Playlist, Your Mood</h2>
 
-          <p class="text-gray-300 mb-6 ">
+          <p class="mb-6 text-gray-300">
             Symphra brings you closer to the music you love, with personalized playlists,
             high-quality sound, and endless tracks to match every moment. Dive into a
             world where every beat, song, and melody is tailored just for you.
@@ -48,22 +45,22 @@
           <!-- Statistiques -->
           <div class="grid grid-cols-3 gap-4 text-center">
             <div>
-              <p class="text-2xl md:text-3xl font-bold">50M+</p>
-              <p class="text-gray-400 text-xs md:text-sm">Tracks Streamed</p>
+              <p class="text-2xl font-bold md:text-3xl">50M+</p>
+              <p class="text-xs text-gray-400 md:text-sm">Tracks Streamed</p>
             </div>
             <div>
-              <p class="text-2xl md:text-3xl font-bold">10M+</p>
-              <p class="text-gray-400 text-xs md:text-sm">Listeners</p>
+              <p class="text-2xl font-bold md:text-3xl">10M+</p>
+              <p class="text-xs text-gray-400 md:text-sm">Listeners</p>
             </div>
             <div>
-              <p class="text-2xl md:text-3xl font-bold">12M+</p>
-              <p class="text-gray-400 text-xs md:text-sm">Downloads App</p>
+              <p class="text-2xl font-bold md:text-3xl">12M+</p>
+              <p class="text-xs text-gray-400 md:text-sm">Downloads App</p>
             </div>
           </div>
         </div>
       </div>
       <div v-else>
-        <p class="text-center text-xl text-gray-500 font-bold">Chargement...</p>
+        <p class="text-center text-xl font-bold text-gray-500">Chargement...</p>
       </div>
     </div>
     <div class="bg-black">
@@ -78,7 +75,7 @@
     <div>
       <laster />
     </div>
-    <div class="bg-stone-800 rm-wrapper">
+    <div class="rm-wrapper bg-stone-800">
       <lasterUnderLaster />
     </div>
   </section>

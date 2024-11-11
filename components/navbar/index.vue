@@ -101,8 +101,6 @@ const menuItems = computed(() => [
   t("menu.about"),
   t("menu.news"),
   t("menu.events"),
-  t("menu.apps"),
-  t("menu.prod"),
 ]);
 
 // Fonction de gestion des liens avec la langue actuelle

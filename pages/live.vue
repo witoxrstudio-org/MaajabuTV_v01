@@ -4,10 +4,6 @@
       :class="{ 'backdrop-blur-sm': menuOpen }"
       class="relative flex min-h-screen flex-col items-center bg-black text-white"
     >
-      <!-- Barre de navigation -->
-      <Navbar @toggleMenu="toggleMenu" />
-      <!-- Video Player -->
-
       <div class="mj-container">
         <div class="flex justify-around space-x-4">
           <div class="w-full rounded border-none bg-none">
