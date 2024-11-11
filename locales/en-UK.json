@@ -1,63 +1,63 @@
 {
-	"menu": {
-		"home": "Home",
-		"news": "News",
-		"events": "Events",
-		"tv": "TV",
-		"submit": "Submit video",
-		"about": "About"
-	},
-	"title": {
-		"title": " Now showing!",
-		"titles": "Let’s share dreams",
-		"desc": "Available on Apple Soundcast and Spotify",
-		"welcome": "Let's get started",
-		"about": "Maajabu Gospel is a well-known music production label, associated with four talented and popular ambassadors: Mike Kalambay, Sandra Mbuyi, Deborah Lukalu, and Rosny Kayiba. These artists, who are among the top gospel singers in the DRC, have contributed to the label's popularity, especially through events like Maajabu Talent, where they play the role of coaches and judges.",
-		"abouter": "Through competitions like Maajabu Talent and Maajabu Rafiki, they have demonstrated their dedication to nurturing the next generation of gospel artists, providing them with a platform to shine and sharing their accumulated wisdom over the years.",
-		"bouton_un": "MORE"
-	},
-	"latest": {
-		"title": "Latest Music",
-		"btn": "See All",
-		"btn_alt": "See More Singles"
-	},
-	"champs": {
-		"title": "Spiritual songs",
-		"btn": "Show more categories"
-	},
-	"album": {
-		"title": "Album",
-		"title_2": "Top Albums",
-		"desc": "Here are the podcasters with the highest followers and viewers. Immediately follow to follow the podcast",
-		"follow": "FOLLOW",
-		"followed": "FOLLOWED"
-	},
-	"sub": {
-		"title_1": "New episode ",
-		"title_2": "every week",
-		"desc": "The latest updates straight to your inbox.",
-		"form": "Enter your email...",
-		"label": "Subscribe"
-	},
-	"about": {
-		"one": "The place for self-improvement",
-		"two": "Best Gospel Songs for Curious Minds",
-		"three": "we are the best place for you who want to develop yourself through voice. for those of you who are busy and don't have time to read self-development books.",
-		"about_icon_1": "Reach the goal",
-		"about_icon_desc1": "Find out how to tips and tricks to achieve your goals and your dreams",
+  "menu": {
+    "home": "Home",
+    "news": "News",
+    "events": "Events",
+    "tv": "TV",
+    "submit": "Submit video",
+    "about": "About"
+  },
+  "title": {
+    "title": " Now showing!",
+    "titles": "Let’s share dreams",
+    "desc": "Available on Apple Soundcast and Spotify",
+    "welcome": "Let's get started",
+    "about": "Maajabu Gospel is a well-known music production label, associated with four talented and popular ambassadors: Mike Kalambay, Sandra Mbuyi, Deborah Lukalu, and Rosny Kayiba. These artists, who are among the top gospel singers in the DRC, have contributed to the label's popularity, especially through events like Maajabu Talent, where they play the role of coaches and judges.",
+    "abouter": "Through competitions like Maajabu Talent and Maajabu Rafiki, they have demonstrated their dedication to nurturing the next generation of gospel artists, providing them with a platform to shine and sharing their accumulated wisdom over the years.",
+    "bouton_un": "MORE"
+  },
+  "latest": {
+    "title": "Latest Music",
+    "btn": "See All",
+    "btn_alt": "See More Singles"
+  },
+  "champs": {
+    "title": "Spiritual songs",
+    "btn": "Show more categories"
+  },
+  "album": {
+    "title": "Album",
+    "title_2": "Top Albums",
+    "desc": "Here are the podcasters with the highest followers and viewers. Immediately follow to follow the podcast",
+    "follow": "FOLLOW",
+    "followed": "FOLLOWED"
+  },
+  "sub": {
+    "title_1": "New episode ",
+    "title_2": "every week",
+    "desc": "The latest updates straight to your inbox.",
+    "form": "Enter your email...",
+    "label": "Subscribe"
+  },
+  "about": {
+    "one": "The place for self-improvement",
+    "two": "Best Gospel Songs",
+    "three": "we are the best place for you who want to develop yourself through voice. for those of you who are busy and don't have time to read self-development books.",
+    "about_icon_1": "Reach the goal",
+    "about_icon_desc1": "Find out how to tips and tricks to achieve your goals and your dreams",
 
-		"about_icon_2": "Relationship",
-		"about_icon_desc2": "We also talked about how to maintain and maintain a good relationship with your partner",
+    "about_icon_2": "Relationship",
+    "about_icon_desc2": "We also talked about how to maintain and maintain a good relationship with your partner",
 
-		"about_icon_3": "Forming a habit",
-		"about_icon_desc3": "we provide podcasts with episodes that talk about habits",
+    "about_icon_3": "Forming a habit",
+    "about_icon_desc3": "we provide podcasts with episodes that talk about habits",
 
-		"about_icon_4": "Grow with career",
-		"about_icon_desc4": "Talking about the journey to achieve your dream career and what about the circumstances around it"
-	},
-	"news": {
-		"btn1": "Latest",
-		"btn2": "All News",
-		"btn3": "My Playlists"
-	}
+    "about_icon_4": "Grow with career",
+    "about_icon_desc4": "Talking about the journey to achieve your dream career and what about the circumstances around it"
+  },
+  "news": {
+    "btn1": "Latest",
+    "btn2": "All News",
+    "btn3": "My Playlists"
+  }
 }
