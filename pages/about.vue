@@ -19,50 +19,47 @@
       <div
         class="flex flex-col items-center gap-8 pt-8 lg:flex-row lg:items-start"
       >
-        <!-- Left Image Section -->
-        <!-- <div class="relative -top-24 w-full lg:w-1/2">
-          <img
-            src="public/img/pastor.png"
-            alt="Maajabu Gospel"
-            class="duration-400 transform rounded-lg transition hover:scale-105"
-          />
-        </div> -->
-        <div class="relative -top-24 w-full lg:w-1/2">
+        <div class="relative -top-24 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 mx-auto">
           <img
             src="/img/pastor.png"
             alt="Maajabu Gospel"
-            class="duration-400 transform rounded-lg transition hover:scale-105"
+            class="duration-400 transform rounded-lg transition hover:scale-105 w-full"
           />
 
-          <!-- Card en bas à gauche -->
+          <!-- Card en bas à gauche avec compteur de reviews -->
           <div
-            class="absolute bottom-2 left-12 flex flex-col items-center bg-white p-3 rounded-lg shadow-lg"
+            class="absolute bottom-2 left-4 sm:left-8 md:left-12 flex flex-col items-center bg-white p-2 sm:p-3 rounded-lg shadow-lg text-center"
           >
-            <div class="flex space-x-2">
+            <div class="flex space-x-1 sm:space-x-2">
               <img
                 src="/img/profile_1.png"
                 alt="Profile 1"
-                class="w-14 h-14 rounded-full"
+                class="w-10 h-10 sm:w-14 sm:h-14 rounded-full"
               />
               <img
                 src="/img/profile_2.png"
                 alt="Profile 2"
-                class="w-14 h-14 rounded-full"
+                class="w-10 h-10 sm:w-14 sm:h-14 rounded-full"
               />
             </div>
-            <span class="mt-2 text-sm font-semibold text-gray-700 text-center"
-              >8000+ reviews</span
+            <!-- Affichage du compteur de reviews -->
+            <span
+              class="mt-1 sm:mt-2 text-xs sm:text-sm font-semibold text-gray-700"
             >
+              {{ reviewsCount }}+ reviews
+            </span>
           </div>
 
-          <!-- Nouveau card en haut à droite -->
+          <!-- Card en haut à droite avec compteur de membres -->
           <div
-            class="absolute top-2 right-2 bg-white p-3 rounded-lg shadow-lg flex flex-col items-center"
+            class="absolute top-20 sm:top-28 right-2 sm:-right-4 bg-white p-2 sm:p-3 rounded-lg shadow-lg flex flex-col items-center text-center"
           >
-            <span class="text-sm font-semibold text-gray-700">New Feature</span>
-            <p class="mt-1 text-xs text-gray-500 text-center">
-              Explore our latest update!
-            </p>
+            <span class="text-xs font-medium text-gray-500"
+              >Monthly Members</span
+            >
+            <span class="text-lg sm:text-2xl font-bold text-gray-800 mt-1">
+              {{ membersCount }}+
+            </span>
           </div>
         </div>
 
@@ -118,4 +115,37 @@ const about = ref(t("title.about"));
 const abouter = ref(t("title.abouter"));
 const bouton = ref(t("title.bouton_un"));
 const localPath = useLocalePath();
+// Les Variables réactives pour les deux compteurs
+const membersCount = ref(0);
+const reviewsCount = ref(0);
+
+onMounted(() => {
+  // Compteur de membres (jusqu'à 5000)
+  const targetMembers = 5000;
+  const durationMembers = 2000;
+  const incrementMembers = Math.ceil(targetMembers / (durationMembers / 16));
+
+  const membersCounter = setInterval(() => {
+    if (membersCount.value < targetMembers) {
+      membersCount.value += incrementMembers;
+    } else {
+      membersCount.value = targetMembers;
+      clearInterval(membersCounter);
+    }
+  }, 16);
+
+  // Compteur de reviews (jusqu'à 8000)
+  const targetReviews = 8000;
+  const durationReviews = 2500;
+  const incrementReviews = Math.ceil(targetReviews / (durationReviews / 16));
+
+  const reviewsCounter = setInterval(() => {
+    if (reviewsCount.value < targetReviews) {
+      reviewsCount.value += incrementReviews;
+    } else {
+      reviewsCount.value = targetReviews;
+      clearInterval(reviewsCounter);
+    }
+  }, 16);
+});
 </script>
