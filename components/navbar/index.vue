@@ -99,6 +99,8 @@ const toggleMenu = () => {
 const menuItems = computed(() => [
   t("menu.home"),
   t("menu.about"),
+  t("menu.tv"),
+  t("menu.submit"),
   t("menu.news"),
   t("menu.events"),
 ]);
@@ -113,10 +115,10 @@ const localPath = (item) => {
       return `${prefix}/news`;
     case t("menu.events"):
       return `${prefix}/events`;
-    case t("menu.apps"):
-      return `${prefix}/apps`;
-    case t("menu.prod"):
-      return `${prefix}/products`;
+    case t("menu.tv"):
+      return `${prefix}/tv`;
+    case t("menu.sumbit"):
+      return `${prefix}/submit`;
     case t("menu.about"):
       return `${prefix}/about`;
     default:
