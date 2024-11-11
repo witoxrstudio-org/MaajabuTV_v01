@@ -1,96 +1,167 @@
 <template>
-  <div class="flex justify-center items-center min-h-screen bg-gray-100">
-    <form class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-      <h1 class="text-2xl font-bold mb-6">Formulaire</h1>
+  <div class="rm-container flex items-center pt-20 justify-center">
+    <form
+      class="bg-white px-8 pt-6 pb-8 mb-4 max-w-lg w-full"
+      @submit.prevent="handleSubmit"
+    >
+      <h2 class="text-center font-bold text-lg mb-4">
+        Faites attention, vous ne pouvez plus modifier une fois les données
+        envoyées.
+      </h2>
 
-      <label class="block mb-4">
-        <span class="text-gray-700">Prenom</span>
-        <input
-          type="text"
-          class="mt-1 block w-full px-4 py-2 border rounded-md text-gray-900"
-          placeholder="Vincent"
-        />
-      </label>
-
-      <label class="block mb-4">
-        <span class="text-gray-700">Nom de la famille</span>
-        <input
-          type="text"
-          class="mt-1 block w-full px-4 py-2 border rounded-md text-gray-900"
-          placeholder="ASANI"
-        />
-      </label>
-
-      <label class="block mb-4">
-        <span class="text-gray-700">Qui est-tu?</span>
-        <input
-          type="text"
-          class="mt-1 block w-full px-4 py-2 border rounded-md text-gray-900"
-          placeholder="Homme"
-        />
-      </label>
-
-      <label class="block mb-4">
-        <span class="text-gray-700">Email</span>
-        <input
-          type="email"
-          class="mt-1 block w-full px-4 py-2 border rounded-md text-gray-900"
-          placeholder="vincentasani@gmail.com"
-        />
-      </label>
-
-      <div class="flex flex-col space-y-2">
-        <label for="phone" class="text-gray-700 font-medium">Phone No.</label>
-        <div
-          class="flex items-center border gap-2 border-gray-300 rounded-md overflow-hidden"
-        >
-          <span
-            class="bg-gray-100 px-4 py-2 text-gray-600 font-medium border border-gray-300"
-            >+243</span
+      <div class="grid grid-cols-2 gap-4 mb-4">
+        <div>
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="prenom"
+            >Prénom *</label
           >
           <input
+            v-model="formData.prenom"
             type="text"
-            id="phone"
-            placeholder="999 249 663"
-            class="w-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 ml-1"
+            id="prenom"
+            required
+            placeholder="Veuillez saisir votre prénom"
+            class="border w-full py-2 px-3 text-gray-700 focus:outline-none focus:border-yellow-600"
+          />
+        </div>
+
+        <div>
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="nom"
+            >Nom de famille *</label
+          >
+          <input
+            v-model="formData.nom"
+            type="text"
+            id="nom"
+            required
+            placeholder="Veuillez saisir votre nom de famille"
+            class="border w-full py-2 px-3 text-gray-700 focus:outline-none focus:border-yellow-600"
           />
         </div>
       </div>
 
-      <label class="block mb-4">
-        <span class="text-gray-700">Pays</span>
-        <select
-          class="mt-1 block w-full px-4 py-2 border rounded-md text-gray-900"
-        >
-          <option>Congo Dem. Rep</option>
-          <option>Other Country</option>
-        </select>
-      </label>
+      <div class="grid grid-cols-2 gap-2 mb-4">
+        <div>
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="gender"
+            >Qui es-tu ?</label
+          >
+          <select
+            v-model="formData.gender"
+            id="gender"
+            required
+            class="border w-full py-2 px-3 text-gray-700 focus:outline-none focus:border-yellow-600"
+          >
+            <option value="Homme">Homme</option>
+            <option value="Femme">Femme</option>
+            <option value="Autre">Autre</option>
+          </select>
+        </div>
 
-      <label class="block mb-4">
-        <span class="text-gray-700">Profile Social Media</span>
+        <div>
+          <label
+            class="block text-gray-700 text-sm font-bold mb-2"
+            for="country"
+            >Pays *</label
+          >
+          <input
+            v-model="formData.country"
+            type="text"
+            id="country"
+            required
+            placeholder="Veuillez saisir votre pays"
+            class="border w-full py-2 px-3 text-gray-700 focus:outline-none focus:border-yellow-600"
+          />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 mb-4">
+        <div>
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="email"
+            >Adresse E-mail *</label
+          >
+          <input
+            v-model="formData.email"
+            type="email"
+            id="email"
+            required
+            placeholder="Veuillez saisir votre email"
+            class="border w-full py-2 px-3 text-gray-700 focus:outline-none focus:border-yellow-600"
+          />
+        </div>
+
+        <div>
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="phone"
+            >Téléphone *</label
+          >
+          <input
+            v-model="formData.phone"
+            type="tel"
+            id="phone"
+            required
+            placeholder="Veuillez entrer votre numéro de téléphone"
+            class="border w-full py-2 px-3 text-gray-700 focus:outline-none focus:border-yellow-600"
+          />
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="social"
+          >Profile Social media *</label
+        >
         <input
-          type="text"
-          class="mt-1 block w-full px-4 py-2 border rounded-md text-gray-900"
+          v-model="formData.social"
+          type="url"
+          id="social"
+          required
           placeholder="Veuillez entrer votre lien de réseau social"
+          class="border w-full py-2 px-3 text-gray-700 focus:outline-none focus:border-yellow-600"
         />
-      </label>
+      </div>
 
-      <label class="block mb-6">
-        <span class="text-gray-700">Image de l'artiste</span>
-        <select
-          class="mt-1 block w-full px-4 py-2 border rounded-md text-gray-900"
+      <div class="mb-6">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="image"
+          >Image de l'artiste *</label
         >
-          <option>Choisir un fichier</option>
-        </select>
-      </label>
+        <input
+          type="file"
+          id="image"
+          required
+          class="border w-full py-2 px-3 text-gray-700 focus:outline-none focus:border-yellow-600"
+        />
+      </div>
 
-      <button
-        type="submit"
-        class="w-full bg-yellow-500 text-white font-bold py-2 rounded-md hover:bg-yellow-600"
-      >
-        Submit
-      </button>
+      <div class="flex items-center justify-start">
+        <button
+          type="submit"
+          class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline"
+        >
+          Continuer
+        </button>
+      </div>
     </form>
   </div>
 </template>
+
+<script setup>
+import { reactive } from "vue";
+
+const formData = reactive({
+  prenom: "",
+  nom: "",
+  gender: "Homme",
+  email: "",
+  phone: "",
+  country: "",
+  social: "",
+  image: null,
+});
+
+function handleSubmit() {
+  console.log(formData);
+}
+</script>
+
+<style scoped>
+body {
+  font-family: "Inter", sans-serif;
+}
+</style>
