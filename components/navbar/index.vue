@@ -78,7 +78,7 @@
           >
             {{ item }}
           </NuxtLink>
-          <!-- LangSwitcher à l'intérieur du menu mobile -->
+
           <LangSwitcher class="mt-4 block md:hidden" />
         </nav>
       </transition>
