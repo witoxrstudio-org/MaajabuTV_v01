@@ -68,7 +68,12 @@
             v-for="(item, index) in menuItems"
             :key="index"
             :to="localPath(item)"
-            class="font-semibold hover:text-yellow-400 text-2xl transition-opacity duration-300 opacity-0 animate-fadeIn delay-{{ index * 100 }} "
+            @click="closeMenu"
+            class="font-semibold hover:text-yellow-400 text-2xl
+            transition-opacity duration-300 opacity-0 animate-fadeIn delay-{{
+              index * 100
+            }}
+            "
             :class="{ 'text-yellow-500': isActiveLink(localPath(item)) }"
           >
             {{ item }}
@@ -93,6 +98,11 @@ const menuOpen = ref(false);
 // Méthode pour basculer l'état du menu
 const toggleMenu = () => {
   menuOpen.value = !menuOpen.value;
+};
+
+// Fonction pour fermer le menu
+const closeMenu = () => {
+  menuOpen.value = false;
 };
 
 // Les éléments de menu, calculés en fonction de la langue actuelle
