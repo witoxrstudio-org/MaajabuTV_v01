@@ -3,11 +3,15 @@
     <div class="max-w-6xl bg-white py-6 pb-12 sm:mx-2">
       <!-- Section Header -->
       <div class="flex items-center justify-between border-gray-200 py-4 pb-12">
-        <div class="hidden w-1/3 border-t border-gray-300 sm:block sm:w-[35%]"></div>
+        <div
+          class="hidden w-1/3 border-t border-gray-300 sm:block sm:w-[35%]"
+        ></div>
         <h2 class="text-xl font-bold text-yellow-500 sm:text-3xl">
           {{ title }}
         </h2>
-        <div class="hidden w-1/3 border-t border-gray-300 sm:block sm:w-[35%]"></div>
+        <div
+          class="hidden w-1/3 border-t border-gray-300 sm:block sm:w-[35%]"
+        ></div>
       </div>
       <!-- Fin Section Header -->
 
@@ -25,15 +29,20 @@
               <img
                 :src="card.image"
                 :alt="card.title"
-                class="h-52 w-full object-cover transition-all duration-300 hover:z-10 hover:scale-110 hover:shadow-lg"
+                class="w-full h-full md:h-52 md:w-full object-cover transition-all duration-300 hover:z-10 hover:scale-110 hover:shadow-lg"
               />
               <div class="p-3">
                 <h3 class="text-md font-semibold">{{ card.title }}</h3>
                 <p class="text-sm text-gray-500">{{ card.description }}</p>
-                <p class="text-sm text-gray-500">{{ card.followers }} Followers</p>
+                <p class="text-sm text-gray-500">
+                  {{ card.followers }} Followers
+                </p>
               </div>
               <div>
-                <button :class="card.buttonStyle" class="mt-3 w-full px-3 py-1.5 text-sm">
+                <button
+                  :class="card.buttonStyle"
+                  class="mt-3 w-full px-3 py-1.5 text-sm"
+                >
                   {{ card.buttonText }}
                 </button>
               </div>
@@ -94,27 +103,27 @@ const formatTextWithLineBreaks = (text) => {
 const formattedDesc = computed(() => formatTextWithLineBreaks(desc.value));
 const cards = [
   {
-    image: "img/e1.png",
+    image: "img/fol1.png",
     title: "PSAUMES",
     description: "Story Life • 102 Podcast",
     followers: "535K",
-    buttonText: "FOLLOWED",
+    buttonText: follow,
     buttonStyle: "bg-black text-yellow-500",
   },
   {
-    image: "img/e2.png",
+    image: "img/al3.jpg",
     title: "DAYLY ARTIST",
     description: "Rimance • 94 Podcast",
     followers: "412K",
-    buttonText: "FOLLOW",
+    buttonText: followed,
     buttonStyle: "bg-white border border-black text-black",
   },
   {
-    image: "img/e3.jpeg",
+    image: "img/fol3.png",
     title: "AMOUR INCONDITIONNEL",
     description: "Comedy • 152 Podcast",
     followers: "389",
-    buttonText: "FOLLOW",
+    buttonText: follow,
     buttonStyle: "bg-white border border-black text-black",
   },
 ];

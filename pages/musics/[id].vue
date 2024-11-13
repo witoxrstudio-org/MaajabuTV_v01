@@ -101,13 +101,13 @@ import { ref, onMounted } from "vue";
 const episodes = ref([
   {
     id: 1,
-    artist: "SHEKINAH MPIANA",
+    artist: "RUTH KIMONGOLI",
     duration: "46 min",
     episode: 10,
-    title: "Désormais",
+    title: "PLUS QU'UN CHANT",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac neque sagittis...",
-    image: "/img/a1.png",
+    image: "/img/al1.jpg",
     stats: {
       listen: "8.9K",
       likes: "2.1K",
@@ -140,6 +140,22 @@ const episodes = ref([
     description:
       "Cras facilisis orci in arcu ullamcorper viverra. Maecenas vulputate risus...",
     image: "/img/a3.png",
+    stats: {
+      listen: "42K",
+      likes: "10K",
+      comments: "16K",
+      downloads: "5.1K",
+    },
+  },
+  {
+    id: 4,
+    artist: "DAVID IZE",
+    duration: "46 min",
+    episode: 8,
+    title: "BENGA NGAI",
+    description:
+      "Cras facilisis orci in arcu ullamcorper viverra. Maecenas vulputate risus...",
+    image: "/img/al4.jpg",
     stats: {
       listen: "42K",
       likes: "10K",

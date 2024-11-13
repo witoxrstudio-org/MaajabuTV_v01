@@ -25,24 +25,25 @@
         {{ desc }}
       </p>
       <!-- Boutons -->
-      <div
-        class="mt-4 flex flex-col space-y-2 md:flex-row md:space-x-4 md:space-y-0"
-      >
+      <!-- Boutons -->
+      <div class="mt-4 flex flex-row justify-center space-x-2 md:justify-start">
         <button
-          class="flex w-full transform items-center justify-center space-x-2 rounded-full bg-yellow-500 px-3 py-2 text-sm font-semibold text-black transition duration-200 hover:bg-yellow-600 hover:text-green-500 md:w-auto"
+          class="flex transform items-center justify-center rounded-full bg-yellow-500 px-4 py-3 text-lg font-semibold text-black transition duration-200 hover:bg-yellow-600 hover:text-green-500 md:px-3 md:py-2 md:text-sm"
         >
-          <i class="fab fa-spotify"></i> <span>Spotify</span>
+          <i class="fab fa-spotify"></i>
+          <span class="hidden md:inline">Spotify</span>
         </button>
         <button
-          class="flex w-full transform items-center justify-center space-x-2 rounded-full bg-yellow-500 px-3 py-2 text-sm font-semibold text-black transition duration-200 hover:bg-yellow-600 hover:text-orange-200 md:w-auto"
+          class="flex transform items-center justify-center rounded-full bg-yellow-500 px-4 py-3 text-lg font-semibold text-black transition duration-200 hover:bg-yellow-600 hover:text-orange-200 md:px-3 md:py-2 md:text-sm"
         >
           <i class="fab fa-soundcloud"></i>
-          <span>SoundCloud</span>
+          <span class="hidden md:inline">SoundCloud</span>
         </button>
         <button
-          class="flex w-full transform items-center justify-center space-x-2 rounded-full bg-yellow-500 px-3 py-2 text-sm font-semibold text-black transition duration-200 hover:bg-yellow-600 hover:text-white md:w-auto"
+          class="flex transform items-center justify-center rounded-full bg-yellow-500 px-4 py-3 text-lg font-semibold text-black transition duration-200 hover:bg-yellow-600 hover:text-white md:px-3 md:py-2 md:text-sm"
         >
-          <i class="fab fa-apple"></i> <span>Apple Podcast</span>
+          <i class="fab fa-apple"></i>
+          <span class="hidden md:inline">Apple Podcast</span>
         </button>
       </div>
     </div>

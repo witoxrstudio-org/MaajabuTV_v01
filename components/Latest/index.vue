@@ -6,7 +6,9 @@
       <div class="max-w-6xl bg-white py-0 sm:mx-4 sm:px-4">
         <!-- Section Header -->
 
-        <div class="flex items-center justify-between border-b border-gray-200 py-4">
+        <div
+          class="flex items-center justify-between border-b border-gray-200 py-4"
+        >
           <h2 class="text-xl font-bold text-yellow-600 sm:text-2xl">
             {{ title }}
           </h2>
@@ -25,11 +27,11 @@
             :key="episode.id"
             class="flex flex-col items-start space-y-4 border-b pb-4 md:flex-row md:space-x-4 md:space-y-0"
           >
-            <div class="w-full sm:w-auto">
+            <div class="w-full h-full md:w-24 md:h-24">
               <img
                 :src="episode.image"
                 alt="Album cover"
-                class="h-48 w-full object-cover transition-transform duration-300 hover:scale-105 sm:h-80 md:h-24 md:w-40"
+                class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
               />
             </div>
             <div
@@ -39,7 +41,9 @@
                 <h3
                   class="text-base font-semibold transition-all duration-300 hover:translate-y-[-3px] hover:text-yellow-500 sm:text-lg"
                 >
-                  <NuxtLink :to="`/musics/${episode.id}`"> {{ episode.title }}</NuxtLink>
+                  <NuxtLink :to="`/musics/${episode.id}`">
+                    {{ episode.title }}</NuxtLink
+                  >
                 </h3>
                 <p
                   class="mt-1 text-xs text-gray-600 transition-all duration-300 hover:translate-y-[-3px] hover:text-yellow-500 sm:text-sm"
@@ -54,28 +58,33 @@
                   <i
                     class="fas fa-headphones h-5 w-5 transition-transform duration-300 hover:scale-110 hover:text-yellow-500"
                   ></i>
-                  <span class="text-xs sm:text-sm">{{ episode.stats.listen }}</span>
+                  <span class="text-xs sm:text-sm">{{
+                    episode.stats.listen
+                  }}</span>
                 </div>
-
                 <div class="flex items-center space-x-2">
                   <i
                     class="fas fa-heart h-5 w-5 transition-transform duration-300 hover:scale-110 hover:text-red-500"
                   ></i>
-                  <span class="text-xs sm:text-sm">{{ episode.stats.likes }}</span>
+                  <span class="text-xs sm:text-sm">{{
+                    episode.stats.likes
+                  }}</span>
                 </div>
-
                 <div class="flex items-center space-x-2">
                   <i
                     class="fas fa-comment h-5 w-5 transition-transform duration-300 hover:scale-110 hover:text-blue-500"
                   ></i>
-                  <span class="text-xs sm:text-sm">{{ episode.stats.comments }}</span>
+                  <span class="text-xs sm:text-sm">{{
+                    episode.stats.comments
+                  }}</span>
                 </div>
-
                 <div class="flex items-center space-x-2">
                   <i
                     class="fas fa-download h-5 w-5 transition-transform duration-300 hover:scale-110 hover:text-green-500"
                   ></i>
-                  <span class="text-xs sm:text-sm">{{ episode.stats.downloads }}</span>
+                  <span class="text-xs sm:text-sm">{{
+                    episode.stats.downloads
+                  }}</span>
                 </div>
               </div>
             </div>
@@ -84,7 +93,11 @@
             <button
               class="mt-10 flex h-14 w-14 items-center justify-center self-center rounded-full bg-gray-100 transition-colors duration-300 ease-in-out hover:bg-yellow-300 sm:h-16 sm:w-16"
             >
-              <img src="/img/frame.png" alt="Play icon" class="h-6 w-6 sm:h-8 sm:w-8" />
+              <img
+                src="/img/frame.png"
+                alt="Play icon"
+                class="h-6 w-6 sm:h-8 sm:w-8"
+              />
             </button>
           </div>
         </div>
@@ -117,13 +130,13 @@ const btn_alt = ref(t("latest.btn_alt"));
 const episodes = ref([
   {
     id: 1,
-    artist: "SHEKINAH MPIANA",
+    artist: "RUTH KIMONGOLI",
     duration: "46 min",
     episode: 10,
-    title: "Désormais",
+    title: "PLUS QU'UN CHANT",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac neque sagittis...",
-    image: "/img/a1.png",
+    image: "/img/al1.jpg",
     stats: {
       listen: "8.9K",
       likes: "2.1K",
@@ -137,7 +150,8 @@ const episodes = ref([
     duration: "34 min",
     episode: 9,
     title: "CELEBRONS HEBRON AUJOURD'HUI",
-    description: "Quisque sit amet lacus luctus, ultrices eros ac, laoreet sem...",
+    description:
+      "Quisque sit amet lacus luctus, ultrices eros ac, laoreet sem...",
     image: "/img/a2.png",
     stats: {
       listen: "24K",
@@ -155,6 +169,22 @@ const episodes = ref([
     description:
       "Cras facilisis orci in arcu ullamcorper viverra. Maecenas vulputate risus...",
     image: "/img/a3.png",
+    stats: {
+      listen: "42K",
+      likes: "10K",
+      comments: "16K",
+      downloads: "5.1K",
+    },
+  },
+  {
+    id: 4,
+    artist: "DAVID IZE",
+    duration: "46 min",
+    episode: 8,
+    title: "BENGA NGAI",
+    description:
+      "Cras facilisis orci in arcu ullamcorper viverra. Maecenas vulputate risus...",
+    image: "/img/al4.jpg",
     stats: {
       listen: "42K",
       likes: "10K",
