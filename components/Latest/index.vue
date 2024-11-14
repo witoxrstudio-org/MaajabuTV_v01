@@ -134,8 +134,7 @@ const episodes = ref([
     duration: "46 min",
     episode: 10,
     title: "PLUS QU'UN CHANT",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac neque sagittis...",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
     image: "/img/al1.jpg",
     stats: {
       listen: "8.9K",
@@ -166,8 +165,7 @@ const episodes = ref([
     duration: "46 min",
     episode: 8,
     title: "Hakuniacaha",
-    description:
-      "Cras facilisis orci in arcu ullamcorper viverra. Maecenas vulputate risus...",
+    description: "Cras facilisis orci in arcu ullamcorper viverra. risus...",
     image: "/img/a3.png",
     stats: {
       listen: "42K",
@@ -182,8 +180,7 @@ const episodes = ref([
     duration: "46 min",
     episode: 8,
     title: "BENGA NGAI",
-    description:
-      "Cras facilisis orci in arcu ullamcorper viverra. Maecenas vulputate risus...",
+    description: "Cras facilisis orci in arcu ullamcorper vulputate risus...",
     image: "/img/al4.jpg",
     stats: {
       listen: "42K",
