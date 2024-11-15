@@ -45,6 +45,4 @@ const menuOpen = ref(false);
 const toggleMenu = (value) => {
   menuOpen.value = value;
 };
-
-const data = ref({ musics: [], events: [] });
 </script>
