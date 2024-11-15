@@ -25,11 +25,11 @@
     <div>
       <albums />
     </div>
-    <!-- Subscription -->
+    <!-- Subscription Section -->
     <div>
       <subscription />
     </div>
-    <!-- Footer -->
+    <!-- Footer  Section -->
     <div>
       <laster />
     </div>
